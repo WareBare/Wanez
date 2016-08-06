@@ -1,0 +1,8 @@
+# RUNES
+
+tagWaRunesNPC_Crafter01=Materia Merger
+tagWaNPCRunes=Runes - Merger and Guide
+
+tagWaRunesNPC_Scribe01=Rune-Scribe
+tagWaRunesNPC_Creator01=Rune-Smith
+

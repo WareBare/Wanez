@@ -1,0 +1,6 @@
+templateName,database/templates/leveltable.tpl,
+ActorName,,
+Class,LevelTable,
+FileDescription,,
+levels,1;30,
+records,mod_wanez/items/loottables/tdyn_token_d00.dbr;mod_wanez/items/loottables/tdyn_token_d00.dbr,
