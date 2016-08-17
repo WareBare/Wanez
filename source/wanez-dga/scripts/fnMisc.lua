@@ -66,7 +66,7 @@ function wanez.dga.onUseScrollPortalHideout(argObjectId)
             wanez.dga.RiftHO:actionPortal()
         else
             --player:Turn(_player:GetCoords().zAxis.z)
-            UI.Notify("tagWaCannotUsePortalScrollHidoutInHideout")
+            UI.Notify("tagWaDGA_ScriptNotify_ScrollHideoutUnusable")
         end
     end
 end

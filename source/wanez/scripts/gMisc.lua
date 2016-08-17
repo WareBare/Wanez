@@ -44,6 +44,17 @@ function wanez.getFactionRank(argFaction)
 
     return FactionRank;
 end
+function wanez.giveItems(optItems,argUnique) -- TODO: argUnique
+    local argUnique = argUnique or false
+    local _player = Game.GetLocalPlayer()
+    if(type(optItems) == 'table')then
+        for i=1,table.getn(optItems) do
+            _player:GiveItem(optItems[i],1,true)
+        end;
+    else
+        _player:GiveItem(optItems,1,true)
+    end
+end
 
 -- argSubject: String to replace
 -- optReplacements: array - key: int search; value: string replacement

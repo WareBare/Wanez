@@ -46,7 +46,7 @@ local listBounties = { -- TODO: add it to settings
 
 --
 function wanez.dga.bounties.giveTokenPM(argEnemyClassId)
-    local chanceMultiplier = (wanez.dga.Settings:getTier() > 0) and wanez.dga.Settings:getTier() / 10 or 0
+    local chanceMultiplier = (wanez.dga.Settings:getTier() > 0) and wanez.dga.Settings:getTier() / 5 or 0
     local questTaskState = false;
     local _player = Game.GetLocalPlayer()
     local curData = false

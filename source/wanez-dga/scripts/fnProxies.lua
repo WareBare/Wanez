@@ -16,7 +16,7 @@ local function resetArea()
     end;
 end
 
---
+-- TODO: code to avoid duplicate proxy data
 local function setEntityLoc(argObjectId,argType,argAreaID,argLayoutID,argFloorID,argRegionID)
     argAreaID = argAreaID or 1
     argLayoutID = argLayoutID or 1
@@ -25,12 +25,6 @@ local function setEntityLoc(argObjectId,argType,argAreaID,argLayoutID,argFloorID
     local isAreaProxy = false
     if(argAreaID == dgaVar.AreaID and argLayoutID == dgaVar.LayoutID and argFloorID == dgaVar.FloorID and argRegionID == dgaVar.RegionID)then isAreaProxy = true;end;
     if(Server)then -- isAreaProxy
-        --[[
-        if(wanez.dga.var.BlockProxyCleanUp == false)then
-            wanez.dga.Areas[dgaAreaType] = wanez.dga.cArea({"Default","Boss"});
-            wanez.dga.var.BlockProxyCleanUp = true
-        end;
-        ]]--
         resetArea()
         if(wanez.dga.var.BlockProxyCleanUp == true)then
             wanez.dga.Areas[dgaAreaType]:addProxy(argObjectId,argType,argAreaID,argLayoutID,argFloorID,argRegionID)

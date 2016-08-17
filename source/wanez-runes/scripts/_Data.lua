@@ -14,6 +14,38 @@ using fixed table keys because:
 
 ]]--
 
+--[[
+
+FileName: str FileName Template - the name of the dbr file the player gets (using {1} to insert the tier), no file extension (or path), the .dbr will be set by the script
+Ratio: unsigned int Ratio - if that combination has multiple outcomes, ratio will determine the chance to get them
+Stone: array {str equipment slot, str classification/type} - Equipment Stone data
+Runes: array {int RuneID} - array length determines sockets
+Tiers: unsigned int Tier - how many tiers are available of that inscription
+
+]]--
+local aPrimaryInscriptions = {
+    {
+        ['FileName']='runea_001{1}_inscription',
+        ['Ratio']=100,
+        ['Stone']={'torso','caster'},
+        ['Runes']={2,4,1},
+        ['Tiers']=1
+    },
+    {
+        ['FileName']='runea_002{1}_inscription',
+        ['Ratio']=200,
+        ['Stone']={'torso','heavy'},
+        ['Runes']={2,4,1},
+        ['Tiers']=2
+    },
+    {
+        ['FileName']='runea_003{1}_inscription',
+        ['Ratio']=100,
+        ['Stone']={'torso','heavy'},
+        ['Runes']={3,1,6},
+        ['Tiers']=1
+    }
+}
 -- Tier 1 Components (or Common?!?!)
 local materia01 = {
     [1]='records/items/materia/compa_aethersoul.dbr',
@@ -105,42 +137,39 @@ local materia02 = {
 }
 
 local aAlgValues = {
-    {'records/items/gearweapons/axe1h/','axe',1,1},
-    {'records/items/gearweapons/sword1h/','sword',1,1},
-    {'records/items/gearweapons/blunt1h/','blunt',1,1},
-    {'records/items/gearweapons/melee2h/','axe2h',1,2},
-    {'records/items/gearweapons/melee2h/','sword2h',1,2},
-    {'records/items/gearweapons/melee2h/','blunt2h',1,2},
-    {'records/items/gearweapons/gun1h/','gun1h',1,1},
-    {'records/items/gearweapons/gun2h/','gun2h',1,2},
-    {'records/items/gearweapons/caster/','scepter',1,1},
-    {'records/items/gearweapons/caster/','dagger',1,1},
-    {'records/items/gearweapons/shields/','shield',2,1},
-    {'records/items/gearweapons/focus/','focus',2,1},
+    {'records/items/gearweapons/axe1h/','axe',1,0.5},
+    {'records/items/gearweapons/swords1h/','sword',1,0.5},
+    {'records/items/gearweapons/blunt1h/','blunt',1,0.5},
+    {'records/items/gearweapons/melee2h/','axe2h',1,1},
+    {'records/items/gearweapons/melee2h/','sword2h',1,1},
+    {'records/items/gearweapons/melee2h/','blunt2h',1,1},
+    {'records/items/gearweapons/guns1h/','gun1h',1,0.5},
+    {'records/items/gearweapons/guns2h/','gun2h',1,1},
+    {'records/items/gearweapons/caster/','scepter',1,0.5},
+    {'records/items/gearweapons/caster/','dagger',1,0.5},
+    {'records/items/gearweapons/shields/','shield',2,0.5},
+    {'records/items/gearweapons/focus/','focus',2,0.5},
 
-    {'records/items/geartorso/','torso',1,2},
+    {'records/items/geartorso/','torso',1,1},
     --{'records/items/gearweapons/geartorso/','torso','{1}a{2}_{3}0{4}b.dbr'},
-    {'records/items/gearshoulders/','shoulder',2,1},
-    {'records/items/gearlegs/','legs',1,2},
-    {'records/items/gearhead/','head',1,1},
-    {'records/items/gearhands/','hand',1,1},
-    {'records/items/gearfeet/','feet',1,1},
+    {'records/items/gearshoulders/','shoulder',2,0.5},
+    {'records/items/gearlegs/','legs',2,1},
+    {'records/items/gearhead/','head',1,0.5},
+    {'records/items/gearhands/','hands',2,0.5},
+    {'records/items/gearfeet/','feet',2,0.5},
 
-    {'records/items/gearaccessories/medals/','medal',3,0.5},
-    {'records/items/gearaccessories/necklaces/','necklace',2,0.5},
-    {'records/items/gearaccessories/rings/','ring',3,0.5},
-    {'records/items/gearaccessories/waist/','waist',1,0.5}
+    {'records/items/gearaccessories/medals/','medal',3,0.25},
+    {'records/items/gearaccessories/necklaces/','necklace',2,0.25},
+    {'records/items/gearaccessories/rings/','ring',3,0.25},
+    {'records/items/gearaccessories/waist/','waist',1,0.25}
 
 }
-
-local aRunesA = {}
-local aRunesB = {
-    'mod_wanez/_runes/items/runeb_001.dbr',
-    'mod_wanez/_runes/items/runeb_002.dbr',
-    'mod_wanez/_runes/items/runeb_003.dbr',
-    'mod_wanez/_runes/items/runeb_004.dbr',
-    'mod_wanez/_runes/items/runeb_005.dbr',
-    'mod_wanez/_runes/items/runeb_006.dbr'
+local aItemsMI = {
+    -- Common Dermapteran Claw
+    {'records/items/gearweapons/swords1h/b011a_sword.dbr',1},
+    {'records/items/gearweapons/swords1h/b011b_sword.dbr',4},
+    {'records/items/gearweapons/swords1h/b011c_sword.dbr',7},
+    {'records/items/gearweapons/swords1h/b011d_sword.dbr',10}
 }
 
 --
@@ -150,12 +179,12 @@ wanez.Runes._Data = {
         materia02
     },
     ['Items']={
-        aAlgValues
+        aAlgValues,
+        aItemsMI
     },
     ['Runes']={
-        aRunesA,
-        aRunesB
     },
     ['Inscriptions']={
+        aPrimaryInscriptions
     }
 }

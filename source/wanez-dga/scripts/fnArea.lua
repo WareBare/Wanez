@@ -53,11 +53,11 @@ function wanez.dga.spawnTrigger(argObjectId)
         --if(wanez.dga.Settings:getAreaID() ~= 102)then
             --if(wanez.dga.Areas[dgaAreaType]:getAreaTypeID() ~= 1 and Game.GetLocalPlayer():HasItem('mod_wanez/items/dga/scroll_portal_hideout.dbr',1,true))then ;end;
         --end
-        dgaCleanProxies = true
+        --dgaCleanProxies = true
         wanez.dga.var.BlockProxyCleanUp = true
         wanez.dga.Settings:setSpawnTrigger();
         if(wanez.dga.Settings:getModeID() == 2)then wanez.dga.Settings:setTier(wanez.dga.Settings:getTier() + 1);end;
-        UI.Notify("tagWaEventNewMonsters")
+        UI.Notify("tagWaDGA_ScriptNotify_EventSpawnedEntities")
     end
 end
 

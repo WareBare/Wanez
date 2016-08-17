@@ -21,8 +21,9 @@ dgaAreaType = "Default"
 wanez.dga.var.BlockProxyCleanUp = false
 dgaSpecialCredit = 0
 
-Script.Load(wanez.filePath.DGA.."_Data.lua");
-Script.Load(wanez.filePath.DGA.."_Settings.lua");
+Script.Load("wanez-dga/scripts/_Data.lua");
+Script.Load("wanez-dga/scripts/_Settings.lua");
+Script.Load("wanez-dga/scripts/_Scrolls.lua");
 Script.Load("scripts/Omega_Mod/dga.lua");
 
 wanez.dga.Data = {};
@@ -33,25 +34,25 @@ wanez.dga.Data.Rewards = {};
 wanez.dga.Rifts = {};
 wanez.dga.DynRifts = {}; -- rifts opened by a scroll
 wanez.dga.RiftHO = false
-Script.Load(wanez.filePath.DGA.."cMain.lua");
-Script.Load(wanez.filePath.DGA.."cPortal.lua");
-Script.Load(wanez.filePath.DGA.."cReward.lua");
-Script.Load(wanez.filePath.DGA.."cArea.lua");
-Script.Load(wanez.filePath.DGA.."cRift.lua");
-Script.Load(wanez.filePath.DGA.."cEntity.lua");
-Script.Load(wanez.filePath.DGA.."cLoot.lua");
-Script.Load(wanez.filePath.DGA.."cGamble.lua");
-Script.Load(wanez.filePath.DGA.."cSettings.lua");
+Script.Load("wanez-dga/scripts/cMain.lua");
+Script.Load("wanez-dga/scripts/cPortal.lua");
+Script.Load("wanez-dga/scripts/cReward.lua");
+Script.Load("wanez-dga/scripts/cArea.lua");
+Script.Load("wanez-dga/scripts/cRift.lua");
+Script.Load("wanez-dga/scripts/cEntity.lua");
+Script.Load("wanez-dga/scripts/cLoot.lua");
+Script.Load("wanez-dga/scripts/cGamble.lua");
+Script.Load("wanez-dga/scripts/cSettings.lua");
 --wanez.dga.Settings = {};
-Script.Load(wanez.filePath.DGA.."fnHideout.lua");
-Script.Load(wanez.filePath.DGA.."fnArea.lua");
-Script.Load(wanez.filePath.DGA.."fnAffixDGA.lua");
-Script.Load(wanez.filePath.DGA.."fnBounties.lua");
-Script.Load(wanez.filePath.DGA.."fnEntity.lua");
-Script.Load(wanez.filePath.DGA.."fnProxies.lua");
-Script.Load(wanez.filePath.DGA.."fnMisc.lua");
-Script.Load(wanez.filePath.DGA.."fnQuest.lua");
-Script.Load(wanez.filePath.DGA.."fnNPC.lua");
+Script.Load("wanez-dga/scripts/fnHideout.lua");
+Script.Load("wanez-dga/scripts/fnArea.lua");
+Script.Load("wanez-dga/scripts/fnAffixDGA.lua");
+Script.Load("wanez-dga/scripts/fnBounties.lua");
+Script.Load("wanez-dga/scripts/fnEntity.lua");
+Script.Load("wanez-dga/scripts/fnProxies.lua");
+Script.Load("wanez-dga/scripts/fnMisc.lua");
+Script.Load("wanez-dga/scripts/fnQuest.lua");
+Script.Load("wanez-dga/scripts/fnNPC.lua");
 --Script.Load("scripts/wanez/dga/dbrSouls.lua");
 
 --[[

@@ -1,5 +1,59 @@
 # Items specific to the "Wanez-Mods"
 
+
+###    ###
+# PORTAL #
+###    ###
+tagWaDGA_ItemsTiers_A000A_DESC="Tier-Materials can be used to craft tiers at a Portal-Master Blacksmith [NORMAL]"
+tagWaDGA_ItemsTiers_A000B_DESC="Portal-Masters can open a higher DGA-Tier for you with this Tier-Key [NORMAL]"
+tagWaDGA_ItemsTiers_B000A_DESC="Tier-Materials can be used to craft tiers at a Portal-Master Blacksmith [ELITE]"
+tagWaDGA_ItemsTiers_B000B_DESC="Portal-Masters can open a higher DGA-Tier for you with this Tier-Key [ELITE]"
+tagWaDGA_ItemsTiers_C000A_DESC="Tier-Materials can be used to craft tiers at a Portal-Master Blacksmith [ULTIMATE]"
+tagWaDGA_ItemsTiers_C000B_DESC="Portal-Masters can open a higher DGA-Tier for you with this Tier-Key [ULTIMATE]"
+
+tagWaDGA_ItemsTiers_X001A_NAME=Tier 1 (Material)
+tagWaDGA_ItemsTiers_X001B_NAME=Tier 1 (Key)
+tagWaDGA_ItemsTiers_X002A_NAME=Tier 2 (Material)
+tagWaDGA_ItemsTiers_X002B_NAME=Tier 2 (Key)
+tagWaDGA_ItemsTiers_X003A_NAME=Tier 3 (Material)
+tagWaDGA_ItemsTiers_X003B_NAME=Tier 3 (Key)
+tagWaDGA_ItemsTiers_X004A_NAME=Tier 4 (Material)
+tagWaDGA_ItemsTiers_X004B_NAME=Tier 4 (Key)
+tagWaDGA_ItemsTiers_X005A_NAME=Tier 5 (Material)
+tagWaDGA_ItemsTiers_X005B_NAME=Tier 5 (Key)
+tagWaDGA_ItemsTiers_X006A_NAME=Tier 6 (Material)
+tagWaDGA_ItemsTiers_X006B_NAME=Tier 6 (Key)
+tagWaDGA_ItemsTiers_X007A_NAME=Tier 7 (Material)
+tagWaDGA_ItemsTiers_X007B_NAME=Tier 7 (Key)
+tagWaDGA_ItemsTiers_X008A_NAME=Tier 8 (Material)
+tagWaDGA_ItemsTiers_X008B_NAME=Tier 8 (Key)
+tagWaDGA_ItemsTiers_X009A_NAME=Tier 9 (Material)
+tagWaDGA_ItemsTiers_X009B_NAME=Tier 9 (Key)
+tagWaDGA_ItemsTiers_X010A_NAME=Tier 10 (Material)
+tagWaDGA_ItemsTiers_X010B_NAME=Tier 10 (Key)
+
+
+###     ###
+# SCROLLS #
+###     ###
+tagWaDGA_ItemsMisc_ScrollHideout_NAME=Portal Scroll (Hideout)
+tagWaDGA_ItemsMisc_ScrollHideout_DESC="Opens a Portal to take you back to the Hideout. The Settings | Guide can remove the scroll from your inventory or give you a new one."
+
+
+#
+tagWaDGA_ItemsMisc_EssenceX_DESC="Essences can be used at the DGA-Blacksmith"
+tagWaDGA_ItemsMisc_Essence001a_NAME=Essence: Map
+tagWaDGA_ItemsMisc_Essence002a_NAME=Essence: Gear
+
+###  ###
+# GEAR #
+###  ###
+tagWaDGA_ItemsCrafting_GearC00Necklace_NAME
+
+
+
+
+
 # CURRENCY || ANTIQUITIES
 tagWaCurrencyNormal01_NAME=Antique Coin (Currency)
 tagWaCurrencyNormal01_DESC="An Archaeologist would love to have this antiquity!"
@@ -124,3 +178,8 @@ tagWaNPC_Crafter01_PROFESSION=Old Recipes
 
 # Enchants
 tagDamageModifierTotalDamageR={%+.0f0}%-{%+.0f1}% {^E}to All Damage
+
+
+
+# REMOVE WITH 0.5 or 0.6
+

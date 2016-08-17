@@ -542,7 +542,7 @@ function wanez.dga.cArea(argProxyTypes)
 
             if(wanez.RNG({},math.ceil(dbr[argEnemyClassId][2][wanez.DifficultyID] * curMul)))then
                 self:createEntity(dbr[argEnemyClassId][1],Character.Get(argEnemyId):GetCoords())
-                UI.Notify("tagWaContainerSpawned")
+                UI.Notify("tagWaDGA_ScriptNotify_ContainerSpawned")
             end
 
         end;

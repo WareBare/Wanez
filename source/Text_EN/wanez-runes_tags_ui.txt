@@ -1,0 +1,8 @@
+
+tagWaRunesMsg_NoSequence=You need to start an Inscription Sequence first, before you can do that!
+tagWaRunesMsg_SequenceInProgress=There already is an Inscription Sequence active!
+tagWaRunesMsg_SequenceStarted=You have started a new Inscription Sequence!
+
+tagWaRunes_SequenceSuccess=Congratulations! You created an Inscription. ^rYou can still get a higher Tier.
+tagWaRunes_SequenceSuccessMax=Congratulations! You created an Inscription. ^gIt is the highest Tier available!
+tagWaRunes_SequenceFailed=You Failed creating an Inscription :(

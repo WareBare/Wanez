@@ -72,6 +72,7 @@ function wanez.dga.dieHero(argObjectId)
     if(wanez.RNG({1,100},25) and wanez.DifficultyID == 3)then
        omega.scripts.spawnomegaboss();
     end
+    callDAILonherodeath();
 end
 --
 function wanez.dga.dieMiniBoss(argObjectId)
@@ -85,6 +86,7 @@ function wanez.dga.dieMiniBoss(argObjectId)
     if(wanez.DifficultyID == 3)then
         omega.scripts.spawnomegaboss();
     end
+    callDAILonherodeath();
 end
 --
 function wanez.dga.dieBoss(argObjectId)
@@ -117,7 +119,7 @@ function wanez.dga.dieSouleater(argObjectId)
 end
 --
 function wanez.dga.dieAetherCrystal(argObjectId)
-    --UI.Notify("aether died")
+    UI.Notify("aether died")
     local enemyClassID = 9
     genericOnDie(enemyClassID,argObjectId)
     --

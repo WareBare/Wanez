@@ -9,12 +9,24 @@ Package:
 
 wanez.Runes.npc = {}
 
+local function file_check(file_name)
+    local file_found=io.open(file_name, "r")
+
+    if file_found==nil then
+        file_found=file_name .. " ... Error - File Not Found"
+    else
+        file_found=file_name .. " ... File Found"
+    end
+    return file_found
+end
+
 function wanez.Runes.npc.summonNPC01()
     wanez.scroll.fnCall = function()
         local aActions = {
             ['GiveItem']= 'mod_wanez/_runes/misc/scroll_summon_npc01.dbr',
             ['Notify']='Summon Scribe'
         }
+
         return aActions;
     end
 end;
@@ -40,11 +52,23 @@ function wanez.Runes.npc.giveItems()
         dbr = aItems[i]
         if not(_player:HasItem(dbr,1,true))then _player:GiveItem(dbr,1,true);end;
     end;
+    aItems = {
+        'mod_wanez/_runes/items/misc/stone_torso_generic_03.dbr',
+        'mod_wanez/_runes/items/misc/stone_torso_heavy_03.dbr',
+        'mod_wanez/_runes/items/materia/runea_001.dbr',
+        'mod_wanez/_runes/items/materia/runea_002.dbr',
+        'mod_wanez/_runes/items/materia/runea_003.dbr',
+        'mod_wanez/_runes/items/materia/runea_004.dbr',
+        'mod_wanez/_runes/items/materia/runea_005.dbr',
+        'mod_wanez/_runes/items/materia/runea_006.dbr'
+    }
 
-    _player:GiveItem('records/items/gearweapons/caster/a02_scepter007.dbr',1,true)
-    _player:GiveItem('records/items/gearweapons/shields/a04_shield01.dbr',1,true)
-    _player:GiveItem('records/items/gearshoulders/a09_shoulder02.dbr',1,true)
-    _player:GiveItem('records/items/gearaccessories/medals/a005_medal01.dbr',1,true)
-
-
+    for i=1,table.getn(aItems) do
+        dbr = aItems[i]
+        if not(_player:HasItem(dbr,1,true))then
+            _player:GiveItem(dbr,1,true)
+        end
+    end;
+    --UI.Notify('items given!')
+    _player:GiveItem('mod_wanez/_dga/items/misc/essence_002a.dbr',20,true)
 end

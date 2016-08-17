@@ -16,7 +16,7 @@ function wanez.scroll.entityOnDie()
     local _player = Game.GetLocalPlayer()
 
     if(aActions.GiveItem ~= nil)then
-        _player:GiveItem(aActions.GiveItem,1,true)
+        wanez.giveItems(aActions.GiveItem)
     end
     if(aActions.Notify ~= nil)then
         UI.Notify(aActions.Notify)

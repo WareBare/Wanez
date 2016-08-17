@@ -7,50 +7,83 @@ tagWaRunesScroll_SummonNPC02_DESC="Summons a Component Merger, he can create Run
 tagWaRunesScroll_SalvageCommon_NAME=Salvage Items (Common)
 tagWaRunesScroll_SalvageCommon_DESC="Salvage Common Items in your inventory"
 
-tagWaRunesItems_RuneB000_DESC="You need to use Rune Scrolls in order to get a Rune Component or Inscription, more information at the Rune Scribe"
-tagWaRunesItems_RuneB000A_DESC="Runes can make your items stronger just like components, but an item can only have a component or a rune - runes have some of the stats of the components used to create it"
-tagWaRunesItems_RuneB000B_DESC="Greater Runes are more powerful, they might even come with additional stats"
-tagWaRunesItems_RuneB001A_NAME=Rune: 001
-tagWaRunesItems_RuneB001B_NAME=Greater Rune: 001
-tagWaRunesItems_RuneB002A_NAME=Rune: 002
-tagWaRunesItems_RuneB002B_NAME=Greater Rune: 002
-tagWaRunesItems_RuneB003A_NAME=Rune: 003
-tagWaRunesItems_RuneB003B_NAME=Greater Rune: 003
-tagWaRunesItems_RuneB004A_NAME=Rune: 004
-tagWaRunesItems_RuneB004B_NAME=Greater Rune: 004
-tagWaRunesItems_RuneB005A_NAME=Rune: 005
-tagWaRunesItems_RuneB005B_NAME=Greater Rune: 005
-tagWaRunesItems_RuneB006A_NAME=Rune: 006
-tagWaRunesItems_RuneB006B_NAME=Greater Rune: 006
-tagWaRunesItems_RuneB007A_NAME=Rune: 007
-tagWaRunesItems_RuneB007B_NAME=Greater Rune: 007
-tagWaRunesItems_RuneB008A_NAME=Rune: 008
-tagWaRunesItems_RuneB008B_NAME=Greater Rune: 008
-tagWaRunesItems_RuneB009A_NAME=Rune: 009
-tagWaRunesItems_RuneB009B_NAME=Greater Rune: 009
-tagWaRunesItems_RuneB010A_NAME=Rune: 010
-tagWaRunesItems_RuneB010B_NAME=Greater Rune: 010
-tagWaRunesItems_RuneB011A_NAME=Rune: 011
-tagWaRunesItems_RuneB011B_NAME=Greater Rune: 011
-tagWaRunesItems_RuneB012A_NAME=Rune: 012
-tagWaRunesItems_RuneB012B_NAME=Greater Rune: 012
-tagWaRunesItems_RuneB013A_NAME=Rune: 013
-tagWaRunesItems_RuneB013B_NAME=Greater Rune: 013
-tagWaRunesItems_RuneB014A_NAME=Rune: 014
-tagWaRunesItems_RuneB014B_NAME=Greater Rune: 014
-tagWaRunesItems_RuneB015A_NAME=Rune: 015
-tagWaRunesItems_RuneB015B_NAME=Greater Rune: 015
-tagWaRunesItems_RuneB016A_NAME=Rune: 016
-tagWaRunesItems_RuneB016B_NAME=Greater Rune: 016
-tagWaRunesItems_RuneB017A_NAME=Rune: 017
-tagWaRunesItems_RuneB017B_NAME=Greater Rune: 017
-tagWaRunesItems_RuneB018A_NAME=Rune: 018
-tagWaRunesItems_RuneB018B_NAME=Greater Rune: 018
-tagWaRunesItems_RuneB019A_NAME=Rune: 019
-tagWaRunesItems_RuneB019B_NAME=Greater Rune: 019
-tagWaRunesItems_RuneB020A_NAME=Rune: 020
-tagWaRunesItems_RuneB020B_NAME=Greater Rune: 020
-tagWaRunesItems_RuneB021A_NAME=Rune: 021
-tagWaRunesItems_RuneB021B_NAME=Greater Rune: 021
-tagWaRunesItems_RuneB022A_NAME=Rune: 022
-tagWaRunesItems_RuneB022B_NAME=Greater Rune: 022
+tagWaRunesItems_RuneA000_DESC="You need to use Rune Scrolls in order to get a Rune Component or Inscription, more information at the Rune Scribe"
+tagWaRunesItems_RuneA000A_DESC="Runes can make your items stronger just like components, but an item can only have a component or a rune - runes have some of the stats of the components used to create it"
+tagWaRunesItems_RuneA000B_DESC="Greater Runes are more powerful, they might even come with additional stats"
+tagWaRunesItems_RuneA001A_NAME=Rune: 001
+tagWaRunesItems_RuneA001B_NAME=Greater Rune: 001
+tagWaRunesItems_RuneA002A_NAME=Rune: 002
+tagWaRunesItems_RuneA002B_NAME=Greater Rune: 002
+tagWaRunesItems_RuneA003A_NAME=Rune: 003
+tagWaRunesItems_RuneA003B_NAME=Greater Rune: 003
+tagWaRunesItems_RuneA004A_NAME=Rune: 004
+tagWaRunesItems_RuneA004B_NAME=Greater Rune: 004
+tagWaRunesItems_RuneA005A_NAME=Rune: 005
+tagWaRunesItems_RuneA005B_NAME=Greater Rune: 005
+tagWaRunesItems_RuneA006A_NAME=Rune: 006
+tagWaRunesItems_RuneA006B_NAME=Greater Rune: 006
+tagWaRunesItems_RuneA007A_NAME=Rune: 007
+tagWaRunesItems_RuneA007B_NAME=Greater Rune: 007
+tagWaRunesItems_RuneA008A_NAME=Rune: 008
+tagWaRunesItems_RuneA008B_NAME=Greater Rune: 008
+tagWaRunesItems_RuneA009A_NAME=Rune: 009
+tagWaRunesItems_RuneA009B_NAME=Greater Rune: 009
+tagWaRunesItems_RuneA010A_NAME=Rune: 010
+tagWaRunesItems_RuneA010B_NAME=Greater Rune: 010
+tagWaRunesItems_RuneA011A_NAME=Rune: 011
+tagWaRunesItems_RuneA011B_NAME=Greater Rune: 011
+tagWaRunesItems_RuneA012A_NAME=Rune: 012
+tagWaRunesItems_RuneA012B_NAME=Greater Rune: 012
+tagWaRunesItems_RuneA013A_NAME=Rune: 013
+tagWaRunesItems_RuneA013B_NAME=Greater Rune: 013
+tagWaRunesItems_RuneA014A_NAME=Rune: 014
+tagWaRunesItems_RuneA014B_NAME=Greater Rune: 014
+tagWaRunesItems_RuneA015A_NAME=Rune: 015
+tagWaRunesItems_RuneA015B_NAME=Greater Rune: 015
+tagWaRunesItems_RuneA016A_NAME=Rune: 016
+tagWaRunesItems_RuneA016B_NAME=Greater Rune: 016
+tagWaRunesItems_RuneA017A_NAME=Rune: 017
+tagWaRunesItems_RuneA017B_NAME=Greater Rune: 017
+tagWaRunesItems_RuneA018A_NAME=Rune: 018
+tagWaRunesItems_RuneA018B_NAME=Greater Rune: 018
+tagWaRunesItems_RuneA019A_NAME=Rune: 019
+tagWaRunesItems_RuneA019B_NAME=Greater Rune: 019
+tagWaRunesItems_RuneA020A_NAME=Rune: 020
+tagWaRunesItems_RuneA020B_NAME=Greater Rune: 020
+tagWaRunesItems_RuneA021A_NAME=Rune: 021
+tagWaRunesItems_RuneA021B_NAME=Greater Rune: 021
+tagWaRunesItems_RuneA022A_NAME=Rune: 022
+tagWaRunesItems_RuneA022B_NAME=Greater Rune: 022
+
+# STONES
+tagWaRunesItems_Stone_Generic_DESC="You can use stones to start adding runes to a sequence, generic stones can only give you a common inscription"
+tagWaRunesItems_Stone_Specific_DESC="You can use stones to start adding runes to a sequence, specific stones can give you better inscriptions (if available)"
+##
+tagWaRunesItems_StoneWeapons1H_Generic03_NAME=Stone: 1H Weapon (3 Socket)
+##
+tagWaRunesItems_StoneWeapons2H_Generic03_NAME=Stone: 2H Weapon (3 Socket)
+##
+tagWaRunesItems_StoneOffHand_Generic03_NAME=Stone: Off-Hand (3 Socket)
+##
+tagWaRunesItems_StoneAccessory_Generic03_NAME=Stone: Accessory (3 Socket)
+##
+tagWaRunesItems_StoneTorso_Generic03_NAME=Stone: Torso (3 Socket)
+tagWaRunesItems_StoneTorso_Heavy03_NAME=Stone: Torso - Heavy (3 Socket)
+##
+tagWaRunesItems_StoneShoulders_Generic03_NAME=Stone: Shoulders (3 Socket)
+##
+tagWaRunesItems_StoneLegs_Generic03_NAME=Stone: Legs (3 Socket)
+##
+tagWaRunesItems_StoneHead_Generic03_NAME=Stone: Head (3 Socket)
+##
+tagWaRunesItems_StoneFeet_Generic03_NAME=Stone: Feet (3 Socket)
+##
+tagWaRunesItems_StoneHands_Generic03_NAME=Stone: Hands (3 Socket)
+
+
+# INSCRIPTIONS
+tagWaRunesItems_InscriptionA000A_DESC="Tier 1 Runic Inscription, can be used on your items"
+tagWaRunesItems_InscriptionA000B_DESC="Tier 2 Runic Inscription, can be used on your items"
+tagWaRunesItems_InscriptionA001A_NAME=Runic Inscription: 001
+tagWaRunesItems_InscriptionA002A_NAME=Runic Inscription: 002
+tagWaRunesItems_InscriptionA003A_NAME=Runic Inscription: 003

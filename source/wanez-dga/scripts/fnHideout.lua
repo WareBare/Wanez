@@ -47,8 +47,8 @@ local function iniFirstEnter()
     local player = Game.GetLocalPlayer()
     if not(player:HasToken("DGA_FIRST_ENTER_01"))then
         player:GiveToken("DISMANTLING_UNLOCKED") -- Dismantle
-        if not(player:HasItem("mod_wanez/items/dga/scroll_portal_hideout.dbr",1,true))then
-            player:GiveItem("mod_wanez/items/dga/scroll_portal_hideout.dbr",1,true) -- Portal Scroll (Hideout)
+        if not(player:HasItem("mod_wanez/_dga/items/misc/scroll_portal_hideout.dbr",1,true))then
+            player:GiveItem("mod_wanez/_dga/items/misc/scroll_portal_hideout.dbr",1,true) -- Portal Scroll (Hideout)
         end
         -- give DGA Token at the end in case of a crash
         --player:GiveToken("DGA_FIRST_ENTER_01")
@@ -113,10 +113,11 @@ end
 --
 local function resetGlobal()
     --if(resetGlobalCharges == 0)then
-        wanez.dga.Areas[dgaAreaType]:removeEntities();
-        wanez.dga.Data.Rewards:resetData()
+    wanez.dga.Areas[dgaAreaType]:removeEntities();
+    wanez.dga.Data.Rewards:resetData()
+    wanez.dga.var.BlockProxyCleanUp = false
 
-        moveRiftsBackToHO('hide')
+    moveRiftsBackToHO('hide')
     --end
 end
 --
@@ -142,7 +143,7 @@ function wanez.dga.hideoutTrigger(argObjectId)
             dgaBlockScrollPortalSpawnDGA = false
         end
         wanez.dga.affixdga.resetAffixes()
-        wanez.dga.Settings:getSpawnTrigger(true)
+        wanez.dga.Settings:setSpawnTrigger(true) --- changed
     end
 end
 -- 
@@ -164,7 +165,7 @@ function wanez.dga.regPortalCoordsToDGA(argObjectId)
 
         iniHideout()
         applyGameSettings()
-        UI.Notify("tagWaWelcomeDGA");
+        UI.Notify("tagWaDGA_ScriptNotify_Welcome");
     else
         --[[
         if(resetGlobalCharges > 0)then
@@ -283,9 +284,9 @@ local curBlacksmith = false
 function wanez.dga.spawnBlacksmithDGA(argObjectId)
     if Server then
         local smithDBR = {
-            'mod_wanez/creatures/npcs/dga/blacksmith_normal.dbr',
-            'mod_wanez/creatures/npcs/dga/blacksmith_elite.dbr',
-            'mod_wanez/creatures/npcs/dga/blacksmith_ultimate.dbr'
+            'mod_wanez/_dga/creatures/npcs/blacksmith_tierkeys01.dbr',
+            'mod_wanez/_dga/creatures/npcs/blacksmith_tierkeys02.dbr',
+            'mod_wanez/_dga/creatures/npcs/blacksmith_tierkeys03.dbr'
         }
         --if(curBlacksmith)then curBlacksmith:Destory();end;
         --if not(curBlacksmith)then

@@ -66,7 +66,7 @@ function wanez.dga.cReward()
                         wanez.dga.Areas[dgaAreaType]:createEntity(bossDBR,Game.GetLocalPlayer():GetCoords(),wanez.dga.Areas[dgaAreaType]:getEnemyLevel(wanez._Settings.Enemies.LevelOffset[wanez.data.Enemies.Classification[7]]));
                     end
                     BlockBossSpawn = true
-                    UI.Notify("tagWaSpecialBossSpawned")
+                    UI.Notify("tagWaDGA_ScriptNotify_EventSpawnedBoss")
                 end
             elseif(waData.Credit.Requirements.ReSpawn ~= nil)then
                 
@@ -79,7 +79,7 @@ function wanez.dga.cReward()
                 local _player = Game.GetLocalPlayer()
                 if(argClassId == 4 and SpecialCredit ~= 0)then
                     _player:GiveItem(scrollDBR,1,true)
-                    UI.Notify("tagWaScrollSpecialReceived")
+                    UI.Notify("tagWaDGA_ScriptNotify_ScrollSpecialReceived")
                 end
                 SpecialCredit = SpecialCredit + waData.Credit.Gain.Kills[argClassId]
                 if(BlockBossSpawn and argClassId == 7)then
@@ -107,7 +107,7 @@ function wanez.dga.cReward()
                     if(_player:HasItem(scrollDBR,1,true))then
                         _player:TakeItem(scrollDBR,1,true)
                     end
-                    UI.Notify("tagWaSpecialBossDeafeated")
+                    UI.Notify("tagWaDGA_ScriptNotify_EventKilledBoss")
                     --wanez.dga.Areas[dgaAreaType]:removeEntities()
                 end;
             end

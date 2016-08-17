@@ -256,7 +256,7 @@ local ltDGA_01 = {
 	{
 		["Name"] = "DGA",
         ["Ratio"] = 1,
-		["LevelRequirements"] = {25,50,80},
+		["LevelRequirements"] = {20,40,70},
 		["UseTier"] = {{2,1},false}, -- min: Tier -2; max: Tier +1 and using monster leveloffset
         ["ICwD"] = {false},
 		["Lists"] = {
@@ -269,7 +269,7 @@ local ltDGA_01 = {
         ["Ratio"] = 2,
 		["LevelRequirements"] = {0,25,50},
 		["UseTier"] = {false},
-        ["ICwD"] = {false},
+        ["ICwD"] = {true},
 		["Lists"] = {
 			listDGAToken
 		}
@@ -277,7 +277,7 @@ local ltDGA_01 = {
 	{
 		["Name"] = "Currency",
         ["Ratio"] = 3,
-		["LevelRequirements"] = {0,50,80},
+		["LevelRequirements"] = {0,30,60},
 		["UseTier"] = {false},
         ["ICwD"] = {false},
 		["Lists"] = {

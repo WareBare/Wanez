@@ -35,4 +35,4 @@ Script.Load("wanez/scripts/gScroll.lua");
 
 --- LOAD SUB-MODS
 Script.Load("wanez-runes/scripts/main.lua");
-Script.Load("wanez-dga/scripts/_Package.lua");
+Script.Load("wanez-dga/scripts/main.lua");

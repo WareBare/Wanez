@@ -27,6 +27,7 @@ local function checkAffixID(argAffixID)
     return hasAffix;
 end
 
+local aAffixCost = {10,20}
 function wanez.dga.affixdga.genRandomAffix()
     local _player = Game.GetLocalPlayer()
     local dataAffixCount = table.getn(wanez.dga._Data.DGA_Affixes)
@@ -46,14 +47,21 @@ function wanez.dga.affixdga.genRandomAffix()
     end;
     table.insert(wanez.dga.localVar.dgaAffixes,newAffixID);
 
-    local aAffixCost = {10,20}
     _player:TakeItem('mod_wanez/items/dga/upgrade_token_01.dbr',aAffixCost[curAffixCount],true)
 
-    UI.Notify('tagWaNewAffixDGA')
+    UI.Notify('tagWaDGA_ScriptNotify_Affix01Generated')
     -- wanez.dga.localVar
 end
 
+function wanez.dga.affixdga.checkItemRequirements()
+    local _player = Game.GetLocalPlayer()
+    local curAffixCount = wanez.dga.affixdga.getCurrentAffixCount() + 1
+    local hasItems = false
 
+    if(_player:HasItem('mod_wanez/items/dga/upgrade_token_01.dbr',aAffixCost[curAffixCount],true))then hasItems = true;end;
+
+    return hasItems;
+end
 
 function wanez.dga.affixdga.resetAffixes()
     wanez.dga.localVar.dgaAffixes = {}
