@@ -12,12 +12,12 @@ Every part has its own Version, this probably makes it confusing, but I believe 
 
 * [DGA - Dynamically Generated Areas](http://www.grimdawn.com/forums/showthread.php?p=386994#post386994 "DGA Thread on the Grim Dawn Forums") (Mapping/Rifting for Grim Dawn) [v0.4.3]
 
- * New Areas to kill monsters in and you don't have to re log to start a new session - they will respawn
- * Collect new items to open better Areas with greater rewards
+  * New Areas to kill monsters in and you don't have to re log to start a new session - they will respawn
+  * Collect new items to open better Areas with greater rewards
 
 * Runic Inscriptions (Due to a [request on the Grim Dawn Forums](http://www.grimdawn.com/forums/showthread.php?t=42697 "Thread on the Grim Dawn Forums") of adding D2 Runewords to Grim Dawn)
- * An addition to the current Component and Augment system in Grim Dawn
- * Combine Components to get better ones and if done in the right order you can get a powerful Augment
+  * An addition to the current Component and Augment system in Grim Dawn
+  * Combine Components to get better ones and if done in the right order you can get a powerful Augment
 
 ---
 
