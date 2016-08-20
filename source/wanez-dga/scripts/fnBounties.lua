@@ -28,7 +28,7 @@ local listBounties = { -- TODO: add it to settings
         {{},{5,10,25} }
     },
     { -- 6: Nemesis
-        {{0x5AF4D080,0x7EA32800,1},{5,10,25},true}
+        {{0x5AF4D080,0x7EA32800,1},{25,50,100},true}
     },
     { -- 7: RaidBoss
         {{},{5,10,25} }

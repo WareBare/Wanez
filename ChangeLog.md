@@ -15,9 +15,9 @@
 
 ## Runes and Runic Inscriptions ##
 * NPC
-  + A new NPC "Rune-Scribe" can give you the item "Salvage Items (Common)" and scrolls to summon him and the Blacksmith
-  + The new item "Salvage Items (Common)" will salvage every common item in your inventory and give you parts to craft an "Equipment-Stone" used to make "Runic Inscriptions"
-  + The "Rune-Scribe" has information about the different things you can do and how they work
+  * A new NPC "Rune-Scribe" can give you the item "Salvage Items (Common)" and scrolls to summon him and the Blacksmith
+  * The new item "Salvage Items (Common)" will salvage every common item in your inventory and give you parts to craft an "Equipment-Stone" used to make "Runic Inscriptions"
+  * The "Rune-Scribe" has information about the different things you can do and how they work
 
 * Runes
   * Crafted at a Blacksmith from components - you will get a usable Rune
