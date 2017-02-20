@@ -1,38 +1,61 @@
 --[[
+Created by IntelliJ IDEA.
+User: WareBare
+Date: 1/25/2017
+Time: 7:20 PM
 
-Wanez - MOD
+Package: 
+]]--
 
-table ('namespace'):
-wanez.x.y
-when x starts with upper-case its a submod of wanez - still requires the main wanez package (wanez.Runes)
-when x start with lower-case its a package inside the main wanez package (wanez.scroll)
-only classes and array files are using their prefix, packages are a simple lower-case and global function files are considered packages (wanez.scroll._Functions; wanez.scroll.events)
 
-files starting with:
-_ - customizable file of the package/mod; has most of the data and settings arrays
-p - Package; loads package files (pScroll -> /scroll/x.lua)
-g - collection of global function, often the lua hook in dbr or conversations
-c - class
+_cScroll = false
 
-submod files are loaded inside the main.lua of the submod
+-- used to combine new entries to clientQuestTable without editing core files
+setmetatable(clientQuestTable, {
+    __add = function(coreTable, newTable)
+        
+        for index,subTable in pairs(newTable) do
+            for key,value in pairs(subTable) do
+                coreTable[key] = value
+            end
+        end;
+        return coreTable
+    end
+})
 
-@author: WareBare (warebare89@gmail.com)
-@version: 0.1.0
+function wanez.scrollEntityOnDie(argObjectId)
+    _cScroll:entityOnDie(argObjectId)
+end
 
-Updated: 08/04/2016
+function Player:wzGiveItems(optItems)
+    --UI.Notify("its working")
+    --self:GiveItem(argItem,1,true)
+    optItems = (type(optItems) == 'string') and {optItems} or optItems
+    
+    --local _player = (argObjectIdPlayer) and Player.Get(argObjectIdPlayer) or Game.GetLocalPlayer()
+    --local _player = Game.GetLocalPlayer()
+    
+    for key,value in pairs(optItems) do
+        self:GiveItem(value,1,true)
+    end;
+end
 
-]]
-
-wanez = {}
-wanez.isDev = false
-
---- LOAD FILES
-Script.Load("wanez/scripts/data.lua");
-Script.Load("wanez/scripts/_Settings.lua");
-Script.Load("wanez/scripts/_Data.lua");
-Script.Load("wanez/scripts/gMisc.lua");
-Script.Load("wanez/scripts/gScroll.lua");
-
---- LOAD SUB-MODS
-Script.Load("wanez-runes/scripts/main.lua");
-Script.Load("wanez-dga/scripts/main.lua");
+--- argIsComplete [default: true]
+function Player:wzHasItem(argItem,argAmount,argIsComplete)
+    argAmount = argAmount or 1
+    argIsComplete = (argIsComplete == nil) and true or argIsComplete
+    
+    local hasItems = self:HasItem(argItem,argAmount,argIsComplete)
+    -- check if player has exact amount of items
+    if(hasItems == false)then
+        local hasAmount = argAmount
+        -- if thats not the case check how many items player has and give the difference to player
+        while(hasItems == false) do
+            hasAmount = hasAmount - 1
+            if(self:HasItem(argItem,hasAmount,argIsComplete)) then
+                hasItems = true
+            end
+        end;
+        self:GiveItem(argItem,argAmount - hasAmount,argIsComplete)
+    end
+end

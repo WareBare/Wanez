@@ -1,0 +1,15 @@
+wanez.data.gInscriptions={
+['RuneA']={
+['1']={
+['FileName']='runea_001{1}_inscription',
+['Ratio']=200,
+['Stone']={'armor','chest'},
+['Runes']={1,2},
+['Tiers']=2}},
+['RuneB']={
+['1']={
+['FileName']='runeb_001{1}_inscription',
+['Ratio']=100,
+['Stone']={'armor','head'},
+['Runes']={1,2},
+['Tiers']=2}}}

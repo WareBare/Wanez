@@ -16,7 +16,7 @@ Script.Load("scripts/libs/shared.lua")
 Script.Load("scripts/game/grimdawn.lua")
 
 --Omega Mod
-Script.Load("scripts/Omega_Mod/Omega_Mod.lua")
+--Script.Load("scripts/Omega_Mod/Omega_Mod.lua")
 
 -- Wanez - MOD
-Script.Load("wanez/scripts/main.lua")
+Script.Load("wanez/scripts/index.lua")
