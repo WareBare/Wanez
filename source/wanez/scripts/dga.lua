@@ -173,6 +173,10 @@ function wanez.DGA.onEnterTriggerCampOnLoad(argObjectId)
     end
     --_player:GiveItem("mod_wanez/_dga/items/scrolls/reward_scroll_a001.dbr",1,true)
     --wanez.DGA.dbr.onLeaveTriggerOrbConversion(argObjectId)
+    --_player:wzHasItem("mod_wanez/_dga/items/scrolls/area_scroll_0009.dbr",1)
+    --_player:wzHasItem("mod_wanez/_dga/items/scrolls/area_scroll_0010.dbr",1)
+    --_player:wzHasItem("mod_wanez/_dga/items/scrolls/area_scroll_0012.dbr",1)
+    --_player:wzHasItem("mod_wanez/_dga/items/scrolls/area_scroll_0013.dbr",1)
 end
 function wanez.DGA.onEnterTriggerMapMP(argObjectId)
     local _player = Player.Get(argObjectId)
