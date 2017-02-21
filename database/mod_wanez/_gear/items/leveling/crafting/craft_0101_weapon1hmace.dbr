@@ -1,7 +1,7 @@
 templateName,database/templates/weapon_mace.tpl,
 ActorName,,
 Class,WeaponMelee_Mace,
-FileDescription,Updated with Tool - 17/02/2017 02:56 am,
+FileDescription,Updated with Tool - 21/02/2017 09:51 am,
 hitSound,records/sounds/items/weaponattacks/spak_blunt_impact.dbr,
 swipeSound,records/sounds/items/weaponattacks/spak_blunt_swing.dbr,
 weaponTrail,records/fx/fxtrails/defaultsword_fxtrail.dbr,

@@ -1,7 +1,7 @@
 templateName,database/templates/weaponarmor_shield.tpl,
 ActorName,,
 Class,WeaponArmor_Shield,
-FileDescription,Updated with Tool - 17/02/2017 03:06 am,
+FileDescription,Updated with Tool - 21/02/2017 09:30 am,
 defensiveBlockChance,15.0,
 defensiveBlock,25.0,
 blockAbsorption,100.0,

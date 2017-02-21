@@ -68,9 +68,10 @@ function wanez.DGA.useDGA_Scroll(argObjectId,argDifficultyGD,argTierDGA,argTypeD
             giveItems = "mod_wanez/_dga/items/scrolls/DGA_Scroll"..self:parseIntToString(argDifficultyGD,1).."_Tier"..self:parseIntToString(argTierDGA,2)..argTypeDGA..".dbr";
         }
         portalOpener = Game.GetLocalPlayer()
+        local difficultyId = (self:__getDifficultyID() == 3) and 3 or 1
         local typeId = self:convertIndex(argTypeDGA)
         
-        if(self:__getDifficultyID() ~= argDifficultyGD) then
+        if(difficultyId ~= argDifficultyGD) then
             aActions.notify = "tagWzDGA_LuaNotify_Difficulty_failure"
         elseif(portalOpener:HasToken(tokenPortalDefault)) then
             _cSettings:resetArea()
@@ -117,7 +118,7 @@ function wanez.DGA.useDGA_Scroll(argObjectId,argDifficultyGD,argTierDGA,argTypeD
             aActions.notify = "tagWzDGA_LuaNotify_usedScrollDGA_success"
             -- giveBackItem while in developement
             if(argTierDGA ~= 0) then aActions.giveItems = false end
-        elseif(self:__getDifficultyID() == 3 and self:__getDifficultyID() == argDifficultyGD) then
+        elseif(difficultyId == 3 and difficultyId == argDifficultyGD) then
             portalOpener:GiveItem('mod_wanez/_dga/items/currency/a_001b.dbr',argTierDGA,true)
         
             aActions.notify = false
@@ -167,10 +168,10 @@ function wanez.DGA.onEnterTriggerCampOnLoad(argObjectId)
             _player:UnlockFaction("USER14")
             _player:UnlockFaction("USER15")
             _player:wzHasItem("records/items/misc/inventorybag.dbr",5)
-            _player:AdjustMoney(10000)
-            _player:GiveItem("records/items/misc/potions/potion_healtha01.dbr",20,true)
+            _player:AdjustMoney(1000)
         end
     end
+    _player:wzHasItem("records/items/misc/potions/potion_healtha01.dbr",20)
     --_player:GiveItem("mod_wanez/_dga/items/scrolls/reward_scroll_a001.dbr",1,true)
     --wanez.DGA.dbr.onLeaveTriggerOrbConversion(argObjectId)
     --_player:wzHasItem("mod_wanez/_dga/items/scrolls/area_scroll_0009.dbr",1)

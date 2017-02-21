@@ -1,7 +1,7 @@
 templateName,database/templates/lootitemtable_dynweighted_dynaffix.tpl,
 ActorName,,
 Class,LootItemTable_DynWeight,
-FileDescription,Updated with Tool - 17/02/2017 03:05 am,
+FileDescription,Updated with Tool - 21/02/2017 09:28 am,
 bellSlope,400.0;300.0;250.0;200.0;150.0;100.0;50.0;20.0,
 bothPrefixSuffix,1250,
 brokenOnly,0,

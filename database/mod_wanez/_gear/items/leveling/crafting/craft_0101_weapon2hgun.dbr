@@ -1,7 +1,7 @@
 templateName,database/templates/weapon_ranged2h.tpl,
 ActorName,,
 Class,WeaponHunting_Ranged2h,
-FileDescription,Updated with Tool - 17/02/2017 02:56 am,
+FileDescription,Updated with Tool - 21/02/2017 09:51 am,
 basicProjectileName,records/fx/itemfx/projectiles/gun2h_projectiledefault_fx01.dbr,
 piercingProjectile,0.0,
 hitSound,,

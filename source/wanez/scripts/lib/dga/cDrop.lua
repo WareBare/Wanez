@@ -211,6 +211,9 @@ function wanez.DGA.cDrop()
             end
             if(classId >= 5) then
                 --if(isNotVanilla) then QuestGlobalEvent("wzDGA_dropRewardDevotion") end
+                if(isNotVanilla) then QuestGlobalEvent("wzDGA_dropCurrencyEssence") end
+                if(isNotVanilla) then QuestGlobalEvent("wzDGA_dropCurrencyEssence") end
+                if(isNotVanilla) then QuestGlobalEvent("wzDGA_dropCurrencyEssence") end
             end
             if(typeId == 1) then
                 if(_areaOwner:GetQuestState(wanez.DGA.aData.dgaTypes.mission.quests[1][1]) and classId == 5) then
