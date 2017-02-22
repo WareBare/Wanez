@@ -49,12 +49,21 @@ function wanez.Runes.useRune(argRuneType,argRuneId,argRuneMaxTier)
         
         if(_cSequence)then
             -- sequence is set, try to create an inscription
+            local msg = _cSequence:addRune()
+            if(msg) then
+                aActions.notify = msg[2] or false
+                aActions.giveItems = msg[3] or false
+                
+                if(msg[1])then
+                    _cSequence = false
+                end
+            end
         else
             -- no sequence is set, return a rune (comp) with random tier
             local aTiers = {}
             for i=1,argRuneMaxTier do
                 table.insert(aTiers,wanez.Runes.aData.tierWeights[i])
-            end
+            end;
             local tierLetter = self:RNG({
                 aDataRatio = aTiers
             })

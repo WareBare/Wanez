@@ -3,6 +3,12 @@
 ### Notify ###
 tagWzRunes_LuaNotify_startSequence_failure=Could not start a new Sequence, maybe there is already one active
 tagWzRunes_LuaNotify_useRune_failure=Rune could not be used
+tagWzRunes_LuaNotify_useRune_wrongRuneType=You used the wrong Rune Type for this Sequence, the rune was returned
+tagWzRunes_LuaNotify_useRune_runeUsed=This Rune is aready part of the sequence, rune has been returned
+tagWzRunes_LuaNotify_useRune_success=Successfully added a Rune to the Sequence
+tagWzRunes_LuaNotify_useRune_InscriptionSuccess=Sequence was a success, you received a new Inscription
+tagWzRunes_LuaNotify_useRune_InscriptionFailure=You used the wrong rune type or there is no inscription for that stone available
+tagWzRunes_LuaNotify_useRune_InscriptionWrongSequence=Runes used in this sequence were wrong
 tagWzRunes_LuaNotify_useRune_Tiera_success=You created a new rune Tier 1
 tagWzRunes_LuaNotify_useRune_Tierb_success=You created a new rune Tier 2
 tagWzRunes_LuaNotify_useRune_Tierc_success=You created a new rune Tier 3
