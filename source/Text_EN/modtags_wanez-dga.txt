@@ -27,8 +27,6 @@ tagWzDGA_NpcBlacksmith_Scroll=DGA Crafter
 ### MISC ###
 tagWzGear_NPC_CrafterLeveling_DESC=Equipment
 tagWzGear_NPC_CrafterLeveling_NAME=Planes-Shifters
-tagWzRunes_NPC_Crafter001A_DESC=Crafter
-tagWzRunes_NPC_Crafter001A_NAME=Runes
 
 ## Script ##
 ### Portals ###

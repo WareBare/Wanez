@@ -1,0 +1,17 @@
+
+## LUA ##
+### Notify ###
+tagWzRunes_LuaNotify_startSequence_failure=Could not start a new Sequence, maybe there is already one active
+tagWzRunes_LuaNotify_useRune_failure=Rune could not be used
+tagWzRunes_LuaNotify_useRune_Tiera_success=You created a new rune Tier 1
+tagWzRunes_LuaNotify_useRune_Tierb_success=You created a new rune Tier 2
+tagWzRunes_LuaNotify_useRune_Tierc_success=You created a new rune Tier 3
+tagWzRunes_LuaNotify_useRune_Tierd_success=You created a new rune Tier 4
+tagWzRunes_LuaNotify_useRune_Tiere_success=You created a new rune Tier 5
+tagWzRunes_LuaNotify_useRune_Tierf_success=You created a new rune Tier 6
+tagWzRunes_LuaNotify_useRune_Tierg_success=You created a new rune Tier 7
+
+## NPC ##
+### Blacksmiths ###
+tagWzRunes_NPC_Crafter001A_DESC=Crafter
+tagWzRunes_NPC_Crafter001A_NAME=Runes

@@ -112,7 +112,7 @@ function wanez.DGA.useDGA_Scroll(argObjectId,argDifficultyGD,argTierDGA,argTypeD
     
             -- open portal for mission
             _cSettings:openArea('FloorArea0000-00a',portalOpener,_cType)
-    
+        
             nextAreaId = 0
         
             aActions.notify = "tagWzDGA_LuaNotify_usedScrollDGA_success"
