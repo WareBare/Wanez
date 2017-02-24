@@ -20,6 +20,6 @@ Script.Load("wanez/scripts/fn/gDGA.lua");
 
 --- Runic Inscriptions
 wanez.fn.gRunes = {}
---Script.Load("wanez/scripts/fn/gRunes.lua");
+Script.Load("wanez/scripts/fn/gRunes.lua");
 wanez.fn.gRuneStones = {}
 Script.Load("wanez/scripts/fn/gRuneStones.lua");

@@ -8,7 +8,9 @@ Package:
 ]]--
 
 wanez.Runes = {}
+
 --- Load Core
 Script.Load("wanez/scripts/lib/runes/aData.lua");
 Script.Load("wanez/scripts/lib/runes/cBase.lua");
-Script.Load("wanez/scripts/lib/runes/cSequence.lua");
+Script.Load("wanez/scripts/lib/runes/cMain.lua");
+--Script.Load("wanez/scripts/lib/runes/cSequence.lua");

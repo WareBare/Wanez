@@ -4,10 +4,7 @@ User: WareBare
 Date: 2/21/2017
 Time: 7:02 PM
 
-Package: 
-]]--
-
---- Runic Inscription - Sequence
+Runic Inscription - Sequence
 -- most important class for _runes, everything goes from here
 -- * stone starts sequence (instantiates this class)
 -- * runes (scroll) used will add to this sequence if the type fits and that rune (ID) wasnt set before (:addRune(...))
@@ -15,12 +12,19 @@ Package:
 -- @param argGearType
 -- @param argGearSlot
 -- @param argSockets
---
+
+Package: 
+]]--
+UI.Notify("cSequence File")
+UI.Notify("cSequence File 2")
 function wanez.Runes.cSequence(argGearType,argGearSlot,argSockets)
+    UI.Notify("cSequence: Intantiated")
     local _parent = wanez.Runes.cBase()
+    UI.Notify("cSequence: Inherited cBase")
 
     local gearType = argGearType
     local gearSlot = argGearSlot
+    local isGeneric = (argGearSlot == 'generic') and true or false
     local numberSockets = argSockets
     local runeType = false
     local aRunes = {} -- current sequence
@@ -31,6 +35,7 @@ function wanez.Runes.cSequence(argGearType,argGearSlot,argSockets)
     local pathInsc = "mod_wanez/_runes/items/enchants"
     
     local _player = Game.GetLocalPlayer()
+    UI.Notify("cSequence: declared default var")
 
     local class = {
         __constructor = function(self)
@@ -51,9 +56,12 @@ function wanez.Runes.cSequence(argGearType,argGearSlot,argSockets)
                     aInscriptions = {}
                     for index,data in pairs(self:__getInscriptionsData()) do
                         if(table.getn(data.Runes) == numberSockets) then
+                            
                             -- add viable inscription if the type fits
                             if(data[1] == gearType) then
-                                table.insert(aInscriptions,data)
+                                if(isGeneric or data[2] == gearSlot) then
+                                    table.insert(aInscriptions,data)
+                                end
                             end
                             
                         end
@@ -129,11 +137,11 @@ function wanez.Runes.cSequence(argGearType,argGearSlot,argSockets)
                 local randInscription = self:RNG({
                     aDataRatio = aViables
                 })
-                local maxTier = 1
+                local maxTier = (isGeneric) and 1 or aInscriptions[randInscription].Tiers
                 local aTiers = {}
-                if(aInscriptions[randInscription].Stone[2] == gearSlot) then
-                    maxTier = aInscriptions[randInscription].Tiers
-                end
+                --if(aInscriptions[randInscription].Stone[2] == gearSlot) then
+                    --maxTier = aInscriptions[randInscription].Tiers
+                --end
                 
                 for i=1,maxTier do
                     table.insert(aTiers,wanez.Runes.aData.tierWeights[i])

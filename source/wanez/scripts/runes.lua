@@ -25,7 +25,10 @@ function wanez.Runes.startSequence(argType,argSlot,argSockets)
         };
         
         if(_cSequence == false)then
-            _cSequence = wanez.Runes.cSequence(argType,argSlot,argSockets)
+            _cSequence = wanez.Runes.cMain(argType,argSlot,argSockets)
+            --UI.Notify("started Sequence")
+            aActions.notify = "tagWzRunes_LuaNotify_startSequence_success"
+            aActions.giveItems = false
         end
         
         return aActions
@@ -46,10 +49,11 @@ function wanez.Runes.useRune(argRuneType,argRuneId,argRuneMaxTier)
         local aActions = {
             giveItems = "mod_wanez/_runes/items/materia/"..argRuneType.."_"..self:parseIntToString(argRuneId,2)..".dbr";
         };
-        
+        --UI.Notify("Rune is Working")
         if(_cSequence)then
+            --UI.Notify("Rune is Working: Sequence")
             -- sequence is set, try to create an inscription
-            local msg = _cSequence:addRune()
+            local msg = _cSequence:addRune(argRuneType,argRuneId,argRuneMaxTier)
             if(msg) then
                 aActions.notify = msg[2] or false
                 aActions.giveItems = msg[3] or false
@@ -59,6 +63,7 @@ function wanez.Runes.useRune(argRuneType,argRuneId,argRuneMaxTier)
                 end
             end
         else
+            --UI.Notify("Rune is Working: Give Component")
             -- no sequence is set, return a rune (comp) with random tier
             local aTiers = {}
             for i=1,argRuneMaxTier do

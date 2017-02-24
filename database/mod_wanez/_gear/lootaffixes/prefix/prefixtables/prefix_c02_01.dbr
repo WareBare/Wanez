@@ -1,7 +1,6 @@
 templateName,database/templates/lootrandomizertabledynamic.tpl,
-ActorName,,
 Class,LootRandomizerTable,
-FileDescription,Updated with Tool - 15/02/2017 03:25 pm,
+FileDescription,Updated with Tool - 24/02/2017 03:25 pm,
 randomizerName1,mod_wanez/_gear/lootaffixes/prefix/c01_030406.dbr,
 randomizerLevelMin1,1,
 randomizerLevelMax1,250,

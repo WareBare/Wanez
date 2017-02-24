@@ -2,6 +2,7 @@
 ## LUA ##
 ### Notify ###
 tagWzRunes_LuaNotify_startSequence_failure=Could not start a new Sequence, maybe there is already one active
+tagWzRunes_LuaNotify_startSequence_success=Started a new Sequence, you can now use Runes to create an Inscription
 tagWzRunes_LuaNotify_useRune_failure=Rune could not be used
 tagWzRunes_LuaNotify_useRune_wrongRuneType=You used the wrong Rune Type for this Sequence, the rune was returned
 tagWzRunes_LuaNotify_useRune_runeUsed=This Rune is aready part of the sequence, rune has been returned

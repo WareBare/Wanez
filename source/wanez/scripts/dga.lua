@@ -59,6 +59,209 @@ local function devOnlyFn()
         player:GiveItem("mod_wanez/currency/b_001b.dbr",100,true)
     end
 end
+local function giveComponents(argPlayer)
+    local aMateria = {
+        'records/items/materia/compa_aethersoul.dbr',
+        'records/items/materia/compa_aethersteelalloy.dbr',
+        'records/items/materia/compa_aethersteelbolts.dbr',
+        'records/items/materia/compa_amber.dbr',
+        'records/items/materia/compa_ballisticplating.dbr',
+        'records/items/materia/compa_batteredshell.dbr',
+        'records/items/materia/compa_blacktallow.dbr',
+        'records/items/materia/compa_blessedsteel.dbr',
+        'records/items/materia/compa_bristlyfur.dbr',
+        'records/items/materia/compa_chilledsteel.dbr',
+        'records/items/materia/compa_chippedclaw.dbr',
+        'records/items/materia/compa_coldstone.dbr',
+        'records/items/materia/compa_consecratedwrappings.dbr',
+        'records/items/materia/compa_corpsedust.dbr',
+        'records/items/materia/compa_crackedlodestone.dbr',
+        'records/items/materia/compa_deathchillbolts.dbr',
+        'records/items/materia/compa_densefur.dbr',
+        'records/items/materia/compa_ectoplasm.dbr',
+        'records/items/materia/compa_festeringblood.dbr',
+        'records/items/materia/compa_flint.dbr',
+        'records/items/materia/compa_flintcorebolts.dbr',
+        'records/items/materia/compa_focusingprism.dbr',
+        'records/items/materia/compa_frozenheart.dbr',
+        'records/items/materia/compa_gallstone.dbr',
+        'records/items/materia/compa_hellbaneammo.dbr',
+        'records/items/materia/compa_hollowedfang.dbr',
+        'records/items/materia/compa_imbuedsilver.dbr',
+        'records/items/materia/compa_leatheryhide.dbr',
+        'records/items/materia/compa_markofillusions.dbr',
+        'records/items/materia/compa_markofthetraveler.dbr',
+        'records/items/materia/compa_moltenskin.dbr',
+        'records/items/materia/compa_mutagenicichor.dbr',
+        'records/items/materia/compa_mutatedscales.dbr',
+        'records/items/materia/compa_polishedemerald.dbr',
+        'records/items/materia/compa_purifiedsalt.dbr',
+        'records/items/materia/compa_radiantgem.dbr',
+        'records/items/materia/compa_reinforcedshell.dbr',
+        'records/items/materia/compa_resilientchestplate.dbr',
+        'records/items/materia/compa_restlessremains.dbr',
+        'records/items/materia/compa_riftstone.dbr',
+        'records/items/materia/compa_rigidshell.dbr',
+        'records/items/materia/compa_rottenheart.dbr',
+        'records/items/materia/compa_runestone.dbr',
+        'records/items/materia/compa_sanctifiedbone.dbr',
+        'records/items/materia/compa_scalyhide.dbr',
+        'records/items/materia/compa_scavengedplating.dbr',
+        'records/items/materia/compa_searingember.dbr',
+        'records/items/materia/compa_serratedspike.dbr',
+        'records/items/materia/compa_severedclaw.dbr',
+        'records/items/materia/compa_silkswatch.dbr',
+        'records/items/materia/compa_soulshard.dbr',
+        'records/items/materia/compa_spinedcarapace.dbr',
+        'records/items/materia/compa_vengefulwraith.dbr',
+        'records/items/materia/compa_venomtippedammo.dbr',
+        'records/items/materia/compa_viciousjawbone.dbr',
+        'records/items/materia/compa_viciousspikes.dbr',
+        'records/items/materia/compa_viscousvenom.dbr',
+        'records/items/materia/compa_voidtouchedammo.dbr',
+        'records/items/materia/compa_wardstone.dbr',
+        'records/items/materia/compa_whetstone.dbr',
+        'records/items/materia/compa_wrathstone.dbr',
+        'records/items/materia/compb_ancientarmorplate.dbr',
+        'records/items/materia/compb_arcanediamond.dbr',
+        'records/items/materia/compb_arcanelens.dbr',
+        'records/items/materia/compb_arcanespark.dbr',
+        'records/items/materia/compb_beronath.dbr',
+        'records/items/materia/compb_bindingsofbysmiel.dbr',
+        'records/items/materia/compb_bloodywhetstone.dbr',
+        'records/items/materia/compb_chainsofoleron.dbr',
+        'records/items/materia/compb_deviltouchedammo.dbr',
+        'records/items/materia/compb_dreadskull.dbr',
+        'records/items/materia/compb_hallowedground.dbr',
+        'records/items/materia/compb_hauntedsteel.dbr',
+        'records/items/materia/compb_kilriansoul.dbr',
+        'records/items/materia/compb_lodestone.dbr',
+        'records/items/materia/compb_markofdreeg.dbr',
+        'records/items/materia/compb_markofmogdrogen.dbr',
+        'records/items/materia/compb_markofthemyrmidon.dbr',
+        'records/items/materia/compb_oleronblood.dbr',
+        'records/items/materia/compb_silvercorebolts.dbr',
+        'records/items/materia/compb_spellwoventhreads.dbr',
+        'records/items/materia/compb_symbolofsolael.dbr',
+        'records/items/materia/compb_unholyinscription.dbr'
+    }
+    
+    for index,dbr in pairs(aMateria) do
+        argPlayer:wzHasItem(dbr,1)
+    end;
+end
+local function removeOldItems(argPlayer)
+    
+    local pathOrbDGA = 'mod_wanez/_dga/items/currency/a_001b.dbr'
+    local pathOrbPlanar = 'mod_wanez/_dga/items/currency/a_002b.dbr'
+    local pathEssence = 'mod_wanez/currency/a_001b.dbr'
+    local pathSoul = 'mod_wanez/currency/b_001b.dbr'
+    local planarScrap = 'mod_wanez/_gear/materials/a_001a.dbr'
+    
+    local aItems = {
+        {'mod_wanez/items/dga/comp_elite_01.dbr',{pathOrbDGA,1}},
+        {'mod_wanez/items/dga/comp_elite_02.dbr',{pathOrbDGA,2}},
+        {'mod_wanez/items/dga/comp_elite_03.dbr',{pathOrbDGA,3}},
+        {'mod_wanez/items/dga/comp_elite_04.dbr',{pathOrbDGA,4}},
+        {'mod_wanez/items/dga/comp_elite_05.dbr',{pathOrbDGA,5}},
+        {'mod_wanez/items/dga/comp_elite_06.dbr',{pathOrbDGA,6}},
+        {'mod_wanez/items/dga/comp_elite_07.dbr',{pathOrbDGA,7}},
+        {'mod_wanez/items/dga/comp_elite_08.dbr',{pathOrbDGA,8}},
+        {'mod_wanez/items/dga/comp_elite_09.dbr',{pathOrbDGA,9}},
+        {'mod_wanez/items/dga/comp_elite_10.dbr',{pathOrbDGA,10}},
+        {'mod_wanez/items/dga/comp_normal_01.dbr',{pathOrbDGA,1}},
+        {'mod_wanez/items/dga/comp_normal_02.dbr',{pathOrbDGA,2}},
+        {'mod_wanez/items/dga/comp_normal_03.dbr',{pathOrbDGA,3}},
+        {'mod_wanez/items/dga/comp_normal_04.dbr',{pathOrbDGA,4}},
+        {'mod_wanez/items/dga/comp_normal_05.dbr',{pathOrbDGA,5}},
+        {'mod_wanez/items/dga/comp_ultimate_01.dbr',{pathOrbDGA,1}},
+        {'mod_wanez/items/dga/comp_ultimate_02.dbr',{pathOrbDGA,2}},
+        {'mod_wanez/items/dga/comp_ultimate_03.dbr',{pathOrbDGA,3}},
+        {'mod_wanez/items/dga/comp_ultimate_04.dbr',{pathOrbDGA,4}},
+        {'mod_wanez/items/dga/comp_ultimate_05.dbr',{pathOrbDGA,5}},
+        {'mod_wanez/items/dga/comp_ultimate_06.dbr',{pathOrbDGA,6}},
+        {'mod_wanez/items/dga/comp_ultimate_07.dbr',{pathOrbDGA,7}},
+        {'mod_wanez/items/dga/comp_ultimate_08.dbr',{pathOrbDGA,8}},
+        {'mod_wanez/items/dga/comp_ultimate_09.dbr',{pathOrbDGA,9}},
+        {'mod_wanez/items/dga/comp_ultimate_10.dbr',{pathOrbDGA,10}},
+        {'mod_wanez/items/dga/key_elite_01.dbr',{pathOrbDGA,1}},
+        {'mod_wanez/items/dga/key_elite_02.dbr',{pathOrbDGA,2}},
+        {'mod_wanez/items/dga/key_elite_03.dbr',{pathOrbDGA,3}},
+        {'mod_wanez/items/dga/key_elite_04.dbr',{pathOrbDGA,4}},
+        {'mod_wanez/items/dga/key_elite_05.dbr',{pathOrbDGA,5}},
+        {'mod_wanez/items/dga/key_elite_06.dbr',{pathOrbDGA,6}},
+        {'mod_wanez/items/dga/key_elite_07.dbr',{pathOrbDGA,7}},
+        {'mod_wanez/items/dga/key_elite_08.dbr',{pathOrbDGA,8}},
+        {'mod_wanez/items/dga/key_elite_09.dbr',{pathOrbDGA,9}},
+        {'mod_wanez/items/dga/key_elite_10.dbr',{pathOrbDGA,10}},
+        {'mod_wanez/items/dga/key_normal_01.dbr',{pathOrbDGA,1}},
+        {'mod_wanez/items/dga/key_normal_02.dbr',{pathOrbDGA,2}},
+        {'mod_wanez/items/dga/key_normal_03.dbr',{pathOrbDGA,3}},
+        {'mod_wanez/items/dga/key_normal_04.dbr',{pathOrbDGA,4}},
+        {'mod_wanez/items/dga/key_normal_05.dbr',{pathOrbDGA,5}},
+        {'mod_wanez/items/dga/key_ultimate_01.dbr',{pathOrbDGA,1}},
+        {'mod_wanez/items/dga/key_ultimate_02.dbr',{pathOrbDGA,2}},
+        {'mod_wanez/items/dga/key_ultimate_03.dbr',{pathOrbDGA,3}},
+        {'mod_wanez/items/dga/key_ultimate_04.dbr',{pathOrbDGA,4}},
+        {'mod_wanez/items/dga/key_ultimate_06.dbr',{pathOrbDGA,6}},
+        {'mod_wanez/items/dga/key_ultimate_05.dbr',{pathOrbDGA,5}},
+        {'mod_wanez/items/dga/key_ultimate_07.dbr',{pathOrbDGA,7}},
+        {'mod_wanez/items/dga/key_ultimate_08.dbr',{pathOrbDGA,8}},
+        {'mod_wanez/items/dga/key_ultimate_09.dbr',{pathOrbDGA,9}},
+        {'mod_wanez/items/dga/key_ultimate_10.dbr',{pathOrbDGA,10}},
+        {'mod_wanez/items/dga/key_reward_01.dbr',{pathOrbDGA,1}},
+        {'mod_wanez/items/dga/key_reward_02.dbr',{pathOrbDGA,3}},
+        {'mod_wanez/items/dga/key_reward_03.dbr',{pathOrbDGA,5}},
+        {'mod_wanez/items/dga/misc_omega_lvlup.dbr',{pathOrbPlanar,1}},
+        {'mod_wanez/items/dga/special_01_comp.dbr',{pathOrbPlanar,1}},
+        {'mod_wanez/items/dga/special_01_key.dbr',{pathOrbPlanar,1}},
+        {'mod_wanez/items/dga/special_01b_comp.dbr',{pathOrbPlanar,1}},
+        {'mod_wanez/items/dga/special_01b_key.dbr',{pathOrbPlanar,1}},
+        {'mod_wanez/items/dga/special_01b_material.dbr',{pathOrbPlanar,1}},
+        {'mod_wanez/items/dga/upgrade_token_01.dbr',{pathOrbDGA,1}},
+        {'mod_wanez/items/dga/upgrade_token_elite_01.dbr',{pathOrbDGA,1}},
+        {'mod_wanez/items/dga/upgrade_token_normal_01.dbr',{pathOrbDGA,1}},
+        {'mod_wanez/items/dga/upgrade_token_ultimate_01.dbr',{pathOrbDGA,1}},
+        {'mod_wanez/items/token/souls/soul_aethercrystal.dbr',{pathSoul,1}},
+        {'mod_wanez/items/token/souls/soul_boss.dbr',{pathSoul,3}},
+        {'mod_wanez/items/token/souls/soul_champion.dbr',{pathSoul,1}},
+        {'mod_wanez/items/token/souls/soul_common.dbr',{pathSoul,1}},
+        {'mod_wanez/items/token/souls/soul_hero.dbr',{pathSoul,2}},
+        {'mod_wanez/items/token/souls/soul_nemesis.dbr',{pathSoul,3}},
+        {'mod_wanez/items/token/souls/soul_raid.dbr',{pathSoul,5}},
+        {'mod_wanez/items/token/souls/soul_souleater.dbr',{pathSoul,5}},
+        {'mod_wanez/items/token/souls/soul_uber.dbr',{pathSoul,5}},
+        {'mod_wanez/items/token/upgrade_token_beginner.dbr',{planarScrap,1}},
+        {'mod_wanez/items/token/currency_normal_01.dbr',{planarScrap,1}},
+        {'mod_wanez/items/token/currency_normal_02.dbr',{planarScrap,2}},
+        {'mod_wanez/items/token/currency_normal_03.dbr',{planarScrap,3}},
+        {'mod_wanez/items/token/currency_normal_04.dbr',{planarScrap,4}},
+        {'mod_wanez/items/token/currency_normal_05.dbr',{planarScrap,5}},
+        {'mod_wanez/items/token/currency_normal_tradable.dbr',{planarScrap,1}}
+    }
+    
+    local isWhile = true
+    local showNotify = false
+
+    for index,data in pairs(aItems) do
+        isWhile = true
+    
+        while(isWhile) do
+            if(argPlayer:HasItem(data[1],1,true))then
+                argPlayer:TakeItem(data[1],1,true)
+                argPlayer:GiveItem(data[2][1],data[2][2],true)
+                showNotify = true
+            else
+                isWhile = false
+            end
+        end;
+        
+    end;
+    
+    if(showNotify)then
+        UI.Notify("tagWzDGA_LuaNotify_RemovedOldItems")
+    end
+end
 
 function wanez.DGA.useDGA_Scroll(argObjectId,argDifficultyGD,argTierDGA,argTypeDGA)
     _cScroll = wanez.cScroll({
@@ -171,9 +374,31 @@ function wanez.DGA.onEnterTriggerCampOnLoad(argObjectId)
             _player:AdjustMoney(1000)
         end
     end
-    _player:wzHasItem("records/items/misc/potions/potion_healtha01.dbr",20)
+    _player:wzHasItem("records/items/misc/potions/potion_healtha01.dbr",10)
     --_player:GiveItem("mod_wanez/_dga/items/scrolls/reward_scroll_a001.dbr",1,true)
     --wanez.DGA.dbr.onLeaveTriggerOrbConversion(argObjectId)
+    --_player:wzHasItem("mod_wanez/currency/a_001c.dbr",100)
+    --_player:wzHasItem("mod_wanez/currency/b_001c.dbr",100)
+    --- RUNES
+    --_player:wzHasItem("mod_wanez/_runes/items/materia/runeb_001.dbr",1)
+    --_player:wzHasItem("mod_wanez/_runes/items/materia/runeb_002.dbr",1)
+    --_player:wzHasItem("mod_wanez/_runes/items/materia/runeb_003.dbr",1)
+    --_player:wzHasItem("mod_wanez/_runes/items/materia/runeb_004.dbr",1)
+    --_player:wzHasItem("mod_wanez/_runes/items/materia/runeb_005.dbr",1)
+    --_player:wzHasItem("mod_wanez/_runes/items/stones/stone_armor_head02.dbr",1)
+    --- Pre v0.5
+    --_player:wzHasItem("mod_wanez/items/dga/comp_ultimate_01.dbr",1000)
+    --_player:wzHasItem("mod_wanez/items/dga/comp_ultimate_02.dbr",1000)
+    --_player:wzHasItem("mod_wanez/items/dga/comp_ultimate_03.dbr",1000)
+    --_player:wzHasItem("mod_wanez/items/dga/comp_ultimate_04.dbr",1000)
+    --_player:wzHasItem("mod_wanez/items/dga/comp_ultimate_05.dbr",1000)
+    --_player:wzHasItem("mod_wanez/items/dga/comp_ultimate_06.dbr",1000)
+    --_player:wzHasItem("mod_wanez/items/dga/comp_ultimate_07.dbr",1000)
+    --_player:wzHasItem("mod_wanez/items/dga/comp_ultimate_08.dbr",1000)
+    --_player:wzHasItem("mod_wanez/items/dga/comp_ultimate_09.dbr",1000)
+    --_player:wzHasItem("mod_wanez/items/dga/comp_ultimate_10.dbr",1000)
+    --giveComponents(_player)
+    removeOldItems(_player)
     --_player:wzHasItem("mod_wanez/_dga/items/scrolls/area_scroll_0009.dbr",1)
     --_player:wzHasItem("mod_wanez/_dga/items/scrolls/area_scroll_0010.dbr",1)
     --_player:wzHasItem("mod_wanez/_dga/items/scrolls/area_scroll_0012.dbr",1)

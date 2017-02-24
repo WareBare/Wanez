@@ -1,5 +1,5 @@
 ###
-tagWzDGA_LuaNotify_Welcome=DGA v0.5.0
+tagWzDGA_LuaNotify_Welcome=DGA v0.5.0 - Pre-Release
 tagWzDGA_LuaNotify_Difficulty_failure=You are in the wrong difficulty to use this
 tagWzDGA_LuaNotify_usedScrollDGA_success=A Portal has been opened
 tagWzDGA_LuaNotify_usedScrollDGA_failure=You can only open a Portal inside the Portal Summoning-Circle
@@ -10,6 +10,8 @@ tagWzDGA_LuaNotify_usedDGA_QuestScroll_failure=You were unable to receive a new 
 tagWzDGA_LuaNotify_usedDGA_QuestScroll_hasAlready003=You already have an active Challenge, finish that one first
 tagWzDGA_LuaNotify_BossRoomEndlessNPC=A new NPC appeared on the Stone-Floor
 tagWzDGA_LuaNotify_BossRoomChallengeNPC=A new Portal appeared on the Stone-Floor
+
+tagWzDGA_LuaNotify_RemovedOldItems=Old Items have been replaced with new ones
 
 tagWzDGA_DifficultyNormal=Normal/Elite
 tagWzDGA_DifficultyEpic=

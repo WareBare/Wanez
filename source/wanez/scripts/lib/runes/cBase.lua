@@ -7,7 +7,9 @@ Time: 6:20 AM
 Package: 
 ]]--
 
+--UI.Notify("cBase File")
 local gInscriptions = wanez.data.gInscriptions
+--UI.Notify("cBase File 2")
 
 function wanez.Runes.cBase()
     local _parent = wanez.cBase()
@@ -21,18 +23,22 @@ function wanez.Runes.cBase()
         end;
         __setInscriptionsData = function(self,argRuneType,argOverride)
             argOverride = argOverride or false
-            if(aInscriptions == false or argOverride == true) then aInscriptions = gInscriptions[argRuneType] end
+            if(aInscriptions == false or argOverride) then
+                aInscriptions = gInscriptions[argRuneType]
+            end
         end;
         __getInscriptionsData = function(self)
             return aInscriptions
         end;
         __setRuneType = function(self,argRuneType,argOverride)
-            local isSameType = true
-            if(runeType == false or argOverride == true) then
+            local isSameType = false
+            argOverride = argOverride or false
+            if(runeType == false or argOverride) then
                 runeType = argRuneType
-                aInscriptions = self:__setInscriptionsData(runeType)
+                self:__setInscriptionsData(runeType)
             end
-            if(runeType ~= argRuneType) then isSameType = false end
+            if(runeType == argRuneType) then isSameType = true end
+            --UI.Notify(runeType)
             
             return isSameType
         end;

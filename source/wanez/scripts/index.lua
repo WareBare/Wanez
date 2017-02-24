@@ -33,7 +33,6 @@ Script.Load("wanez/scripts/fn/index.lua")
 --- Load LIB
 Script.Load("wanez/scripts/lib/index.lua")
 
-
 --- LOAD FILES
 Script.Load("wanez/scripts/main.lua");
 Script.Load("wanez/scripts/dga.lua");
