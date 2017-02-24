@@ -13,17 +13,34 @@ You can check out the Section 'For Modders' to get more information on what you 
 ## Dynamically Generated Areas ##
 ### Introduction ###
 #### General ####
-`update` Entering the game will give you access to everything the dismantle NPC has to offer and in addition normal will give you all inventory bags.
+Entering the game will give you access to everything the dismantle NPC has to offer and in addition normal will give you all inventory bags.
 
 #### `new` Multiplayer ####
 In any previous version lots of issues occured in Multiplayer, v0.5 is going to change that as it's fully compatible with Multiplayer!
 
+#### `new` OMEGA MOD removal ####
+From the start the plan was to make a mod that can be merged easily with any other mod. Having a complex mod with many files is not going to make it easier for others who only want the source of my mod, so I decided to remove it. Since the source is now available, it's pretty easy to merge it yourself.
+
+In addition my mod will have different ways to improve your character and adding other mods to it will make it more difficult to balance properly.
+
+What this means to you (as a non-DAIL player), if you have any OMEGA items on you, you should place them in your transfer-stash or they will disappear, unless you have merged the mods yourself.
+
+
+*The guard dbr is in the world and will show up either as the vanilla guard or OMEGA NPC depending on it being merged or not*
+
 ### DGA-Items ###
-#### General ####
-In general any item not used anymore can be exchanged for the new ones at a lower rate with v0.5, the rate increases as the version number goes up, until they are removed entirely with v1.0. The goal with these changes is to reduce the amount of different items you have to collect in DGA and give the player more control over what the player wants to do with it.
+#### `updated` General ####
+Any item not used anymore is exchanged when you first login for the new ones coming with v0.5, if you don't want that - you can place them in your stash (at least in the non-DAIL version) and they are removed entirely with v1.0.
+* Components and Keys will turn into DGA-Orbs
+* DGA Essences will turn into DGA-Orbs
+* Better DGA items such as Uber Materials will turn into Planar-Orbs
+* (Artifact-) Currency will turn into Planar-Scraps
+* Souls will turn into Planar-Souls
+Anything remaining after this with a "Circle and Cross Icon" can be reported and I'll add it with the next version to be converted.
+
+The goal with these changes is to reduce the amount of different items you have to collect in DGA and give the player more control over what the player wants to do with it.
 
 Some things don't require much to be crafted or at least no specific item, but because it does require something or it won't show up at the blacksmith, you can craft items marked as free with potions.
-
 
 Starting with v0.5 you'll have the option of enemies having vanilla Loot Tables or the new DGA Loot Tables, certain DGA-Items won't be able to drop in Vanilla-Mode.
 
@@ -272,7 +289,7 @@ You can choose between
 * Friendly Faction
 * `Access to Bounty-Table in DGA (moved to v0.5.x)`
 
-## Runic Inscriptions ##
+## `updated` Runic Inscriptions ##
 ### General ###
 #### Introduction ####
 * Runic Inscriptions come in different sets
@@ -292,14 +309,14 @@ You can choose between
 #### Stones ####
 * Usable Item (Scroll)
 * Craftable at the Blacksmith
-* White items can be salvaged into Scraps with a new item or at the NPC (amount depends on Item Level)
+* `White items can be salvaged into Scraps with a new item or at the NPC (amount depends on Item Level) [with v0.5.x]`
 * Stones can be crafted with scraps
 * Stones have Rune-Sockets and since Inscriptions are inheriting the consumed Runes' stats, the more sockets a stone has the harder it is to obtain it
 
 #### Inscriptions ####
 * Augments
 * Different Rarities (or Tiers)
-* require a Stone and a Runic Sequence to be created
+* require a Stone and a Runic-Sequence to be created
 
 #### Runic Sets ####
 This has nothing to do with set bonuses, it simply means these are different types of runes. Only Runes from the same set can be used to create an Inscription
@@ -311,23 +328,65 @@ This has nothing to do with set bonuses, it simply means these are different typ
   * Materials can be gathered anywhere
 * Runic Empowerment
   * Craftable at a Blacksmith
-  * A new Item has to be obtained and combined with one Component to create a Rune
-  * The required Carfting Material is only dropping in DGA (Components can be gathered from anywhere)
+  * Aether Crystals can be used with a Component to make a Rune
   * The Rune inherits all properties from the Component with increased values (basically the same Component for a higher level)
+  * 5 Different Tiers are available (Required Levels: 75, 77, 79, 81, 83)
 * `Runic Creation (with v0.5.x)`
   * `No Crafting required, need to find the Rune-Scroll directly`
   * `No Base Components, the Rune has entirely new stats and its signature skill`
-  * `The Rune-Scroll can only be optained in DGA`
+  * `The Rune-Scroll can only be obtained in DGA`
 
-## Gifts & Treasures ##
+#### `new` Runic-Sequence ####
+A quick Tutorial on "How to create an Inscription"
+* Use an Equipment-Stone to initiate a new Sequence
+* You can choose between two different Stones
+  * if you are not sure what weapon is possible you can use a Generic Weapon Stone *this cannot result in Tiers higher than 1*
+  * if you know exactly what weapon it is, you can use a Specific Weapon Stone (eg. 1H Axe Stone) *this can result in the highest Tier available for that Inscription*
+* Use a Rune-Scroll to add Runes to the Sequence
+* Use more Rune-Scrolls to add more Runes to the Sequence
+* once the number of Runes [used] matches the number of Sockets [of the Stone] it will either fail or succeed in creating an Inscription
+  * It will only succeed if the Runes were used in the correct order
+
+## `updated` Gifts & Treasures ##
+### New Items ###
+#### Planar Essences & Planar Souls ####
+Already mentioned in the DGA Section, but they are still relevant here, because you can only exchange them for something useful at the Blacksmith for Gifts & Treasures. You can buy a variety of Vanilla Materials/Components with them and new items used to craft new Items.
+
+#### Planar Scraps ####
+* Crafted from
+  * Scraps
+  * Planar Essence
+  * Planar Soul
+* Used for
+  * Leveling-Gear
+  * `Upgrading Planar Sets [v0.5.x]`
+  * `Upgrading Artifact dropping in DGA [v0.5.x]`
+
 ### Leveling Gear ###
 #### How To Obtain ####
-* Planar Souls and Planar Essences can be used to get the required Materials
+* Planar Souls and Planar Essences can be used to get Planar-Scraps
 * Craftable at the Blacksmith
 
 #### What Is Special About It ####
-* New pool of Affixes
+* New pool of Affixes (similar to other ARPGs)
+  * Prefix with 1-3 Random properties
+  * Suffix with 1-3 Random properties
+* Has a new pool of Blacksmith bonuses
 * Base item has a useful property
+  * eg. Gloves could roll Cast Speed or Attack Speed
+* Variations
+  * higher armor with a physique requirement
+  * lower armor with a spirit requirement
+  * weapons with different attack-speed and min/max damage rolls
+  * accessories with different rolls useful to different builds (eg. cooldown reduction)
+  * a variety of pet-bonuses
+
+*this is still the first version of them, they'll be adjusted depending on the feedback*
+
+#### The Goal ####
+* Good rolls should be fairly easy to obtain in lower levels, but more difficult in higher levels
+* the first character will have trouble getting these items right away, but farming essences/souls with a higher level character will make leveling alternate characters easier
+* no need to hoard anything, you can easily craft good enough gear if you have the souls/essences for it
 
 ### Planar Sets (with v0.5.x) ###
 #### Why The Delay ####
@@ -373,7 +432,3 @@ With the exception of Tags, everything is inside the "wanez" directory.
 #### Good-looking MOD ####
 * by Grim Dawg
 * The NPC is in the Planes-Shifters Encampment
-
-#### OMEGA-MOD v0.32 ####
-* by okami29
-* partially included, but includes everything required to support it

@@ -1,5 +1,6 @@
 ###
 tagWzDGA_LuaNotify_Welcome=DGA v0.5.0 - Pre-Release
+tagWzDGA_LuaNotify_SpawnedEntities=New Enemies have arrived, enjoy!
 tagWzDGA_LuaNotify_Difficulty_failure=You are in the wrong difficulty to use this
 tagWzDGA_LuaNotify_usedScrollDGA_success=A Portal has been opened
 tagWzDGA_LuaNotify_usedScrollDGA_failure=You can only open a Portal inside the Portal Summoning-Circle

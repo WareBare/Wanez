@@ -317,7 +317,8 @@ function wanez.DGA.area.cBase(argRegionId,argAreaId,optData)
                 end;
             
                 allowSpawn = false
-                UI.Notify("Trigger finished on Try: "..tryCount)
+                --UI.Notify("Trigger finished on Try: "..tryCount)
+                UI.Notify("tagWzDGA_LuaNotify_SpawnedEntities")
             end
             
         end;
