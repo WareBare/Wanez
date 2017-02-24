@@ -255,32 +255,32 @@ wanez.DGA.aData = {
         {
             regularScroll = 10;
             endlessScroll = 0;
-            soul = 1;
-            essence = 10;
+            soul = 3;
+            essence = 30;
             rewardDevotion = 50;
         };
         -- Endless
         {
             regularScroll = 1;
             endlessScroll = 10;
-            soul = 1;
-            essence = 10;
+            soul = 3;
+            essence = 30;
             rewardDevotion = 50;
         };
         -- Challenge
         {
             regularScroll = 3;
             endlessScroll = 0;
-            soul = 1;
-            essence = 10;
+            soul = 15;
+            essence = 50;
             rewardDevotion = 50;
         };
         -- Raid
         {
             regularScroll = 10;
             endlessScroll = 0;
-            soul = 1;
-            essence = 10;
+            soul = 3;
+            essence = 30;
             rewardDevotion = 50;
         };
     };

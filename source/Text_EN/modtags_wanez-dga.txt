@@ -1,5 +1,5 @@
 ###
-tagWzDGA_LuaNotify_Welcome=DGA v0.5.0 - Beta #02
+tagWzDGA_LuaNotify_Welcome=DGA v0.5.0 - Beta #03
 tagWzDGA_LuaNotify_SpawnedEntities=New Enemies have arrived, enjoy!
 tagWzDGA_LuaNotify_Difficulty_failure=You are in the wrong difficulty to use this
 tagWzDGA_LuaNotify_usedScrollDGA_success=A Portal has been opened
@@ -26,6 +26,12 @@ tagWaDGA_PrefixAX=
 ## NPCs ##
 ### Blacksmiths ###
 tagWzDGA_NpcBlacksmith_Scroll=DGA Crafter
+
+## Enemies ##
+tagEnemyHarpyA02=Harpy Flesh Ripper
+tagEnemyHarpyB02=Harpy Death Wind
+tagEnemyZombieTrollHalfCasterB01=Zombie Mistborn Shaman
+tagEnemyZombieTrollHalfA01=Zombie Mistborn Brute
 
 ### MISC ###
 tagWzGear_NPC_CrafterLeveling_DESC=Equipment
