@@ -17,6 +17,9 @@ local aTypeIdToBossType = {5,7,7,8}
 local aEnemies = wanez.data.gEnemies
 local aNameToId = wanez.data.gNameToId
 --local aDataBase = wanez.DGA.aData
+local regionCount = {
+    [11]=3
+}
 
 function wanez.DGA.area.cBase(argRegionId,argAreaId,optData)
     local _parent = wanez.DGA.cBase()
@@ -41,6 +44,8 @@ function wanez.DGA.area.cBase(argRegionId,argAreaId,optData)
     local monsterLevel = 1
     local areaLvL = false
     local tryCount = 0
+
+    local regionalSpawns;
 
     local _cType = false
 
@@ -104,6 +109,47 @@ function wanez.DGA.area.cBase(argRegionId,argAreaId,optData)
             self:setMonsterLevel()
         end;
         
+        setRegionalEntities = function(self)
+            --UI.Notify("setRegionalEntities: Start")
+            regionalSpawns = {}
+            local curRegionCount = regionCount[areaId] or 1
+            for i=1,curRegionCount do
+                regionalSpawns[i] = {}
+            end;
+            --UI.Notify("setRegionalEntities: Regions set")
+            --- NEMESIS
+            local spawnNemesis = 0
+            if(_areaOwner:HasToken("WZ_DGA_NO_NEMESIS_SPAWN") == false) then
+                local factionRank = self:getFactionRank('USER15')
+                --UI.Notify("setRegionalEntities: got faction rank")
+                if(factionRank > 0) then
+                    spawnNemesis = self:RNG({
+                        aChances = aDataArea.areaSettings.nemesisChance[factionRank];
+                        returnNumber = true;
+                    })
+                end
+            end
+            
+            --UI.Notify("setRegionalEntities: RNG set | "..spawnNemesis)
+            local incCount = self.aMods.enemyCount[6] or 0
+            --local incCount = 0
+            local nemesisCount = spawnNemesis + incCount
+            --UI.Notify("setRegionalEntities: count increased")
+            if(nemesisCount > 0) then
+                --UI.Notify("setRegionalEntities: start loop")
+                for i=1,nemesisCount do
+                    local randRegion = self:RNG({randomMax = curRegionCount})
+                    --UI.Notify("setRegionalEntities: loop 001 | "..randRegion)
+                    regionalSpawns[randRegion].Nemesis = regionalSpawns[randRegion].Nemesis or 0
+                    --UI.Notify("setRegionalEntities: loop 002")
+                    regionalSpawns[randRegion].Nemesis = regionalSpawns[randRegion].Nemesis + 1
+                end;
+                --UI.Notify("setRegionalEntities: finish loop")
+            end
+    
+            --UI.Notify("setRegionalEntities: Finish")
+        end;
+        
         convertTier = function(self,argTier)
             argTier = argTier or areaTier
             --- calculate new monster level
@@ -142,7 +188,13 @@ function wanez.DGA.area.cBase(argRegionId,argAreaId,optData)
             end;
             lvlInc = lvlInc + (mulRemain * (mulFloor + 1))
             ]]
-            monsterLevel = Game.GetAveragePlayerLevel() + areaLvL
+            local baseLevel = Game.GetAveragePlayerLevel()
+            if(self:__getDifficultyID() == 1 and baseLevel > 50)then
+                baseLevel = 50
+            elseif(self:__getDifficultyID() == 2 and baseLevel > 60)then
+                baseLevel = 60
+            end
+            monsterLevel = baseLevel + areaLvL
         end;
         
         setAffixData = function(self)
@@ -187,13 +239,16 @@ function wanez.DGA.area.cBase(argRegionId,argAreaId,optData)
                 _cType = _argType
                 aDataMP = self:getMonsterPower(argPlayer,mpTypeId)
                 for key,value in pairs(aPortals) do
-                    value.isCasual = (aDataMP.difficulty.ID == 1) and true or false
+                    value.isCasual = (aDataMP.difficulty.ID == 1 and mpTypeId == 1 and aDataMP.mode.ID == 1) and true or false
                 end;
-                if(argPlayer:HasToken('WZ_DGA_COMPLETE_UBER')) then argPlayer:RemoveToken('WZ_DGA_COMPLETE_UBER') end
             end
             --- set data dependant on MonsterPower or Tier
             self:setDataArea(mpTypeId)
             self:setDropMul()
+            
+            if(curRegion == 1) then
+                self:setRegionalEntities()
+            end
         end;
         __getAreaOwner = function(self)
             return _areaOwner
@@ -283,11 +338,17 @@ function wanez.DGA.area.cBase(argRegionId,argAreaId,optData)
                     _tempProxy:setDataEntity(aDataMP,monsterLevel)
         
                     if(iBossRoom) then
-                        if( iBossRoom:spawnBoss() )then
-                            _tempProxy:createEntities(bossCoords,aDataArea.bossSpawn,aTypeIdToBossType[mpTypeId])
-                        else
-                            _tempProxy:createEntities(bossCoords,self:RNG({aData = aEnemies.aBossMini}),4)
-                        end
+    
+                        local incCount = self.aMods.enemyCount[aTypeIdToBossType[mpTypeId]] or 0
+                        local totalCount = 1 + incCount
+                        for i=1,totalCount do
+                            if( iBossRoom:spawnBoss() )then
+                                _tempProxy:createEntities(bossCoords,aDataArea.bossSpawn,aTypeIdToBossType[mpTypeId])
+                            else
+                                _tempProxy:createEntities(bossCoords,self:RNG({aData = aEnemies.aBossMini}),4)
+                            end
+                        end;
+                        
                         table.insert(aEntities,_tempProxy)
                     end
                     usedCoords[bossCoords] = true
@@ -302,6 +363,26 @@ function wanez.DGA.area.cBase(argRegionId,argAreaId,optData)
                         --allowSpawn = allowSpawn;
                     })
                     --UI.Notify("Trigger: has set bossroom data")
+                    --- NEMESIS
+                    if(regionalSpawns[curRegion].Nemesis) then
+                        --UI.Notify("spawn "..regionalSpawns[curRegion].Nemesis.." Nemesis")
+                        for i=1,regionalSpawns[curRegion].Nemesis do
+                            
+                            local nemesisDbr = self:RNG({
+                                aData = aEnemies.aNemesis
+                            })
+                            local nemesisCoords = self:RNG({
+                                aData = aEntityCoords[curRegion].Default;
+                                rngData = usedCoords;
+                            })
+                            _tempProxy = wanez.DGA.entity.cEnemy()
+                            _tempProxy:setDataEntity(aDataMP,monsterLevel)
+                            _tempProxy:createEntities(nemesisCoords,nemesisDbr,6)
+                            table.insert(aEntities,_tempProxy)
+    
+                            usedCoords[nemesisCoords] = true
+                        end;
+                    end
                 end
                 
             
@@ -387,8 +468,11 @@ function wanez.DGA.area.cBase(argRegionId,argAreaId,optData)
                 
                 --- enemy Classification
                 entityClass = self:RNG({aChances = aDataArea.spawnData.Enemy.aClassChance})
-                -- special case for Heroes
-                if(entityClass == 3) then
+                if(entityClass == 2) then
+                    if(aDataArea.areaSettings.championReq >= monsterLevel)then
+                        entityClass = 1
+                    end
+                elseif(entityClass == 3) then -- special case for Heroes
                     if(aDataArea.areaSettings.heroReq <= monsterLevel) then
                         _tempProxy:createEntities(argEntityCoords,self:genEntityDbr(entityClass,aEntityPool),entityClass)
                     end

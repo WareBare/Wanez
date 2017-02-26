@@ -1,6 +1,6 @@
 templateName,database/templates/monster.tpl,
 Class,Monster,
-FileDescription,Updated with Tool - 24/02/2017 03:32 pm,
+FileDescription,Updated with Tool - 26/02/2017 01:40 pm,
 LowerHealthDisplayPercentage,0.000000,
 MonsterMusic,records/sounds/soundpak_musicambient/bosspak_act3_karroz.dbr,
 MonsterMusicRadius,30.000000,

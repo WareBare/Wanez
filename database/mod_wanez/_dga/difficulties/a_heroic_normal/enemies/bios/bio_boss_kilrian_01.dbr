@@ -1,5 +1,5 @@
 templateName,database/templates/characterattributeequations.tpl,
-FileDescription,Updated with Tool - 06/02/2017 03:37 am,
+FileDescription,Updated with Tool - 26/02/2017 01:40 pm,
 characterDefensiveAbility,((charLevel*6.8)+50)*1.00,
 characterDexterity,((charLevel*8)+60)*1.00,
 characterIntelligence,((charLevel*8)+60)*1.00,

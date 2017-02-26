@@ -363,6 +363,7 @@ function wanez.DGA.onEnterTriggerCampOnLoad(argObjectId)
     wanez.DGA.dbr.onLeaveTriggerSummonPortal(argObjectId)
     
     _player:GiveToken("WZ_DGA_CHALLENGE_COMPLETE")
+    _player:GiveToken("WZ_DGA_MODE_001_FINISH") -- finishes uber
 
     -- first load per difficulty
     if(_player:HasToken("DISMANTLING_UNLOCKED") == false)then
@@ -585,6 +586,24 @@ function wanez.DGA.useDGA_Affix(argObjectId,argType,argAffix)
     end)
 end
 
+local modeId = false
+function wanez.DGA.useMode_Scroll(argTypeId)
+    _cScroll = wanez.cScroll({
+        notify = "tagWzDGA_LuaNotify_usedDGA_ModeScroll_failure";
+    },function(self)
+        local aActions = {
+            notify = false;
+        };
+    
+        if(self:hasMode(modeId) == false) then
+            modeId = argTypeId
+            QuestGlobalEvent("wzDGA_setMode")
+        end
+        
+        return aActions
+    end)
+end
+
 local questData = false
 function wanez.DGA.useQuest_Scroll(argQuestId,argType)
     _cScroll = wanez.cScroll({
@@ -623,6 +642,19 @@ function wanez.DGA.useQuest_Scroll(argQuestId,argType)
     end)
 end
 
+local entityClassId = false
+local entityObjectId = false
+---
+-- @param argObjectId Enemy ObjectId
+-- @param argClassId {int} Enemy Classification Id (Wanez)
+-- @param argEvent {str} QuestGlobalEvent()
+--
+function wanez.DGA.mpDrop(argObjectId,argClassId,argEvent)
+    entityObjectId = argObjectId or false
+    entityClassId = argClassId or 1
+    
+    QuestGlobalEvent(argEvent)
+end
 
 --- Global Events, addition to QuestGlobalEvent()
 local addToClientQuestTable = {
@@ -678,6 +710,18 @@ local addToClientQuestTable = {
         end
     end;
     
+    --- MODES
+    -- modeId [default: 1] -> Epic/Uber
+    wzDGA_setMode = function()
+        _cSettings:setMode(modeId)
+    end;
+    wzDGA_startMode = function()
+        _cSettings:startMode(modeId)
+    end;
+    wzDGA_finishMode = function()
+        _cSettings:finishMode(modeId)
+    end;
+    
     wzDGA_setDifficulty00 = function()
         RemoveTokenFromLocalPlayer("WZ_DGA_MP_DIFFICULTY_00")
     end;
@@ -691,11 +735,11 @@ local addToClientQuestTable = {
     
     wzDGA_dropCurrencySoul = function()
         local _cDrop = wanez.DGA.cDrop()
-        _cDrop:dropCurrency('soul')
+        _cDrop:dropCurrency('soul',entityClassId)
     end;
     wzDGA_dropCurrencyEssence = function()
         local _cDrop = wanez.DGA.cDrop()
-        _cDrop:dropCurrency('essence')
+        _cDrop:dropCurrency('essence',entityClassId)
     end;
     wzDGA_dropPlanarOrb = function()
         local _cDrop = wanez.DGA.cDrop()

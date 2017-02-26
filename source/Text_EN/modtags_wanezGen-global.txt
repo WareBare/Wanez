@@ -96,5 +96,11 @@ tagWzDGA_ItemsCraft_Vanillaa_005c_DESC="Gain a random Aethercrystal."
 tagWzDGA_ItemsCraft_Vanillaa_005cX_NAME=Aethercrystal - Essence (Greater)
 tagWzDGA_ItemsCraft_Vanillab_005c_DESC="Gain a random Aethercrystal."
 tagWzDGA_ItemsCraft_Vanillab_005cX_NAME=Aethercrystal - Soul (Greater)
+tagWzDGA_ItemsCraft_Vanilla_a006_DESC="Gain a random Vanilla Relic (Empowered)."{^n}
+tagWzDGA_ItemsCraft_Vanilla_a006_NAME=Vanilla Relic (Empowered)
+tagWzDGA_ItemsCraft_Vanilla_a007_DESC="Gain a random Vanilla Relic (Transcendent)."{^n}
+tagWzDGA_ItemsCraft_Vanilla_a007_NAME=Vanilla Relic (Transcendent)
+tagWzDGA_ItemsCraft_Vanilla_a008_DESC="Gain a random Vanilla Relic (Mythical)."{^n}
+tagWzDGA_ItemsCraft_Vanilla_a008_NAME=Vanilla Relic (Mythical)
 
 # Tool-Author: WareBare

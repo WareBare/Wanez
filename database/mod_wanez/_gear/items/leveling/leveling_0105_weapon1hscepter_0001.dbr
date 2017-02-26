@@ -1,6 +1,6 @@
 templateName,database/templates/weapon_scepter.tpl,
 Class,WeaponMelee_Scepter,
-FileDescription,Updated with Tool - 24/02/2017 10:20 pm,
+FileDescription,Updated with Tool - 26/02/2017 02:39 pm,
 hitSound,records/sounds/items/weaponattacks/spak_blunt_impact.dbr,
 swipeSound,records/sounds/items/weaponattacks/spak_blunt_swing.dbr,
 weaponTrail,records/fx/fxtrails/defaultsword_fxtrail.dbr,

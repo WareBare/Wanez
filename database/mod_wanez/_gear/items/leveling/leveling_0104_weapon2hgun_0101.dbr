@@ -1,6 +1,6 @@
 templateName,database/templates/weapon_ranged2h.tpl,
 Class,WeaponHunting_Ranged2h,
-FileDescription,Updated with Tool - 24/02/2017 10:20 pm,
+FileDescription,Updated with Tool - 26/02/2017 02:39 pm,
 basicProjectileName,records/fx/itemfx/projectiles/gun2h_projectiledefault_fx01.dbr,
 piercingProjectile,0.0,
 swipeSound,records/sounds/items/weaponattacks/spak_rifle_shot.dbr,

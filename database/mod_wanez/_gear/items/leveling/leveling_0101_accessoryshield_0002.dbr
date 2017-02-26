@@ -1,6 +1,6 @@
 templateName,database/templates/weaponarmor_shield.tpl,
 Class,WeaponArmor_Shield,
-FileDescription,Updated with Tool - 24/02/2017 06:25 pm,
+FileDescription,Updated with Tool - 25/02/2017 09:48 pm,
 defensiveBlockChance,15.0,
 defensiveBlock,25.0,
 blockAbsorption,100.0,

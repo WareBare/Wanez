@@ -1,6 +1,6 @@
 templateName,database/templates/monster.tpl,
 Class,Monster,
-FileDescription,Updated with Tool - 24/02/2017 03:34 pm,
+FileDescription,Updated with Tool - 26/02/2017 01:41 pm,
 LowerHealthDisplayPercentage,0.000000,
 MonsterMusicRadius,0.000000,
 UpperHealthDisplayPercentage,100.000000,

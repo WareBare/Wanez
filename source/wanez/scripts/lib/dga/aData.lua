@@ -97,6 +97,8 @@ wanez.DGA.aData = {
             heroCount = {1,2,3}; -- chance for max heroes per pack, may not go below 1
             heroChance = {15,20,40}; -- combination of heroChance and championChance may not go beyond 100
             heroReq = 15; -- level requirement for heroes, not before player level {x}
+            championReq = 10; -- level requirement for champions, not before player level {x}
+            nemesisChance = {10,33,100}; -- nemesis spawn chance per faction rank
         };
         -- Endless
         {
@@ -108,6 +110,8 @@ wanez.DGA.aData = {
             heroCount = {1,2,3};
             heroChance = {15,20,40};
             heroReq = 15;
+            championReq = 10;
+            nemesisChance = {10,33,100};
         };
         -- Challenge
         {
@@ -119,6 +123,8 @@ wanez.DGA.aData = {
             heroCount = {1,2,3};
             heroChance = {15,20,40};
             heroReq = 15;
+            championReq = 10;
+            nemesisChance = {50,100,150};
         };
         -- Raid
         {
@@ -130,6 +136,8 @@ wanez.DGA.aData = {
             heroCount = {1,2,3};
             heroChance = {15,20,40};
             heroReq = 15;
+            championReq = 10;
+            nemesisChance = {10,33,100};
         };
     };
     containers = {
@@ -226,6 +234,12 @@ wanez.DGA.aData = {
         };
         entityChances = {
             proxies = {{'a005',25}}
+        }
+    };
+    mpModes = {
+        -- EPIC
+        {
+            quest = {0x72D02680,{0xBF980D00,0x978ECA00}}
         }
     };
     dgaTypes = {

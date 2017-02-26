@@ -1,6 +1,6 @@
 templateName,database/templates/monster.tpl,
 Class,Monster,
-FileDescription,Updated with Tool - 24/02/2017 03:35 pm,
+FileDescription,Updated with Tool - 26/02/2017 02:24 pm,
 LowerHealthDisplayPercentage,0.000000,
 MonsterMusicRadius,0.000000,
 StatusIcon,ui/skills/icons/class03/skillicon_hellhoundsummon1up.tex,

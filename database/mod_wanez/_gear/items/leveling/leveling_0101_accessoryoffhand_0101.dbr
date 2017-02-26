@@ -1,6 +1,6 @@
 templateName,database/templates/weapon_offhand.tpl,
 Class,WeaponArmor_Offhand,
-FileDescription,Updated with Tool - 24/02/2017 10:19 pm,
+FileDescription,Updated with Tool - 25/02/2017 09:48 pm,
 itemNameTag,tagWaGearLeveling_0101_AccessoryOffhand_0101_NAME,
 bitmap,items/gearweapons/focus/bitmaps/a01_focus01.tex,
 attributeScalePercent,0.0,

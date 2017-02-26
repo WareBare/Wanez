@@ -201,19 +201,49 @@ function wanez.DGA.cBase()
             })
         end;
         getModeId = function(self,argPlayer)
-            local questIdUber = 0x6F17D400
-            --local taskIdUber = 0x85543C00
-            local modeId = 1
             argPlayer = argPlayer or Game.GetLocalPlayer()
         
-            if(argPlayer:GetQuestState(questIdUber) == QuestState.InProgress) then
+            local modeId = 1
+        
+            if(self:hasMpMode(1,argPlayer)) then
                 modeId = 2
-            
-                argPlayer:GiveToken('WZ_DGA_COMPLETE_UBER')
             end
         
             return modeId
         end;
+        ---
+        -- @return Boolean|Array - { questId, taskId }
+        hasMode = function(self,argModeId,argPlayer)
+            argModeId = argModeId or 1
+            argPlayer = argPlayer or Game.GetLocalPlayer()
+            local hasMode = false
+            local aData = wanez.DGA.aData.mpModes[argModeId]
+            local questId = aData.quests[1]
+            local taskId = aData.quests[2][1]
+        
+            if(argPlayer:GetQuestState(questId) == QuestState.InProgress) then
+                hasMode = {questId,taskId}
+            end
+            
+            return hasMode
+        end;
+        setMode = function(self,argModeId)
+            argModeId = argModeId or 1
+            local modeData = self:hasMpMode(argModeId)
+            if(modeData) then
+                local _player = Game.GetLocalPlayer()
+                RemoveTokenFromLocalPlayer("WZ_DGA_MODE_"..self:parseIntToString(argModeId,2).."_START")
+                RemoveTokenFromLocalPlayer("WZ_DGA_MODE_"..self:parseIntToString(argModeId,2).."_FINISH")
+                _player:GrantQuest(modeData[1],modeData[2])
+            end
+        end;
+        startMode = function(self,argModeId)
+            GiveTokenToLocalPlayer("WZ_DGA_MODE_"..self:parseIntToString(argModeId,2).."_START")
+        end;
+        finishMode = function(self,argModeId)
+            GiveTokenToLocalPlayer("WZ_DGA_MODE_"..self:parseIntToString(argModeId,2).."_FINISH")
+        end;
+        
         getMonsterPower = function(self,argPlayer,argMpTypeId)
             argPlayer = argPlayer or Game.GetLocalPlayer()
             argMpTypeId = argMpTypeId or 1

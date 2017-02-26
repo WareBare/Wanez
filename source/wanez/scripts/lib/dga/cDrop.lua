@@ -23,6 +23,7 @@ function wanez.DGA.cDrop()
     --local randomMax = 1000;
     local typeId;
     local areaTier;
+    local entityId;
     local _entity;
     local _areaOwner;
     local dropItems;
@@ -55,10 +56,13 @@ function wanez.DGA.cDrop()
         __iniClass = function(self,argObjectId,argClassId)
             classId = argClassId or 1
             classMul = aClassMul[classId]
+            -- Entity Instances
+            entityId = argObjectId
             _entity = Entity.Get(argObjectId)
             entityCoords = _entity:GetCoords()
             _pack = self:__getPack(argObjectId) or false
         end;
+        
         
         --- todo multiple drops
         dropItem = function(self,argDbr,argToOwner)
@@ -116,7 +120,9 @@ function wanez.DGA.cDrop()
             end
         end;
         
-        dropCurrency = function(self,argCurrencyType)
+        dropCurrency = function(self,argCurrencyType,argClassId)
+            local aMul = {0.10,0.25,0.5,0.75,1.0,3.0,2.0,3.0,3.0}
+            local newClassMul = aMul[argClassId] or classMul
             --UI.Notify("should drop currency")
             if(aDataMP.difficulty.ID ~= 1) then
                 --UI.Notify("will drop currency")
@@ -131,7 +137,7 @@ function wanez.DGA.cDrop()
     
                 local dropChance = self:RNG({
                     --randomMax = 1000;
-                    aChances = baseChance * dropMulMP[2] * classMul * (areaTier / 100 * 3 + 1);
+                    aChances = baseChance * dropMulMP[2] * newClassMul * (areaTier / 100 * 3 + 1);
                     returnNumber = true
                 })
                 
@@ -195,7 +201,7 @@ function wanez.DGA.cDrop()
         __dropLoot = function(self)
             --- INDIVIDUAL
             --self:dropCurrency('soul')
-            if(isNotVanilla) then QuestGlobalEvent("wzDGA_dropCurrencySoul") end
+            if(isNotVanilla) then wanez.DGA.mpDrop(entityId,classId,"wzDGA_dropCurrencySoul") end -- QuestGlobalEvent("wzDGA_dropCurrencySoul")
         
             -- Endless Scroll Drop
             if(typeId == 2 and classId == 7) then
@@ -207,13 +213,13 @@ function wanez.DGA.cDrop()
             end
             if(classId >= 3)then
                 --self:dropCurrency('essence')
-                if(isNotVanilla) then QuestGlobalEvent("wzDGA_dropCurrencyEssence") end
+                if(isNotVanilla) then wanez.DGA.mpDrop(entityId,classId,"wzDGA_dropCurrencyEssence") end -- QuestGlobalEvent("wzDGA_dropCurrencyEssence")
             end
             if(classId >= 5) then
                 --if(isNotVanilla) then QuestGlobalEvent("wzDGA_dropRewardDevotion") end
-                if(isNotVanilla) then QuestGlobalEvent("wzDGA_dropCurrencyEssence") end
-                if(isNotVanilla) then QuestGlobalEvent("wzDGA_dropCurrencyEssence") end
-                if(isNotVanilla) then QuestGlobalEvent("wzDGA_dropCurrencyEssence") end
+                --if(isNotVanilla) then QuestGlobalEvent("wzDGA_dropCurrencyEssence") end
+                --if(isNotVanilla) then QuestGlobalEvent("wzDGA_dropCurrencyEssence") end
+                --if(isNotVanilla) then QuestGlobalEvent("wzDGA_dropCurrencyEssence") end
             end
             if(typeId == 1) then
                 if(_areaOwner:GetQuestState(wanez.DGA.aData.dgaTypes.mission.quests[1][1]) and classId == 5) then

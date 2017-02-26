@@ -1,6 +1,6 @@
 templateName,database/templates/weapon_axe.tpl,
 Class,WeaponMelee_Axe,
-FileDescription,Updated with Tool - 24/02/2017 10:19 pm,
+FileDescription,Updated with Tool - 25/02/2017 09:48 pm,
 actorHeight,0.5,
 actorRadius,0.5,
 allowTransparency,0,

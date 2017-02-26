@@ -1,6 +1,6 @@
 templateName,database/templates/weapon_offhand.tpl,
 Class,WeaponArmor_Offhand,
-FileDescription,Updated with Tool - 24/02/2017 06:25 pm,
+FileDescription,Updated with Tool - 26/02/2017 02:26 pm,
 itemNameTag,tagWaGearCraft_0100_AccessoryOffhand_NAME,
 bitmap,items/craftingparts/customblueprints/randoms/legendary_misc_neclace01.tex,
 attributeScalePercent,0.0,

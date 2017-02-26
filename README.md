@@ -1,8 +1,8 @@
-# Wanez :: GD-MOD (v0.1.0) #
+# WanezMod v0.5.0 - For GrimDawn #
 
-Unofficial MOD for Grim Dawn. This is the full Mod's source with all of its SubMods. Right now Wanez is literally just DGA and some additional stuff, but in the future it will have everything in it I am working on (DGA, Masteries, Items, etc.), everything will be available in this mod as some kind of Compilation.
+Unofficial Mod for Grim Dawn. This is the full Mod's source with all of its SubMods. Right now WanezMod is literally just DGA and some additional stuff, but in the future it will have everything in it I am working on (DGA, Masteries, Items, etc.), everything will be available in this mod as some kind of Compilation.
 
-Every part has its own Version, this probably makes it confusing, but I believe it's the best way for others to keep track of updates of the parts they wish to use. If you are just here for Runic Inscriptions than there is no reason to update if the latest version of Wanez doesn't have an Update for Runic Inscriptions. 
+Every part has its own Version, this probably makes it confusing, but I believe it's the best way for others to keep track of updates of the parts they wish to use. If you are just here for Runic Inscriptions than there is no reason to update if the latest version of WanezMod doesn't have an Update for Runic Inscriptions. 
 
 You can check out the Section 'For Modders' to get more information on what you need. You should also check out [my Website for this mod](http://wanez.de/gd/mod/features) to get more information.
 

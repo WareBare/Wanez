@@ -69,6 +69,7 @@ function wanez.cBase()
                 aChances = false;
                 maxLoops = 5;
                 rngEntries = false;
+                rngData = false;
                 returnArrayValue = true;
                 returnNumber = false
             }})
@@ -124,6 +125,14 @@ function wanez.cBase()
                         end
                     else
                         rngEntries[opt.rngEntries] = {}
+                    end
+                elseif(opt.rngData) then
+                    if(table.getn(opt.rngData) < optRange[2]) then
+                        --local tempIndex = 1
+                        --local tempValue = false
+                        if(opt.rngData[optData[rand]] == true)then
+                            doWhile = true
+                        end
                     end
                 end
             end;
@@ -248,8 +257,9 @@ function wanez.cBase()
             return newMul
         end;
         
-        __getFactionRank = function(self,argFaction) -- ToDo
-            local factionRating = Game.GetLocalPlayer():GetFaction(argFaction)
+        getFactionRank = function(self,argFaction,argPlayer) -- ToDo
+            argPlayer = argPlayer or Game.GetLocalPlayer()
+            local factionRating = argPlayer:GetFaction(argFaction)
             local FactionRank = 0
             if(factionRating >= 25000)then FactionRank = 4
             elseif(factionRating <= -20000 or factionRating >= 10000)then FactionRank = 3
