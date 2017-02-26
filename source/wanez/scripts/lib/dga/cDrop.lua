@@ -156,24 +156,31 @@ function wanez.DGA.cDrop()
         giveOrb = function(self,argOrbType)
             argOrbType = argOrbType or 1
             argOrbType = (self:__getDifficultyID() == 3) and argOrbType or 1
-            
+        
+            --[[
             local orbType = self:RNG({
-                aDataRatio = {{1,100},{argOrbType,25}}
+                aDataRatio = {{1,100},{argOrbType,75}}
             })
+            ]]
             local baseChance = 200
+            local avgLevel = Game.GetAveragePlayerLevel()
             local potency = 'b'
             local challengeMul = (typeId == 3) and 2.5 or 1.0
     
             local dropChance = self:RNG({
                 --randomMax = 1000;
-                aChances = baseChance * dropMulMP[3] * classMul * (areaTier / 100 * 3 + 1) * challengeMul;
+                aChances = baseChance * (avgLevel / 10 + 1) * dropMulMP[1] * classMul * (areaTier / 100 * 3 + 1) * challengeMul;
                 returnNumber = true
             })
             if(dropChance)then
-                Game.GetLocalPlayer():GiveItem(self:str_replace(tplOrb,{
-                    NAME = self:parseIntToString(orbType,2);
-                    POTENCY = potency;
-                }),dropChance,true)
+                for i=1,dropChance do
+                    self:dropItem(self:str_replace(tplOrb,{
+                        NAME = self:parseIntToString(self:RNG({
+                            aDataRatio = {{1,100},{argOrbType,10}}
+                        }),2);
+                        POTENCY = potency;
+                    }))
+                end;
             end
         end;
         

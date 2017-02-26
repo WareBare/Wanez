@@ -421,6 +421,7 @@ function wanez.DGA.onEnterTriggerMapMP(argObjectId)
     if(_player:HasToken("WZ_DGA_ALLOW_PORTAL_DEFAULT")) then
         _player:RemoveToken("WZ_DGA_ALLOW_PORTAL_DEFAULT")
     end
+    _player:GiveToken("WZ_DGA_MODE_001_START") -- finishes uber
     if(_cType) then
         --- start challenge for the player entering
         if(_cType.TypeID == 3) then
@@ -595,7 +596,7 @@ function wanez.DGA.useMode_Scroll(argTypeId)
             notify = false;
         };
     
-        if(self:hasMode(modeId) == false) then
+        if(_cSettings:hasMode(argTypeId) == false) then
             modeId = argTypeId
             QuestGlobalEvent("wzDGA_setMode")
         end

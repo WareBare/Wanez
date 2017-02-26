@@ -90,7 +90,7 @@ wanez.DGA.aData = {
         -- Mission
         {
             inhabitantChance = 33; -- {unsigned Int} chance to spawn inhabited enemies
-            useProxies = 50; -- {unsigned Int} chance to use available proxies 50% will result in ~half of the available spawn locations
+            useProxies = 60; -- {unsigned Int} chance to use available proxies 50% will result in ~half of the available spawn locations
             commonCount = {4,5,7}; -- may not go below 3
             championCount = {3,4,6}; -- chance for max champions per pack, may not go below 3
             championChance = {25,30,50}; -- combination of heroChance and championChance may not go beyond 100
@@ -103,7 +103,7 @@ wanez.DGA.aData = {
         -- Endless
         {
             inhabitantChance = 33;
-            useProxies = 50;
+            useProxies = 60;
             commonCount = {4,5,7};
             championCount = {3,4,6};
             championChance = {25,30,50};
@@ -116,7 +116,7 @@ wanez.DGA.aData = {
         -- Challenge
         {
             inhabitantChance = 33;
-            useProxies = 50;
+            useProxies = 60;
             commonCount = {4,5,7};
             championCount = {3,4,6};
             championChance = {25,30,50};

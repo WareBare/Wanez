@@ -205,7 +205,7 @@ function wanez.DGA.cBase()
         
             local modeId = 1
         
-            if(self:hasMpMode(1,argPlayer)) then
+            if(self:hasMode(1,argPlayer)) then
                 modeId = 2
             end
         
@@ -218,23 +218,26 @@ function wanez.DGA.cBase()
             argPlayer = argPlayer or Game.GetLocalPlayer()
             local hasMode = false
             local aData = wanez.DGA.aData.mpModes[argModeId]
-            local questId = aData.quests[1]
-            local taskId = aData.quests[2][1]
+            local questId = aData.quest[1]
         
             if(argPlayer:GetQuestState(questId) == QuestState.InProgress) then
-                hasMode = {questId,taskId}
+                hasMode = true
             end
             
             return hasMode
         end;
         setMode = function(self,argModeId)
             argModeId = argModeId or 1
-            local modeData = self:hasMpMode(argModeId)
-            if(modeData) then
+            
+            if(self:hasMode(argModeId) == false) then
+                local aData = wanez.DGA.aData.mpModes[argModeId]
+                local questId = aData.quest[1]
+                local taskId = aData.quest[2][1]
+                
                 local _player = Game.GetLocalPlayer()
                 RemoveTokenFromLocalPlayer("WZ_DGA_MODE_"..self:parseIntToString(argModeId,2).."_START")
                 RemoveTokenFromLocalPlayer("WZ_DGA_MODE_"..self:parseIntToString(argModeId,2).."_FINISH")
-                _player:GrantQuest(modeData[1],modeData[2])
+                _player:GrantQuest(questId,taskId)
             end
         end;
         startMode = function(self,argModeId)

@@ -6045,3 +6045,4 @@ function wanez.fn.gDGA.useArea_Scroll_1002(argObjectId) wanez.DGA.useArea_Scroll
 function wanez.fn.gDGA.useArea_Scroll_3001(argObjectId) wanez.DGA.useArea_Scroll(argObjectId,3001); end;
 function wanez.fn.gDGA.useArea_Scroll_3002(argObjectId) wanez.DGA.useArea_Scroll(argObjectId,3002); end;
 function wanez.fn.gDGA.useArea_Scroll_3003(argObjectId) wanez.DGA.useArea_Scroll(argObjectId,3003); end;
+function wanez.fn.gDGA.useMode_Scroll001() wanez.DGA.useMode_Scroll(1); end;
