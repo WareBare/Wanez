@@ -1,5 +1,36 @@
 # Changelog #
-An online version can be found [here](http://wanez.de/gd/mod/updates).
+You can also check out an [online changelog](http://wanez.de/gd/mod/updates).
+
+## v0.5.0 - Beta #05 ##
+### DGA ###
+#### Maps ####
+* fixed various map related issues
+
+#### Enemies ####
+* fixed two more missing tags
+  * tagEnemyZombieTrollHalfB01=Zombie Mistborn Hunter
+  * tagEnemyZombieTrollHalfC01=Zombie Mistborn Warrior
+
+### Gifts & Treasures ###
+#### Weapons ####
+* fix to weapon attack speed, every weapon had 1.25 (default value) due to an issue with the generation tool and negative numbers
+* weapon rework - I only placed some random values and a pretty bad scaling on them, to get it done asap, I have taken a closer look now
+  * Weapon Damage has been increased across the board ()
+  * Ranged weapons received a buff (always felt a little underwhelming to me, Im gonna test it out if they're too strong now)
+  * Scepters now have magical base dmg and their respective increases(this includes DoT increases)
+  * total speed (implicit) on some weapons has been changed to bonus physical damage
+  * increases (implicit) on two-handed weapons has been doubled to make up for the loss in an off hand
+  * one-handed weapons have received a 30% damage buff (compared to vanilla values)
+
+#### Variations ####
+* Scepter Physical Damage Increase has been replaced with high Total Damage value
+
+#### Properties ####
+* rebalance and multiple changes
+  * little more love for pets
+  * lowered regen values and merged some of them
+  * much higher change to get total damage
+  * new total damage affix with double value, but low chance
 
 ## v0.5.0 - Beta #04 ##
 ### DGA ###
