@@ -189,8 +189,9 @@ function wanez.DGA.cBase()
             --UI.Notify("__genRandomArea :: finished")
             --return self:RNG(false,'RandomAreaID0'..argTypeId,aTypes[argTypeId])
             return self:RNG({
-                rngEntries = 'RandomAreaID0'..argTypeId;
+                rngEntries = 'RandomAreaID'..self:parseIntToString(argTypeId,3);
                 aData = aTypes[argTypeId];
+                maxLoops = 10;
             })
         end;
         __genRandomVariationID = function(self,argAreaId)

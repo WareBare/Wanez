@@ -32,6 +32,8 @@ tagEnemyHarpyA02=Harpy Flesh Ripper
 tagEnemyHarpyB02=Harpy Death Wind
 tagEnemyZombieTrollHalfCasterB01=Zombie Mistborn Shaman
 tagEnemyZombieTrollHalfA01=Zombie Mistborn Brute
+tagEnemyZombieTrollHalfB01=Zombie Mistborn Hunter
+tagEnemyZombieTrollHalfC01=Zombie Mistborn Warrior
 
 ### MISC ###
 tagWzGear_NPC_CrafterLeveling_DESC=Equipment

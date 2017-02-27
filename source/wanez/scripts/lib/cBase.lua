@@ -191,7 +191,7 @@ function wanez.cBase()
             return ( (number <= 9) and arr[base - add]..number or (number <= 99) and arr[base + 1 - add]..number or (number <= 999) and arr[base + 2 - add]..number or number );
         end;
         newRandomSeed = function(self)
-            if( (Time.Now() - lastSeed) >= 10000) then
+            if( (Time.Now() - lastSeed) >= 100000) then
                 lastSeed = Time.Now()
                 math.randomseed(lastSeed)
                 --UI.Notify('set new randomseed')
