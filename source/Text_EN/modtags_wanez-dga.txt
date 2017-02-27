@@ -1,5 +1,5 @@
 ###
-tagWzDGA_LuaNotify_Welcome=Welcome to DGA v0.5.0 - Beta #04
+tagWzDGA_LuaNotify_Welcome=Welcome to DGA v0.5.0 - Beta #05
 tagWzDGA_LuaNotify_SpawnedEntities=New Enemies have arrived, enjoy!
 tagWzDGA_LuaNotify_Difficulty_failure=You are in the wrong difficulty to use this
 tagWzDGA_LuaNotify_usedScrollDGA_success=A Portal has been opened
