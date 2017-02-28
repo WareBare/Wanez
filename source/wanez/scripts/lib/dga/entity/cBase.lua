@@ -122,6 +122,19 @@ function wanez.DGA.entity.cBase()
             
         end;
         
+        createPylon = function(self,argCoords,optEntities)
+            argCoords = argCoords or Game.GetLocalPlayer()
+            optEntities = (type(optEntities) == 'string') and {optEntities} or optEntities
+    
+            for key,dbr in pairs(optEntities) do
+                local newEntity = Entity.Create(dbr)
+                --UI.Notify("Spawn: entity created")
+                newEntity:SetCoords(argCoords)
+                --UI.Notify("Spawn: setCoords")
+                table.insert(aEntities,newEntity)
+            end;
+        end;
+        
         destoryEntities = function(self)
             for key,_entity in pairs(aEntities) do
                 _entity:Destroy()

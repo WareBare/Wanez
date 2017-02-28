@@ -67,29 +67,33 @@ wanez.DGA.aData = {
     entityTypes = {
         -- Mission
         {
-            {"Enemy",100},
-            {"Container",1}--, {"Anomaly",100}
+            {"Enemy",98},
+            {"Container",1},--, {"Anomaly",100}
+            {"Pylon",1}
         };
         -- Endless
         {
-            {"Enemy",100},
-            {"Container",1}--, {"Anomaly",100}
+            {"Enemy",98},
+            {"Container",1},--, {"Anomaly",100}
+            {"Pylon",1}
         };
         -- Challenge
         {
-            {"Enemy",100},
-            {"Container",5}--, {"Anomaly",100}
+            {"Enemy",98},
+            {"Container",5},--, {"Anomaly",100}
+            {"Pylon",1}
         };
         -- Raid
         {
-            {"Enemy",100},
-            {"Container",10}--, {"Anomaly",100}
+            {"Enemy",98},
+            {"Container",10},--, {"Anomaly",100}
+            {"Pylon",1}
         };
     };
     enemyTypes = {
         -- Mission
         {
-            inhabitantChance = 33; -- {unsigned Int} chance to spawn inhabited enemies
+            inhabitantChance = 20; -- {unsigned Int} chance to spawn inhabited enemies
             useProxies = 60; -- {unsigned Int} chance to use available proxies 50% will result in ~half of the available spawn locations
             commonCount = {4,5,7}; -- may not go below 3
             championCount = {3,4,6}; -- chance for max champions per pack, may not go below 3
@@ -102,7 +106,7 @@ wanez.DGA.aData = {
         };
         -- Endless
         {
-            inhabitantChance = 33;
+            inhabitantChance = 15;
             useProxies = 60;
             commonCount = {4,5,7};
             championCount = {3,4,6};
@@ -115,7 +119,7 @@ wanez.DGA.aData = {
         };
         -- Challenge
         {
-            inhabitantChance = 33;
+            inhabitantChance = 5;
             useProxies = 60;
             commonCount = {4,5,7};
             championCount = {3,4,6};
@@ -128,7 +132,7 @@ wanez.DGA.aData = {
         };
         -- Raid
         {
-            inhabitantChance = 33;
+            inhabitantChance = 50;
             useProxies = 50;
             commonCount = {4,5,7};
             championCount = {3,4,6};

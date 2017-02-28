@@ -518,6 +518,15 @@ function wanez.DGA.openNextEndless(argObjectId,argInc)
     endlessNPC = false
 end
 
+function wanez.DGA.onInteractPylon(argObjectId,argType,argId)
+    local _pylon = Entity.Get(argObjectId)
+    local coords = _pylon:GetCoords()
+    local buffer = Entity.Create("mod_wanez/pylons/pylon_"..argType.."00"..argId.."_entity.dbr")
+    buffer:SetCoords(coords)
+    --buffer:Destroy()
+    _pylon:Destroy()
+end
+
 function wanez.DGA.onDie(argObjectId,argClassId)
     local _enemy = Entity.Get(argObjectId)
     local typeId = _cType.TypeID or 1

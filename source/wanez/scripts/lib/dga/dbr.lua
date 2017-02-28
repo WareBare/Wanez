@@ -56,4 +56,11 @@ wanez.DGA.dbr = {
         boxTrigger(argObjectId,'onLeave','WZ_DGA_ALLOW_PORTAL_DEFAULT')
         --boxTrigger(argObjectId,'onLeave','WZ_DGA_CHALLENGE_START')
     end;
+    
+    onInteractPylon_a001 = function(argObjectId)
+        wanez.DGA.onInteractPylon(argObjectId,'a',1)
+    end;
+    onInteractPylon_a002 = function(argObjectId)
+        wanez.DGA.onInteractPylon(argObjectId,'a',2)
+    end;
 }

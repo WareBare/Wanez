@@ -13,6 +13,7 @@ wanez.DGA.entity = {}
 Script.Load("wanez/scripts/lib/dga/entity/cBase.lua");
 Script.Load("wanez/scripts/lib/dga/entity/cEnemy.lua");
 Script.Load("wanez/scripts/lib/dga/entity/cContainer.lua");
+Script.Load("wanez/scripts/lib/dga/entity/cPylon.lua");
 Script.Load("wanez/scripts/lib/dga/entity/cNpc.lua");
 Script.Load("wanez/scripts/lib/dga/entity/cProxy.lua");
 

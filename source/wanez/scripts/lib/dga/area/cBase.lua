@@ -489,6 +489,19 @@ function wanez.DGA.area.cBase(argRegionId,argAreaId,optData)
                 _tempProxy:setDataEntity(aDataMP,monsterLevel)
             
                 entityClass = 1
+            elseif(entityType == "Pylon")then
+                -- todo more dynamic
+                aEntitiesToSpawn = self:RNG({
+                    aData = {
+                        "mod_wanez/pylons/pylon_a001.dbr",
+                        "mod_wanez/pylons/pylon_a002.dbr"
+                    }
+                })
+            
+                _tempProxy = wanez.DGA.entity.cPylon()
+                _tempProxy:setDataEntity(aDataMP,monsterLevel)
+                entityClass = 1
+                
                 --[[
             elseif(entityType == "Anomaly") then
                 _tempProxy = wanez.DGA.entity.cEnemy()

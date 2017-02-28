@@ -1,6 +1,24 @@
 # Changelog #
 You can also check out an [online changelog](http://wanez.de/gd/mod/updates).
 
+## v0.5.0 - Beta #06 ##
+### DGA ###
+#### Shrines & Pylons ####
+* Shrines can now spawn in maps, they are as rare as chests and their effects last 10min
+* added two shrines:
+  * Shrine of Experience (150% Exp)
+  * Shrine of Speed (50% Movement Speed, 25% Attack Speed, 25% Casting Speed)
+* it is very likely balancing will result in reduced duration
+
+### Gifts & Treasures ###
+#### Properties ####
+* several % All Damage mods have been reduced
+* belts flat regen have been changed to regen %
+* various small adjustments
+
+#### Items ####
+* Medals have been added
+
 ## v0.5.0 - Beta #05 ##
 ### DGA ###
 #### Maps ####
