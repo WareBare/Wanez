@@ -593,5 +593,21 @@ tagWzDGA_ItemsScrolls_Scroll3Tier030b_DESC="Use a DGA Scroll to open a Portal wh
 tagWzDGA_ItemsScrolls_Scroll3Tier030b_NAME=Endless DGA Scroll (T30)
 tagWzDGA_ItemsScrolls_QuestMode001_DESC="Use to start a quest enabling Uber Mode for the next Area you open."
 tagWzDGA_ItemsScrolls_QuestMode001_NAME=Uber Mode
+tagWzDGA_ItemsRewards_OneShotPotiona001_DESC="You can use an Devotion Reward Potion to gain free Devotion."{^n}T1: 1 Devotion{^n}T2: 3 Devotion{^n}T3: 5 Devotion{^n}{^r}Cannot be used at full mana
+tagWzDGA_ItemsRewards_OneShotPotiona001_NAME=DGA Reward: Devotion (T01)
+tagWzDGA_ItemsRewards_OneShotPotiona002_DESC="You can use an Devotion Reward Potion to gain free Devotion."{^n}T1: 1 Devotion{^n}T2: 3 Devotion{^n}T3: 5 Devotion{^n}{^r}Cannot be used at full mana
+tagWzDGA_ItemsRewards_OneShotPotiona002_NAME=DGA Reward: Devotion (T02)
+tagWzDGA_ItemsRewards_OneShotPotiona003_DESC="You can use an Devotion Reward Potion to gain free Devotion."{^n}T1: 1 Devotion{^n}T2: 3 Devotion{^n}T3: 5 Devotion{^n}{^r}Cannot be used at full mana
+tagWzDGA_ItemsRewards_OneShotPotiona003_NAME=DGA Reward: Devotion (T03)
+tagWzDGA_ItemsRewards_OneShotPotionb001_DESC="You can use an Experience Reward Potion to gain free Experience."{^n}T1: 1000 Experience{^n}T2: 10000 Experience{^n}T3: 50000 Experience{^n}{^r}Cannot be used at full Energy!
+tagWzDGA_ItemsRewards_OneShotPotionb001_NAME=DGA Reward: Experience (T01)
+tagWzDGA_ItemsRewards_OneShotPotionb002_DESC="You can use an Experience Reward Potion to gain free Experience."{^n}T1: 1000 Experience{^n}T2: 10000 Experience{^n}T3: 50000 Experience{^n}{^r}Cannot be used at full Energy!
+tagWzDGA_ItemsRewards_OneShotPotionb002_NAME=DGA Reward: Experience (T02)
+tagWzDGA_ItemsRewards_OneShotPotionb003_DESC="You can use an Experience Reward Potion to gain free Experience."{^n}T1: 1000 Experience{^n}T2: 10000 Experience{^n}T3: 50000 Experience{^n}{^r}Cannot be used at full Energy!
+tagWzDGA_ItemsRewards_OneShotPotionb003_NAME=DGA Reward: Experience (T03)
+tagWzDGA_ItemsCraftRewards_OneShotPotion_a000_DESC="Craft Devotion Reward Potion with a random tier Tier."
+tagWzDGA_ItemsCraftRewards_OneShotPotion_a000_NAME=Random Devotion Reward Tier
+tagWzDGA_ItemsCraftRewards_OneShotPotion_b000_DESC="Craft Experience Reward Potion with a random tier Tier."
+tagWzDGA_ItemsCraftRewards_OneShotPotion_b000_NAME=Random Experience Reward Tier
 
 # Tool-Author: WareBare

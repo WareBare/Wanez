@@ -9,16 +9,15 @@ You can check out the Section 'For Modders' to get more information on what you 
 `In Progress` You will have to download the full source and use the Mod-Splitter Tool to get the parts you want.
 
 ---
-
 ## Dynamically Generated Areas ##
 ### Introduction ###
 #### General ####
 Entering the game will give you access to everything the dismantle NPC has to offer and in addition normal will give you all inventory bags.
 
-#### `new` Multiplayer ####
+#### Multiplayer ####
 In any previous version lots of issues occured in Multiplayer, v0.5 is going to change that as it's fully compatible with Multiplayer!
 
-#### `new` OMEGA MOD removal ####
+#### OMEGA MOD removal ####
 From the start the plan was to make a mod that can be merged easily with any other mod. Having a complex mod with many files is not going to make it easier for others who only want the source of my mod, so I decided to remove it. Since the source is now available, it's pretty easy to merge it yourself.
 
 In addition my mod will have different ways to improve your character and adding other mods to it will make it more difficult to balance properly.
@@ -29,7 +28,7 @@ What this means to you (as a non-DAIL player), if you have any OMEGA items on yo
 *The guard dbr is in the world and will show up either as the vanilla guard or OMEGA NPC depending on it being merged or not*
 
 ### DGA-Items ###
-#### `updated` General ####
+#### General ####
 Any item not used anymore is exchanged when you first login for the new ones coming with v0.5, if you don't want that - you can place them in your stash (at least in the non-DAIL version) and they are removed entirely with v1.0.
 * Components and Keys will turn into DGA-Orbs
 * DGA Essences will turn into DGA-Orbs
@@ -69,7 +68,7 @@ Starting with v0.5 you'll have the option of enemies having vanilla Loot Tables 
   * Any lower Tier DGA-Scroll can drop
   * *eg. Killing a Hero Pack in a Tier 9 DGA has the chance of dropping DGA-Scrolls between Tier 1 and 10*
 
-#### `new` Area-Scroll ####
+#### Area-Scroll ####
 * You can set the Area for the next DGA-Scroll you are using
 * This information will not last until the next session
 * When you set an Area, but don't have the quest or use the right scroll that can lead to it, the Area-Scroll was wasted as the value is reset with every DGA-Scroll use
@@ -116,7 +115,7 @@ Difficulties Normal and Elite don't require you to find an item to open a portal
   * 2 additional Monster Levels for Tiers 6 - 10
   * 3 additional Monster Levels for Tiers 11 - 15
   * this adds up to +30 Monster Level at Tier 15 (rather than the previous +15 at Tier 15)
-  * and +105 Monster Level at Tier 30. 
+  * and +105 Monster Level at Tier 30.
   * Endless DGA work a little different, but more about that later
 * All difficulties now have 30 Tiers available and Normal/Elite doesn't require drops to craft the higher Tiers
 * 3% more Essences/Souls/Orbs per Tier
@@ -158,7 +157,7 @@ Endless will not follow the regular DGA-Tier mechanics, but instead increase Mon
 * `The Portal can be opened by using a regular DGA-Scroll while having an active Raid Quest`
 
 #### Uber ####
-* Uber will show up as a Quest and is removed when you open the next Portal. 
+* Uber will show up as a Quest and is removed when you open the next Portal.
 * Uber Quest-Scrolls can be crafted at the Blacksmith for DGA-Orbs
 * Challenges and Raids require more DGA-Orbs than Missions/Endless
 
@@ -188,7 +187,7 @@ Increases are being added up and multiplied with the base drop-rate (eg. Base Dr
 I added enemies to the tool's functionality, this means I can change data across all files or pick a certain file to change values easily, also every time there is a new Grim Dawn update I can update them aswell. This results in more features that would have been tedious and not worth the time. It also means more customization options for players and up to date enemy files.
 
 #### Loot & Drop ####
-You can choose to play a "Vanilla-Mode", it means monsters will have their vanilla Loot Tables with their vanilla Drop-Rates (or any changes made to vanilla files from other Mods). This Mode is only available in Normal DGA-Difficulty. If you just want a different endgame experience to vanilla areas, you can choose "Vanilla-Mode" and you will get the same items and nothing that would enable any of the new features (eg. Gifts & Treasures). 
+You can choose to play a "Vanilla-Mode", it means monsters will have their vanilla Loot Tables with their vanilla Drop-Rates (or any changes made to vanilla files from other Mods). This Mode is only available in Normal DGA-Difficulty. If you just want a different endgame experience to vanilla areas, you can choose "Vanilla-Mode" and you will get the same items and nothing that would enable any of the new features (eg. Gifts & Treasures).
 
 *I am giving the option of removing worthless items, because I cant just remove them from the ground, you would have to start a new Session if you are doing the same area multiple times and this is defeating the purpose of this Mod.*
 
@@ -279,6 +278,17 @@ You can choose between
 
 *And lets not forget the different Tiers, increasing Monster Level. Tier 15 (+30 to Monster Level) Uber Raid on Elite sounds rough*
 
+### `new` Shrines & Pylons ###
+#### General ####
+* An Obelisk that grants a buff to the player and party members around
+* Inspired by Diablo 3
+
+#### Shrines ####
+* Shrine effects last for 10 minutes
+* Current Shrines in the Mod
+  * Shrine of Experience (150% Exp)
+  * Shrine of Speed (50% Movement Speed, 25% Attack Speed, 25% Casting Speed)
+
 ## Factions ##
 ### DGA-Factions ###
 #### Planar Invaders ####
@@ -289,7 +299,7 @@ You can choose between
 * Friendly Faction
 * `Access to Bounty-Table in DGA (moved to v0.5.x)`
 
-## `updated` Runic Inscriptions ##
+## Runic Inscriptions ##
 ### General ###
 #### Introduction ####
 * Runic Inscriptions come in different sets
@@ -320,12 +330,7 @@ You can choose between
 
 #### Runic Sets ####
 This has nothing to do with set bonuses, it simply means these are different types of runes. Only Runes from the same set can be used to create an Inscription
-* Runic Combination
-  * Craftable at the Blacksmith
-  * Multiple Components are combined
-  * The Rune inherits ALL stats (not the skill) of each Component, but at a lower effect
-  * Duplicate stats will be added up - Comp I has 30 Life and Comp II 12, the rune will have 42 Life - x% (due to reduced effectiveness)
-  * Materials can be gathered anywhere
+* Runic Combination (removed)
 * Runic Empowerment
   * Craftable at a Blacksmith
   * Aether Crystals can be used with a Component to make a Rune
@@ -336,7 +341,7 @@ This has nothing to do with set bonuses, it simply means these are different typ
   * `No Base Components, the Rune has entirely new stats and its signature skill`
   * `The Rune-Scroll can only be obtained in DGA`
 
-#### `new` Runic-Sequence ####
+#### Runic-Sequence ####
 A quick Tutorial on "How to create an Inscription"
 * Use an Equipment-Stone to initiate a new Sequence
 * You can choose between two different Stones
@@ -347,7 +352,7 @@ A quick Tutorial on "How to create an Inscription"
 * once the number of Runes [used] matches the number of Sockets [of the Stone] it will either fail or succeed in creating an Inscription
   * It will only succeed if the Runes were used in the correct order
 
-## `updated` Gifts & Treasures ##
+## Gifts & Treasures ##
 ### New Items ###
 #### Planar Essences & Planar Souls ####
 Already mentioned in the DGA Section, but they are still relevant here, because you can only exchange them for something useful at the Blacksmith for Gifts & Treasures. You can buy a variety of Vanilla Materials/Components with them and new items used to craft new Items.
@@ -398,7 +403,7 @@ I know every little detail on how I want them to work, but it is still work for 
 
 ## For Modders ##
 ### Database ###
-The directories currency, scroll and faction are used globally, so you'll need those as well as the directory with the _ (underscore) prefix. However some items may not be able to drop/craftable unless you add them to vanilla or your own LootTables/Blacksmiths. 
+The directories currency, scroll and faction are used globally, so you'll need those as well as the directory with the _ (underscore) prefix. However some items may not be able to drop/craftable unless you add them to vanilla or your own LootTables/Blacksmiths.
 
 ### Source ###
 With the exception of Tags, everything is inside the "wanez" directory.
@@ -413,13 +418,14 @@ With the exception of Tags, everything is inside the "wanez" directory.
   * Created new Areas
 * Zaknafein
   * Created new Areas
-  * Basic DGA: Bone Pit Sanctuary, King Temple
+  * Basic DGA: Bone Pit Sanctuary, King Temple, Inferno, Torture Chamber
 * hawk4me
   * Created new Areas
   * Basic DGA: Island of Woe
 
 #### Special Thanks To ####
 * PrincessLuna for providing a solution to "de-spawn" monsters, when I started this project
+* The ones alpha testing v0.5.0 for Multiplayer
 
 ### Graphics ###
 #### Bitmaps ####

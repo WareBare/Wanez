@@ -1,7 +1,7 @@
 templateName,database/templates/dungeonentrance.tpl,
 ActorName,,
 Class,DungeonEntrance,
-FileDescription,Pylon - Speed,
+FileDescription,,
 openEffect,,
 doorHooks,,
 factionRequired,,

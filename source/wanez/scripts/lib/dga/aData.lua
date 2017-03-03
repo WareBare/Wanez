@@ -67,25 +67,25 @@ wanez.DGA.aData = {
     entityTypes = {
         -- Mission
         {
-            {"Enemy",98},
-            {"Container",1},--, {"Anomaly",100}
+            {"Enemy",96},
+            {"Container",3},--, {"Anomaly",100}
             {"Pylon",1}
         };
         -- Endless
         {
-            {"Enemy",98},
-            {"Container",1},--, {"Anomaly",100}
+            {"Enemy",96},
+            {"Container",3},--, {"Anomaly",100}
             {"Pylon",1}
         };
         -- Challenge
         {
-            {"Enemy",98},
+            {"Enemy",94},
             {"Container",5},--, {"Anomaly",100}
             {"Pylon",1}
         };
         -- Raid
         {
-            {"Enemy",98},
+            {"Enemy",89},
             {"Container",10},--, {"Anomaly",100}
             {"Pylon",1}
         };
@@ -102,7 +102,7 @@ wanez.DGA.aData = {
             heroChance = {15,20,40}; -- combination of heroChance and championChance may not go beyond 100
             heroReq = 15; -- level requirement for heroes, not before player level {x}
             championReq = 10; -- level requirement for champions, not before player level {x}
-            nemesisChance = {10,33,100}; -- nemesis spawn chance per faction rank
+            nemesisChance = {0,10,33,100}; -- nemesis spawn chance per faction rank
         };
         -- Endless
         {
@@ -115,7 +115,7 @@ wanez.DGA.aData = {
             heroChance = {15,20,40};
             heroReq = 15;
             championReq = 10;
-            nemesisChance = {10,33,100};
+            nemesisChance = {0,10,33,100};
         };
         -- Challenge
         {
@@ -128,7 +128,7 @@ wanez.DGA.aData = {
             heroChance = {15,20,40};
             heroReq = 15;
             championReq = 10;
-            nemesisChance = {50,100,150};
+            nemesisChance = {0,50,100,150};
         };
         -- Raid
         {
@@ -141,25 +141,55 @@ wanez.DGA.aData = {
             heroChance = {15,20,40};
             heroReq = 15;
             championReq = 10;
-            nemesisChance = {10,33,100};
+            nemesisChance = {0,10,33,100};
+        };
+    };
+    reputationGain = {
+        -- Mission
+        {
+            perClass = {5,25,50,50,75,100,150,150,150};
+            rankPenalty = {10.0,3.0,1.00,0.25,0.25}
+        };
+        -- Endless
+        {
+            perClass = {5,25,50,50,75,100,150,150,150};
+            rankPenalty = {10.0,3.0,1.00,0.25,0.25}
+        };
+        -- Challenge
+        {
+            perClass = {5,25,50,50,75,100,150,150,150};
+            rankPenalty = {10.0,3.0,1.00,0.25,0.25}
+        };
+        -- Raid
+        {
+            perClass = {5,25,50,50,75,100,150,150,150};
+            rankPenalty = {10.0,3.0,1.00,0.25,0.25}
         };
     };
     containers = {
         -- Mission
         {
-            {'chest_dga_01.dbr',100}
+            {'chest_dga_01.dbr',25},
+            {'chest_dga_02.dbr',100},
+            {'chest_dga_03.dbr',150}
         };
         -- Endless
         {
-            {'chest_dga_01.dbr',100}
+            {'chest_dga_01.dbr',25},
+            {'chest_dga_02.dbr',100},
+            {'chest_dga_03.dbr',150}
         };
         -- Challenge
         {
-            {'chest_dga_01.dbr',100}
+            {'chest_dga_01.dbr',25},
+            {'chest_dga_02.dbr',100},
+            {'chest_dga_03.dbr',150}
         };
         -- Raid
         {
-            {'chest_dga_01.dbr',100}
+            {'chest_dga_01.dbr',25},
+            {'chest_dga_02.dbr',100},
+            {'chest_dga_03.dbr',150}
         };
     };
     monsterPower = {

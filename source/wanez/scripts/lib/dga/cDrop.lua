@@ -205,6 +205,34 @@ function wanez.DGA.cDrop()
             end
         end;
         
+        giveReputation = function(self,argClassId,optFactions)
+            argClassId = argClassId or 1
+            optFactions = optFactions or {"USER14","USER15"}
+        
+            
+            local aRepGain = wanez.DGA.aData.reputationGain[typeId]
+            local baseChance = aRepGain.perClass[argClassId]
+            
+            local tempFaction;
+            local tempAmount;
+            --UI.Notify("Give Faction")
+        
+            local _player = Game.GetLocalPlayer()
+            for index,value in pairs(optFactions) do
+                tempAmount = self:RNG({
+                    aChances = baseChance * aRepGain.rankPenalty[self:getFactionRank(value,_player)] * (areaTier / 100 * 5 + 1);
+                    returnNumber = true;
+                }) or 0
+                if(value == "USER15") then
+                    tempAmount = tempAmount * -1
+                end
+    
+                _player:GiveFaction(value,tempAmount)
+            end;
+            --UI.Notify("Given Faction")
+            
+        end;
+        
         __dropLoot = function(self)
             --- INDIVIDUAL
             --self:dropCurrency('soul')
@@ -240,6 +268,9 @@ function wanez.DGA.cDrop()
                 _pack:redCounter()
                 if(_pack:giveReward() == classId)then
                     --UI.Notify("Killed Pack: ".._pack:giveReward())
+                    --if(self:__getDifficultyID() == 3) then
+                        wanez.DGA.mpGiveRep(classId)
+                    --end
                     if(classId >= 2) then
                         self:dropScroll()
                     end

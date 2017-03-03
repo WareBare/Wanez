@@ -376,6 +376,9 @@ function wanez.DGA.onEnterTriggerCampOnLoad(argObjectId)
         end
     end
     _player:wzHasItem("records/items/misc/potions/potion_healtha01.dbr",10)
+    --_player:GiveFaction("USER14",100)
+    --_player:GiveFaction("USER15",12000)
+    --UI.Notify(_player:GetFaction("USER15"))
     --_player:GiveItem("mod_wanez/_dga/items/scrolls/reward_scroll_a001.dbr",1,true)
     --wanez.DGA.dbr.onLeaveTriggerOrbConversion(argObjectId)
     --_player:wzHasItem("mod_wanez/currency/a_001c.dbr",100)
@@ -516,14 +519,16 @@ function wanez.DGA.openNextEndless(argObjectId,argInc)
     -- destroy endlessNPC, he isnt required anymore
     endlessNPC:Destroy()
     endlessNPC = false
+    
 end
 
 function wanez.DGA.onInteractPylon(argObjectId,argType,argId)
     local _pylon = Entity.Get(argObjectId)
     local coords = _pylon:GetCoords()
-    local buffer = Entity.Create("mod_wanez/pylons/pylon_"..argType.."00"..argId.."_entity.dbr")
-    buffer:SetCoords(coords)
-    --buffer:Destroy()
+
+    
+    local buffNpc = Entity.Create("mod_wanez/pylons/pylon_"..argType.."00"..argId.."_entity_".._cSettings:parseIntToString(_cSettings:getFactionRank("USER14"),1)..".dbr")
+    buffNpc:SetCoords(coords)
     _pylon:Destroy()
 end
 
@@ -665,6 +670,12 @@ function wanez.DGA.mpDrop(argObjectId,argClassId,argEvent)
     
     QuestGlobalEvent(argEvent)
 end
+local factionClassId = false
+function wanez.DGA.mpGiveRep(argClassId)
+    factionClassId = argClassId or 1
+    
+    QuestGlobalEvent("wzDGA_giveRep")
+end
 
 --- Global Events, addition to QuestGlobalEvent()
 local addToClientQuestTable = {
@@ -754,6 +765,11 @@ local addToClientQuestTable = {
     wzDGA_dropPlanarOrb = function()
         local _cDrop = wanez.DGA.cDrop()
         _cDrop:giveOrb(2)
+    end;
+    
+    wzDGA_giveRep = function()
+        local _cDrop = wanez.DGA.cDrop()
+        _cDrop:giveReputation(factionClassId)
     end;
 }
 

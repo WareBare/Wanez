@@ -122,12 +122,13 @@ function wanez.DGA.area.cBase(argRegionId,argAreaId,optData)
             if(_areaOwner:HasToken("WZ_DGA_NO_NEMESIS_SPAWN") == false) then
                 local factionRank = self:getFactionRank('USER15')
                 --UI.Notify("setRegionalEntities: got faction rank")
-                if(factionRank > 0) then
-                    spawnNemesis = self:RNG({
-                        aChances = aDataArea.areaSettings.nemesisChance[factionRank];
-                        returnNumber = true;
-                    })
-                end
+                --if(factionRank > 0) then
+                spawnNemesis = self:RNG({
+                    aChances = aDataArea.areaSettings.nemesisChance[factionRank];
+                    returnNumber = true;
+                }) or 0
+                --end
+                --UI.Notify(spawnNemesis)
             end
             
             --UI.Notify("setRegionalEntities: RNG set | "..spawnNemesis)
@@ -364,6 +365,7 @@ function wanez.DGA.area.cBase(argRegionId,argAreaId,optData)
                     })
                     --UI.Notify("Trigger: has set bossroom data")
                     --- NEMESIS
+                    --
                     if(regionalSpawns[curRegion].Nemesis) then
                         --UI.Notify("spawn "..regionalSpawns[curRegion].Nemesis.." Nemesis")
                         for i=1,regionalSpawns[curRegion].Nemesis do
@@ -494,8 +496,11 @@ function wanez.DGA.area.cBase(argRegionId,argAreaId,optData)
                 aEntitiesToSpawn = self:RNG({
                     aData = {
                         "mod_wanez/pylons/pylon_a001.dbr",
-                        "mod_wanez/pylons/pylon_a002.dbr"
-                    }
+                        "mod_wanez/pylons/pylon_a002.dbr",
+                        "mod_wanez/pylons/pylon_a003.dbr",
+                        "mod_wanez/pylons/pylon_a004.dbr"
+                    };
+                    rngEntries = "Pylons";
                 })
             
                 _tempProxy = wanez.DGA.entity.cPylon()

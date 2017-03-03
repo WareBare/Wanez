@@ -1,6 +1,53 @@
 # Changelog #
 You can also check out an [online changelog](http://wanez.de/gd/mod/updates).
 
+## v0.5.0 - Beta #07 ##
+### DGA ###
+#### Factions ####
+* trying out a few changes to reputation gain (for DGA Factions).
+* you can gain Reputation by killing a pack (not individual monsters)
+* reputation will now have a chance roll.
+  * a chance of 25% will either give +0 Reputation or +1.
+  * a chance of 250 will either give +2 Reputation or +3.
+* Reputation Chance can be increased by:
+  * Reputation gain can be increased with higher Tiers (+5% per Tier).
+  * Reputation gain is increased until reaching rank 1, this will enable Nemesis spawns sooner.
+  * reputation gain is significantly slower towards the end.
+* first phase of an additional faction system
+
+#### Shrines ####
+* Shrine duration now depends on Faction Rank (Planes-Shifter)
+  * You gain +1 minute to the duration of shrines for every Faction Rank
+  * Shrine duration starts at 1 minute
+  * the current maximum duration of Shrines is 5 minutes
+* one new Shrines has been added and Shrine of Speed has been split into two new shrines and both have been renamed
+  * Shrine of Fleeting: Increases Movement (50%)
+  * Shrine of Celerity: Attack and Casting Speed (25%)
+  * Shrine of Quickening: Cooldown Reduction, Mana Cost Reduction (25%)
+  * Renamed Shrine of Experience to Shrine of Enlightenment
+  * Icons will be changed when I have the time for it, just made some changes to the existing ones to see a difference
+
+#### Major Features ####
+* You can now craft usables granting you either experience or devotion, the come in 3 different Tiers
+  * 1 DGA-Orb:   Experience Usable - 1000 | 10000 | 50000
+  * 10 DGA-Orbs: Experience Usable - 10000 | 100000 | 500000
+  * 15 DGA-Orbs:   Devotion Usable - 1 | 3 | 5
+  * They can only be used when you are not at maximum Energy
+  * Only the Normal/Elite Blacksmith has these usables, since you will likely use them in those difficulties and it keeps the Ultimate Blacksmith clean
+  * they are tradable and can be placed in your transfer stash
+* The option to get Devotion Points or Experience has been removed from the Ghost's Conversation (due to the addition of usables)
+
+#### Minor Features ####
+* a Riftgate has been added to return to the Encampment (this cannot be used to get back into the map/rift)
+* chests will now spawn more frequently, but some of them have less loot
+* Trainings Dummies have been added to the Encampment
+* The Ghost has been moved a little farther away from the spawn point to prevent accidentally clicking on him
+
+#### Bug Fixes ####
+* Endless portal to the next area sometimes disappeared
+* Sometimes going to Torture Chamber would not spawn any monsters
+* Nemesis spawn caused an issue if the chance roll was 0
+
 ## v0.5.0 - Beta #06 ##
 ### DGA ###
 #### Shrines & Pylons ####

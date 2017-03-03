@@ -257,14 +257,14 @@ function wanez.cBase()
             return newMul
         end;
         
-        getFactionRank = function(self,argFaction,argPlayer) -- ToDo
+        getFactionRank = function(self,argFaction,argPlayer)
             argPlayer = argPlayer or Game.GetLocalPlayer()
             local factionRating = argPlayer:GetFaction(argFaction)
-            local FactionRank = 0
-            if(factionRating >= 25000)then FactionRank = 4
-            elseif(factionRating <= -20000 or factionRating >= 10000)then FactionRank = 3
-            elseif(factionRating <= -8000 or factionRating >= 5000)then FactionRank = 2
-            elseif(factionRating <= -1500 or factionRating >= 1500)then FactionRank = 1 end
+            local FactionRank = 1
+            if(factionRating >= 25000)then FactionRank = 5
+            elseif(factionRating <= -20000 or factionRating >= 10000)then FactionRank = 4
+            elseif(factionRating <= -8000 or factionRating >= 5000)then FactionRank = 3
+            elseif(factionRating <= -1500 or factionRating >= 1500)then FactionRank = 2 end
             
             return FactionRank;
         end;

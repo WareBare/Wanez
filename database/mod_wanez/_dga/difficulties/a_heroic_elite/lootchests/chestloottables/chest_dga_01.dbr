@@ -1,6 +1,6 @@
 templateName,database/templates/fixeditemloot.tpl,
-FileDescription,Updated with Tool - 24/02/2017 03:39 pm,
-numSpawnMinEquation,(5.0+(numberOfPlayers*3.0))*1.7,
+FileDescription,Updated with Tool - 03/03/2017 12:03 pm,
+numSpawnMinEquation,(2.0+(numberOfPlayers*1.0))*1.7,
 numSpawnMaxEquation,(6.0+(numberOfPlayers*3.0))*1.7,
 loot1Chance,270.000000;60.000000;12.000000;0.000000;0.000000;0.000000;0.000000;0.000000;0.000000;180.000000,
 loot1Name1,records/items/loottables/mastertables/mt_hu_miscall_c01.dbr,

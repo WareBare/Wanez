@@ -63,4 +63,8 @@ wanez.DGA.dbr = {
     onInteractPylon_a002 = function(argObjectId)
         wanez.DGA.onInteractPylon(argObjectId,'a',2)
     end;
+    
+    onInteractPylon_b001 = function(argObjectId)
+        wanez.DGA.onInteractPylon(argObjectId,'b',1)
+    end;
 }

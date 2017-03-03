@@ -1,5 +1,5 @@
 ###
-tagWzDGA_LuaNotify_Welcome=Welcome to DGA v0.5.0 - Beta #06
+tagWzDGA_LuaNotify_Welcome=Welcome to DGA v0.5.0 - Beta #07
 tagWzDGA_LuaNotify_SpawnedEntities=New Enemies have arrived, enjoy!
 tagWzDGA_LuaNotify_Difficulty_failure=You are in the wrong difficulty to use this
 tagWzDGA_LuaNotify_usedScrollDGA_success=A Portal has been opened
@@ -40,10 +40,19 @@ tagWzGear_NPC_CrafterLeveling_DESC=Equipment
 tagWzGear_NPC_CrafterLeveling_NAME=Planes-Shifters
 
 ### Pylons ###
-tagWzDGA_Pylon_a001_NAME=Shrine of Experience
+#### Type A ####
+tagWzDGA_Pylon_a001_NAME=Shrine of Enlightenment
 tagWzDGA_Pylon_a001_DESC=Increases Experience Gain
-tagWzDGA_Pylon_a002_NAME=Shrine of Speed
-tagWzDGA_Pylon_a002_DESC=Increases Movement, Attack and Casting Speed
+tagWzDGA_Pylon_a002_NAME=Shrine of Fleeting
+tagWzDGA_Pylon_a002_DESC=Increases Movement Speed
+tagWzDGA_Pylon_a003_NAME=Shrine of Celerity
+tagWzDGA_Pylon_a003_DESC=Increases Attack and Casting Speed
+tagWzDGA_Pylon_a004_NAME=Shrine of Quickening
+tagWzDGA_Pylon_a004_DESC=Increases Cooldown Reduction and Mana Cost Reduction
+
+#### Type B ####
+tagWzDGA_Pylon_b001_NAME=Shrine of Lightning
+tagWzDGA_Pylon_b001_DESC=Deals Lightning Damage to Surrounding Enemies
 
 ## Script ##
 ### Portals ###
