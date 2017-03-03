@@ -12,15 +12,14 @@ You can also check out an [online changelog](http://wanez.de/gd/mod/updates).
 * Reputation Chance can be increased by:
   * Reputation gain can be increased with higher Tiers (+5% per Tier).
   * Reputation gain is increased until reaching rank 1, this will enable Nemesis spawns sooner.
-  * reputation gain is significantly slower towards the end.
-* first phase of an additional faction system
+  * Reputation gain is significantly slower towards the end.
 
 #### Shrines ####
 * Shrine duration now depends on Faction Rank (Planes-Shifter)
   * You gain +1 minute to the duration of shrines for every Faction Rank
   * Shrine duration starts at 1 minute
   * the current maximum duration of Shrines is 5 minutes
-* one new Shrines has been added and Shrine of Speed has been split into two new shrines and both have been renamed
+* one new Shrine has been added and Shrine of Speed has been split into two new shrines both of which have been renamed
   * Shrine of Fleeting: Increases Movement (50%)
   * Shrine of Celerity: Attack and Casting Speed (25%)
   * Shrine of Quickening: Cooldown Reduction, Mana Cost Reduction (25%)
@@ -28,7 +27,7 @@ You can also check out an [online changelog](http://wanez.de/gd/mod/updates).
   * Icons will be changed when I have the time for it, just made some changes to the existing ones to see a difference
 
 #### Major Features ####
-* You can now craft usables granting you either experience or devotion, the come in 3 different Tiers
+* You can now craft usables granting you either experience or devotion, they come in 3 different Tiers
   * 1 DGA-Orb:   Experience Usable - 1000 | 10000 | 50000
   * 10 DGA-Orbs: Experience Usable - 10000 | 100000 | 500000
   * 15 DGA-Orbs:   Devotion Usable - 1 | 3 | 5
