@@ -376,6 +376,13 @@ function wanez.DGA.onEnterTriggerCampOnLoad(argObjectId)
         end
     end
     _player:wzHasItem("records/items/misc/potions/potion_healtha01.dbr",10)
+
+    --_player:wzHasItem("mod_wanez/_runes/items/lore/loreobj_runeb001_000.dbr",1)
+    --_player:wzHasItem("mod_wanez/_runes/items/lore/loreobj_runeb001_001.dbr",1)
+    --_player:wzHasItem("mod_wanez/_runes/items/lore/loreobj_runeb001_002.dbr",1)
+    --_player:wzHasItem("mod_wanez/_runes/items/lore/loreobj_runeb001_003.dbr",1)
+    --_player:wzHasItem("mod_wanez/_runes/items/lore/loreobj_runeb001_004.dbr",1)
+    --_player:wzHasItem("mod_wanez/_runes/items/lore/loreobj_runeb001_005.dbr",1)
     --_player:GiveFaction("USER14",100)
     --_player:GiveFaction("USER15",12000)
     --UI.Notify(_player:GetFaction("USER15"))
@@ -527,7 +534,7 @@ function wanez.DGA.onInteractPylon(argObjectId,argType,argId)
     local coords = _pylon:GetCoords()
 
     
-    local buffNpc = Entity.Create("mod_wanez/pylons/pylon_"..argType.."00"..argId.."_entity_".._cSettings:parseIntToString(_cSettings:getFactionRank("USER14"),1)..".dbr")
+    local buffNpc = Entity.Create("mod_wanez/_dga/pylons/pylon_"..argType.."00"..argId.."_entity_".._cSettings:parseIntToString(_cSettings:getFactionRank("USER14"),1)..".dbr")
     buffNpc:SetCoords(coords)
     _pylon:Destroy()
 end

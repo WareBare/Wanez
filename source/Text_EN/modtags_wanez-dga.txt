@@ -41,14 +41,21 @@ tagWzGear_NPC_CrafterLeveling_NAME=Planes-Shifters
 
 ### Pylons ###
 #### Type A ####
-tagWzDGA_Pylon_a001_NAME=Shrine of Enlightenment
-tagWzDGA_Pylon_a001_DESC=Increases Experience Gain
-tagWzDGA_Pylon_a002_NAME=Shrine of Fleeting
-tagWzDGA_Pylon_a002_DESC=Increases Movement Speed
-tagWzDGA_Pylon_a003_NAME=Shrine of Celerity
-tagWzDGA_Pylon_a003_DESC=Increases Attack and Casting Speed
-tagWzDGA_Pylon_a004_NAME=Shrine of Quickening
-tagWzDGA_Pylon_a004_DESC=Increases Cooldown Reduction and Mana Cost Reduction
+#tagWzDGA_Pylon_a001_NAME=Shrine of Enlightenment
+#tagWzDGA_Pylon_a001_DESC=Increases Experience Gain
+#tagWzDGA_Pylon_a002_NAME=Shrine of Fleeting
+#tagWzDGA_Pylon_a002_DESC=Increases Movement Speed
+#tagWzDGA_Pylon_a003_NAME=Shrine of Celerity
+#tagWzDGA_Pylon_a003_DESC=Increases Attack and Casting Speed
+#tagWzDGA_Pylon_a004_NAME=Shrine of Quickening
+#tagWzDGA_Pylon_a004_DESC=Increases Cooldown Reduction and Mana Cost Reduction
+
+#tagWzDGA_Pylon_a005_NAME=Shrine of the Giant
+#tagWzDGA_Pylon_a005_DESC=Increases Health and Energy
+#tagWzDGA_Pylon_a006_NAME=Shrine of Trollblood
+#tagWzDGA_Pylon_a006_DESC=Increases Health and Energy Regeneration
+#tagWzDGA_Pylon_a007_NAME=Shrine of 
+#tagWzDGA_Pylon_a007_DESC=h
 
 #### Type B ####
 tagWzDGA_Pylon_b001_NAME=Shrine of Lightning

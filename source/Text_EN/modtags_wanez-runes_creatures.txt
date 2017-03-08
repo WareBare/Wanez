@@ -6,3 +6,5 @@ tagWaNPCRunes=Runes - Merger and Guide
 tagWaRunesNPC_Scribe01=Rune-Scribe
 tagWaRunesNPC_Creator01=Rune-Smith
 
+tagWzRunes_NPC_GuideA001_DESC=Rune Guide
+

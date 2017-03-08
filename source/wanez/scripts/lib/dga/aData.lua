@@ -67,27 +67,27 @@ wanez.DGA.aData = {
     entityTypes = {
         -- Mission
         {
-            {"Enemy",96},
+            {"Enemy",95},
             {"Container",3},--, {"Anomaly",100}
-            {"Pylon",1}
+            {"Pylon",2}
         };
         -- Endless
         {
-            {"Enemy",96},
+            {"Enemy",95},
             {"Container",3},--, {"Anomaly",100}
-            {"Pylon",1}
+            {"Pylon",2}
         };
         -- Challenge
         {
-            {"Enemy",94},
+            {"Enemy",93},
             {"Container",5},--, {"Anomaly",100}
-            {"Pylon",1}
+            {"Pylon",2}
         };
         -- Raid
         {
-            {"Enemy",89},
+            {"Enemy",88},
             {"Container",10},--, {"Anomaly",100}
-            {"Pylon",1}
+            {"Pylon",2}
         };
     };
     enemyTypes = {
@@ -249,10 +249,10 @@ wanez.DGA.aData = {
         {
             token = "WZ_DGA_AFFIX_01_COMPLETE",
             quests = {
-                {0x34FEE280,{0x49CBF400},20},
-                {0x87D2A800,{0x49CBF400},10},
-                {0x17244760,{0x49CBF400},30},
-                {0x4ECC8C00,{0x49CBF400},25},
+                {0x34FEE280,{0x49CBF400},10},
+                {0x87D2A800,{0x49CBF400},5},
+                {0x17244760,{0x49CBF400},15},
+                {0x4ECC8C00,{0x49CBF400},20},
                 {0x56FC8300,{0x49CBF400},5}
             }
         }
@@ -306,30 +306,34 @@ wanez.DGA.aData = {
             soul = 3;
             essence = 30;
             rewardDevotion = 50;
+            repDrop = 5;
         };
         -- Endless
         {
             regularScroll = 1;
             endlessScroll = 10;
-            soul = 3;
-            essence = 30;
+            soul = 1;
+            essence = 10;
             rewardDevotion = 50;
+            repDrop = 1;
         };
         -- Challenge
         {
             regularScroll = 3;
             endlessScroll = 0;
-            soul = 15;
+            soul = 5;
             essence = 50;
             rewardDevotion = 50;
+            repDrop = 5;
         };
         -- Raid
         {
             regularScroll = 10;
             endlessScroll = 0;
-            soul = 3;
-            essence = 30;
+            soul = 5;
+            essence = 50;
             rewardDevotion = 50;
+            repDrop = 10;
         };
     };
 }

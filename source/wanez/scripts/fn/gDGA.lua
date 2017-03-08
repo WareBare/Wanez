@@ -6046,3 +6046,15 @@ function wanez.fn.gDGA.useArea_Scroll_3001(argObjectId) wanez.DGA.useArea_Scroll
 function wanez.fn.gDGA.useArea_Scroll_3002(argObjectId) wanez.DGA.useArea_Scroll(argObjectId,3002); end;
 function wanez.fn.gDGA.useArea_Scroll_3003(argObjectId) wanez.DGA.useArea_Scroll(argObjectId,3003); end;
 function wanez.fn.gDGA.useMode_Scroll001() wanez.DGA.useMode_Scroll(1); end;
+function wanez.fn.gDGA.onInteractPylon_a001(argObjectId) wanez.DGA.onInteractPylon(argObjectId,'a',1); end;
+function wanez.fn.gDGA.onInteractPylon_a002(argObjectId) wanez.DGA.onInteractPylon(argObjectId,'a',2); end;
+function wanez.fn.gDGA.onInteractPylon_a003(argObjectId) wanez.DGA.onInteractPylon(argObjectId,'a',3); end;
+function wanez.fn.gDGA.onInteractPylon_a004(argObjectId) wanez.DGA.onInteractPylon(argObjectId,'a',4); end;
+function wanez.fn.gDGA.onInteractPylon_a005(argObjectId) wanez.DGA.onInteractPylon(argObjectId,'a',5); end;
+function wanez.fn.gDGA.onInteractPylon_a006(argObjectId) wanez.DGA.onInteractPylon(argObjectId,'a',6); end;
+function wanez.fn.gDGA.onInteractPylon_a007(argObjectId) wanez.DGA.onInteractPylon(argObjectId,'a',7); end;
+function wanez.fn.gDGA.onInteractPylon_a008(argObjectId) wanez.DGA.onInteractPylon(argObjectId,'a',8); end;
+function wanez.fn.gDGA.onInteractPylon_a009(argObjectId) wanez.DGA.onInteractPylon(argObjectId,'a',9); end;
+function wanez.fn.gDGA.onInteractPylon_a010(argObjectId) wanez.DGA.onInteractPylon(argObjectId,'a',10); end;
+function wanez.fn.gDGA.onInteractPylon_a011(argObjectId) wanez.DGA.onInteractPylon(argObjectId,'a',11); end;
+function wanez.fn.gDGA.onInteractPylon_a012(argObjectId) wanez.DGA.onInteractPylon(argObjectId,'a',12); end;

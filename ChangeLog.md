@@ -1,6 +1,38 @@
 # Changelog #
 You can also check out an [online changelog](http://wanez.de/gd/mod/updates).
 
+## v0.5.0 - Beta #08 ##
+### DGA ###
+#### Factions ####
+
+#### Shrines ####
+* changed Shrines
+  * Shrine of Fleeting - 50% Movement Speed; 20% Projectile Speed
+* new Shrines
+  * Shrine of the Giant - 25% Health; 25% Energy
+  * Shrine of Trollblood - 25% Health Regeneration; 15 Health Regeneration; 25% Energy Regeneration; 10 Energy Regeneration
+  * Shrine of Precision - 100 Offensive Ability; 25% Offensive Ability
+  * Shrine of Avoidance - 100 Defensive Ability; 25% Defensive Ability
+  * Shrine of Protection - 25% Armor; 25% Absorption
+  * Shrine of Power - +500% All Damage
+  * Shrine of Resistance - +5 to all Maximum Resistances
+  * Shrine of Force - 50% reduced reflective damage taken
+
+#### Major Features ####
+
+#### Minor Features ####
+* Affix drop-chance increases have been reduced significantly
+
+#### Bug Fixes ####
+* two Shrines have been fixed, as they were not casting their buff
+
+### Runic Inscriptions ###
+#### Major Features ####
+* Lore Pages can be found to give a hint on how to create a new Inscription
+* new NPC explaining how Runes and Inscriptions work
+  * NPC can give the first set of lore pages as an example
+
+
 ## v0.5.0 - Beta #07 ##
 ### DGA ###
 #### Factions ####

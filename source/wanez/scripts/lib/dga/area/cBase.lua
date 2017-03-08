@@ -495,12 +495,21 @@ function wanez.DGA.area.cBase(argRegionId,argAreaId,optData)
                 -- todo more dynamic
                 aEntitiesToSpawn = self:RNG({
                     aData = {
-                        "mod_wanez/pylons/pylon_a001.dbr",
-                        "mod_wanez/pylons/pylon_a002.dbr",
-                        "mod_wanez/pylons/pylon_a003.dbr",
-                        "mod_wanez/pylons/pylon_a004.dbr"
+                        "mod_wanez/_dga/pylons/pylon_a001.dbr",
+                        "mod_wanez/_dga/pylons/pylon_a002.dbr",
+                        "mod_wanez/_dga/pylons/pylon_a003.dbr",
+                        "mod_wanez/_dga/pylons/pylon_a004.dbr",
+                        "mod_wanez/_dga/pylons/pylon_a005.dbr",
+                        "mod_wanez/_dga/pylons/pylon_a006.dbr",
+                        "mod_wanez/_dga/pylons/pylon_a007.dbr",
+                        "mod_wanez/_dga/pylons/pylon_a008.dbr",
+                        "mod_wanez/_dga/pylons/pylon_a009.dbr",
+                        "mod_wanez/_dga/pylons/pylon_a010.dbr",
+                        "mod_wanez/_dga/pylons/pylon_a011.dbr",
+                        "mod_wanez/_dga/pylons/pylon_a012.dbr"
                     };
                     rngEntries = "Pylons";
+                    maxLoops = 8;
                 })
             
                 _tempProxy = wanez.DGA.entity.cPylon()
