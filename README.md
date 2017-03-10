@@ -182,6 +182,10 @@ The following items are being affected by drop-rate increases from DGA Affixes:
 
 Increases are being added up and multiplied with the base drop-rate (eg. Base Drop-Rate of a DGA Scroll could be 5% and you have three different affixes giving 10%/25%/30%, this will result in 5% * 65% = 8.25%)
 
+#### `new` Affix Types ####
+* Type (I): Increase Monster Count
+* Type (II): Buff Monsters
+
 ### Enemies ###
 #### General ####
 I added enemies to the tool's functionality, this means I can change data across all files or pick a certain file to change values easily, also every time there is a new Grim Dawn update I can update them aswell. This results in more features that would have been tedious and not worth the time. It also means more customization options for players and up to date enemy files.
@@ -278,16 +282,27 @@ You can choose between
 
 *And lets not forget the different Tiers, increasing Monster Level. Tier 15 (+30 to Monster Level) Uber Raid on Elite sounds rough*
 
-### `new` Shrines & Pylons ###
+### Shrines & Pylons ###
 #### General ####
 * An Obelisk that grants a buff to the player and party members around
-* Inspired by Diablo 3
+* Duration may vary depending on your Reputation with the Planes-Shifters
 
-#### Shrines ####
-* Shrine effects last for 10 minutes
+#### `updated` Shrines ####
+* Shrine effects last 1 minute
+  * up to 5 minutes at revered
 * Current Shrines in the Mod
-  * Shrine of Experience (150% Exp)
-  * Shrine of Speed (50% Movement Speed, 25% Attack Speed, 25% Casting Speed)
+  * Shrine of Enlightenment (150% Exp)
+  * Shrine of Fleeting (50% Movement Speed)
+  * Shrine of Celerity (25% Attack Speed, 25% Casting Speed)
+  * Shrine of Quickening (25% Cooldown Reduction, 25% Mana Cost Reduction)
+  * Shrine of the Giant - 25% Health; 25% Energy
+  * Shrine of Trollblood - 25% Health Regeneration; 15 Health Regeneration; 25% Energy Regeneration; 10 Energy Regeneration
+  * Shrine of Precision - 100 Offensive Ability; 25% Offensive Ability
+  * Shrine of Avoidance - 100 Defensive Ability; 25% Defensive Ability
+  * Shrine of Protection - 25% Armor; 25% Absorption
+  * Shrine of Power - +500% All Damage
+  * Shrine of Resistance - +5 to all Maximum Resistances
+  * Shrine of Force - 50% reduced reflective damage taken
 
 ## Factions ##
 ### DGA-Factions ###
@@ -352,6 +367,11 @@ A quick Tutorial on "How to create an Inscription"
 * once the number of Runes [used] matches the number of Sockets [of the Stone] it will either fail or succeed in creating an Inscription
   * It will only succeed if the Runes were used in the correct order
 
+#### `new` Lore ####
+* You can find Lore Pages to help you figure out the Sequence used to create an Inscription
+* They drop from Bookstands
+* They also grant Experience like Lore from the Main Campaign
+
 ## Gifts & Treasures ##
 ### New Items ###
 #### Planar Essences & Planar Souls ####
@@ -412,20 +432,29 @@ With the exception of Tags, everything is inside the "wanez" directory.
 
 ## Credits ##
 ### Contributors ###
-#### Maps & Areas ####
-* Alexei
-  * Took over the redesign of old Areas
-  * Created new Areas
-* Zaknafein
-  * Created new Areas
-  * Basic DGA: Bone Pit Sanctuary, King Temple, Inferno, Torture Chamber
-* hawk4me
-  * Created new Areas
-  * Basic DGA: Island of Woe
+#### alexei ####
+* reworked old maps
+  * Canyon
+  * Forest: Hills
+  * Dungeon
+* new Regular Maps
+  * Planes of Agony
 
-#### Special Thanks To ####
+#### Zaknafein ####
+* Regular Maps
+  * Bone Pit Sanctuary
+  * King Temple
+  * Inferno
+  * Torture Chamber
+
+#### hawk4me ####
+* Regular Maps
+  * Island of Woe
+
+#### `updated` Special Thanks To ####
 * PrincessLuna for providing a solution to "de-spawn" monsters, when I started this project
 * The ones alpha testing v0.5.0 for Multiplayer
+* AlienFromBeyond for having the idea of adding "Rune Lore" to help figure out unknown Inscriptions
 
 ### Graphics ###
 #### Bitmaps ####

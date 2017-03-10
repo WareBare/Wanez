@@ -3,8 +3,6 @@ You can also check out an [online changelog](http://wanez.de/gd/mod/updates).
 
 ## v0.5.0 - Beta #08 ##
 ### DGA ###
-#### Factions ####
-
 #### Shrines ####
 * changed Shrines
   * Shrine of Fleeting - 50% Movement Speed; 20% Projectile Speed
@@ -18,20 +16,52 @@ You can also check out an [online changelog](http://wanez.de/gd/mod/updates).
   * Shrine of Resistance - +5 to all Maximum Resistances
   * Shrine of Force - 50% reduced reflective damage taken
 
-#### Major Features ####
+#### Affixes ####
+* Affix drop-chance increases have been reduced
+* Affixes to add entities have been adjusted
+  * additional Champion spawns increased to +4 (from +2)
+  * additional Hero spawns increased to +2 (from +1)
+* new Affix Type buffing enemies has been added (they are all using the same icon, I wanted to release it before spending time on making individual ones)
+  * Onslaught: 25% Run Speed, Attack Speed, Casting Speed
+  * Monster Health: 25% Monster Health
+  * Monster Damage: 25% Monster Damage
+  * Monster Regen: 25% Monster Regen
+  * Monster Offensive Ability: 25% Monster Offensive Ability
+  * Monster Defensive Ability: 25% Monster Defensive Ability
 
 #### Minor Features ####
-* Affix drop-chance increases have been reduced significantly
+* Empty Faction Merchant removed and added a Merchant selling potions
+  * as a result increased the amount of Iron Bits the player receives on first log in to 3000 and the player won't receive potions anymore
+* Nemesis spawn chances have been increased (Hostile | Despised | Hated | Nemesis)
+  * Regular DGA (Mission, Endless): 0% | 25% | 75% | 300%
+  * Challenge DGA: 0% | 100% | 200% | 400%
+
+#### Major Features ####
+* Rune Lore can be found from bookstands and they will drop 0-2 random pages (+1 for every player in your party).
 
 #### Bug Fixes ####
 * two Shrines have been fixed, as they were not casting their buff
+* Using an Affix Scroll of an Affix you already have now returns the Scroll
 
 ### Runic Inscriptions ###
+#### Minor Features ####
+* 3 new Inscriptions have been added
+* Tag: Foot Armor changed to Boots
+
 #### Major Features ####
 * Lore Pages can be found to give a hint on how to create a new Inscription
+  * There is a total of 107 different Pages
 * new NPC explaining how Runes and Inscriptions work
-  * NPC can give the first set of lore pages as an example
+  * NPC can give the first set of Lore Pages as an example
 
+#### Bug Fixes ####
+* Generic Stones still required 500 Scraps to be crafted, this is now reduced correctly to 50 Scraps
+
+### Gifts & Treasures ###
+#### Bug Fixes ####
+* Dagger model has been fixed
+* Dagger class has been changed from sword to dagger (it will now show up under Implements)
+* Sword model has been fixed
 
 ## v0.5.0 - Beta #07 ##
 ### DGA ###

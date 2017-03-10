@@ -102,7 +102,7 @@ wanez.DGA.aData = {
             heroChance = {15,20,40}; -- combination of heroChance and championChance may not go beyond 100
             heroReq = 15; -- level requirement for heroes, not before player level {x}
             championReq = 10; -- level requirement for champions, not before player level {x}
-            nemesisChance = {0,10,33,100}; -- nemesis spawn chance per faction rank
+            nemesisChance = {0,25,75,300}; -- nemesis spawn chance per faction rank
         };
         -- Endless
         {
@@ -115,7 +115,7 @@ wanez.DGA.aData = {
             heroChance = {15,20,40};
             heroReq = 15;
             championReq = 10;
-            nemesisChance = {0,10,33,100};
+            nemesisChance = {0,25,75,300};
         };
         -- Challenge
         {
@@ -128,7 +128,7 @@ wanez.DGA.aData = {
             heroChance = {15,20,40};
             heroReq = 15;
             championReq = 10;
-            nemesisChance = {0,50,100,150};
+            nemesisChance = {0,100,200,400};
         };
         -- Raid
         {
@@ -141,7 +141,7 @@ wanez.DGA.aData = {
             heroChance = {15,20,40};
             heroReq = 15;
             championReq = 10;
-            nemesisChance = {0,10,33,100};
+            nemesisChance = {0,25,75,300};
         };
     };
     reputationGain = {
@@ -171,25 +171,29 @@ wanez.DGA.aData = {
         {
             {'chest_dga_01.dbr',25},
             {'chest_dga_02.dbr',100},
-            {'chest_dga_03.dbr',150}
+            {'chest_dga_03.dbr',150},
+            {'lorechest_runes_001.dbr',100}
         };
         -- Endless
         {
             {'chest_dga_01.dbr',25},
             {'chest_dga_02.dbr',100},
-            {'chest_dga_03.dbr',150}
+            {'chest_dga_03.dbr',150},
+            {'lorechest_runes_001.dbr',100}
         };
         -- Challenge
         {
             {'chest_dga_01.dbr',25},
             {'chest_dga_02.dbr',100},
-            {'chest_dga_03.dbr',150}
+            {'chest_dga_03.dbr',150},
+            {'lorechest_runes_001.dbr',100}
         };
         -- Raid
         {
             {'chest_dga_01.dbr',25},
             {'chest_dga_02.dbr',100},
-            {'chest_dga_03.dbr',150}
+            {'chest_dga_03.dbr',150},
+            {'lorechest_runes_001.dbr',100}
         };
     };
     monsterPower = {
@@ -249,26 +253,45 @@ wanez.DGA.aData = {
         {
             token = "WZ_DGA_AFFIX_01_COMPLETE",
             quests = {
-                {0x34FEE280,{0x49CBF400},10},
+                {0x34FEE280,{0x49CBF400},15},
                 {0x87D2A800,{0x49CBF400},5},
                 {0x17244760,{0x49CBF400},15},
-                {0x4ECC8C00,{0x49CBF400},20},
+                {0x4ECC8C00,{0x49CBF400},10},
                 {0x56FC8300,{0x49CBF400},5}
+            }
+        },
+        {
+            token = "WZ_DGA_AFFIX_01_COMPLETE";
+            quests = {
+                {0x4FB55F00,{0x49CBF400},5},
+                {0x0C5FB820,{0x49CBF400},5},
+                {0x6031C680,{0x49CBF400},5},
+                {0x63E0B900,{0x49CBF400},5},
+                {0x36817880,{0x49CBF400},5},
+                {0x6E0CAD80,{0x49CBF400},5}
             }
         }
     };
     affixEvents = {
         enemyCount = {
-            [2] = {{'a004',2}},
-            [3] = {{'a003',1}},
+            [2] = {{'a004',4}},
+            [3] = {{'a003',2}},
             [5] = {{'a001',1}},
-            [6] = {{'a002',2}},
+            [6] = {{'a002',1}},
             [7] = {{'a001',1}},
             [8] = {{'a001',1}},
         };
         entityChances = {
             proxies = {{'a005',25}}
-        }
+        };
+        buffDbr = {
+            {{'b001',"mod_wanez/_dga/items/affixes/b001_entity_01.dbr"}},
+            {{'b002',"mod_wanez/_dga/items/affixes/b002_entity_01.dbr"}},
+            {{'b003',"mod_wanez/_dga/items/affixes/b003_entity_01.dbr"}},
+            {{'b004',"mod_wanez/_dga/items/affixes/b004_entity_01.dbr"}},
+            {{'b005',"mod_wanez/_dga/items/affixes/b005_entity_01.dbr"}},
+            {{'b006',"mod_wanez/_dga/items/affixes/b006_entity_01.dbr"}}
+        };
     };
     mpModes = {
         -- EPIC

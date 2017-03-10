@@ -368,16 +368,16 @@ function wanez.DGA.onEnterTriggerCampOnLoad(argObjectId)
     -- first load per difficulty
     if(_player:HasToken("DISMANTLING_UNLOCKED") == false)then
         _player:GiveToken("DISMANTLING_UNLOCKED")
+        _player:UnlockFaction("USER14")
+        _player:UnlockFaction("USER15")
         if(Game.GetGameDifficulty() == Game.Difficulty.Normal) then
-            _player:UnlockFaction("USER14")
-            _player:UnlockFaction("USER15")
+            --_player:wzHasItem("records/items/misc/potions/potion_healtha01.dbr",30)
             _player:wzHasItem("records/items/misc/inventorybag.dbr",5)
-            _player:AdjustMoney(1000)
+            _player:AdjustMoney(3000)
         end
     end
-    _player:wzHasItem("records/items/misc/potions/potion_healtha01.dbr",10)
 
-    --_player:wzHasItem("mod_wanez/_runes/items/lore/loreobj_runeb001_000.dbr",1)
+    --_player:wzHasItem("mod_wanez/_dga/items/affixes/b003.dbr",1)
     --_player:wzHasItem("mod_wanez/_runes/items/lore/loreobj_runeb001_001.dbr",1)
     --_player:wzHasItem("mod_wanez/_runes/items/lore/loreobj_runeb001_002.dbr",1)
     --_player:wzHasItem("mod_wanez/_runes/items/lore/loreobj_runeb001_003.dbr",1)
@@ -534,7 +534,7 @@ function wanez.DGA.onInteractPylon(argObjectId,argType,argId)
     local coords = _pylon:GetCoords()
 
     
-    local buffNpc = Entity.Create("mod_wanez/_dga/pylons/pylon_"..argType.."00"..argId.."_entity_".._cSettings:parseIntToString(_cSettings:getFactionRank("USER14"),1)..".dbr")
+    local buffNpc = Entity.Create("mod_wanez/_dga/pylons/pylon_"..argType.._cSettings:parseIntToString(argId,2).."_entity_".._cSettings:parseIntToString(_cSettings:getFactionRank("USER14"),1)..".dbr")
     buffNpc:SetCoords(coords)
     _pylon:Destroy()
 end
@@ -584,8 +584,8 @@ function wanez.DGA.useDGA_Affix(argObjectId,argType,argAffix)
     _cScroll = wanez.cScroll({
         notify = "tagWzDGA_LuaNotify_usedDGA_Affix";
     },function(self)
-        --[[
         local itemDbr = "mod_wanez/_dga/items/affixes/"..argType..self:parseIntToString(argAffix,2)..".dbr"
+        --[[
         local aActions = {
             giveItems = itemDbr;
         }
@@ -598,7 +598,7 @@ function wanez.DGA.useDGA_Affix(argObjectId,argType,argAffix)
     
         if(_player:GetQuestState(aQuests[1]) == QuestState.InProgress) then
             UI.Notify("Has Quest Already")
-            --aActions.giveItems = itemDbr
+            aActions.giveItems = itemDbr
         else
             toSetAffix = {self:convertIndex(argType),argAffix }
             QuestGlobalEvent("wzDGA_grantAffix")

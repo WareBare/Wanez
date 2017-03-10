@@ -87,7 +87,13 @@ function wanez.DGA.entity.cBase()
             --UI.Notify("Spawn: create enemies | "..path)
             for key,dbr in pairs(optEntities) do
                 --UI.Notify("Spawn: start spawn - "..dbr)
-                local newEntity = Character.Create(path.."/"..dbr,argLevel,nil)
+                local newEntity;
+                if string.find(dbr, "mod_wanez") then
+                    newEntity = Character.Create(dbr,argLevel,nil)
+                else
+                    newEntity = Character.Create(path.."/"..dbr,argLevel,nil)
+                end
+                
                 --UI.Notify("Spawn: entity created")
                 newEntity:SetCoords(argCoords)
                 self:__addPack(newEntity:GetId(),_packCounter)

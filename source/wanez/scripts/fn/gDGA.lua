@@ -6058,3 +6058,9 @@ function wanez.fn.gDGA.onInteractPylon_a009(argObjectId) wanez.DGA.onInteractPyl
 function wanez.fn.gDGA.onInteractPylon_a010(argObjectId) wanez.DGA.onInteractPylon(argObjectId,'a',10); end;
 function wanez.fn.gDGA.onInteractPylon_a011(argObjectId) wanez.DGA.onInteractPylon(argObjectId,'a',11); end;
 function wanez.fn.gDGA.onInteractPylon_a012(argObjectId) wanez.DGA.onInteractPylon(argObjectId,'a',12); end;
+function wanez.fn.gDGA.useDGA_AffixB001(argObjectId) wanez.DGA.useDGA_Affix(argObjectId,'b',1); end;
+function wanez.fn.gDGA.useDGA_AffixB002(argObjectId) wanez.DGA.useDGA_Affix(argObjectId,'b',2); end;
+function wanez.fn.gDGA.useDGA_AffixB003(argObjectId) wanez.DGA.useDGA_Affix(argObjectId,'b',3); end;
+function wanez.fn.gDGA.useDGA_AffixB004(argObjectId) wanez.DGA.useDGA_Affix(argObjectId,'b',4); end;
+function wanez.fn.gDGA.useDGA_AffixB005(argObjectId) wanez.DGA.useDGA_Affix(argObjectId,'b',5); end;
+function wanez.fn.gDGA.useDGA_AffixB006(argObjectId) wanez.DGA.useDGA_Affix(argObjectId,'b',6); end;

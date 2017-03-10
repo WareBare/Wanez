@@ -207,8 +207,12 @@ function wanez.DGA.area.cBase(argRegionId,argAreaId,optData)
                 for typeId,data in pairs(aData) do
                     for index,values in pairs(data) do
                         if(self:__hasAffix(values[1])) then
-                            tempData = self.aMods[affixType][typeId] or 0
-                            self.aMods[affixType][typeId] = tempData + values[2]
+                            if(type(values[2]) == "number")then
+                                tempData = self.aMods[affixType][typeId] or 0
+                                self.aMods[affixType][typeId] = tempData + values[2]
+                            else
+                                self.aMods[affixType][typeId] = values[2]
+                            end
                         end
                     end;
                 end;
@@ -431,6 +435,12 @@ function wanez.DGA.area.cBase(argRegionId,argAreaId,optData)
                     aData = optEntityPool[wanez.DGA.aData.monsterClassifications[argEntityClassId]]
                 }))
             end;
+        
+            if(self.aMods.buffDbr)then
+                for index,value in pairs(self.aMods.buffDbr)do
+                    table.insert(aEnemiesToSpawn,value)
+                end;
+            end
             
             return aEnemiesToSpawn
         end;
@@ -480,7 +490,7 @@ function wanez.DGA.area.cBase(argRegionId,argAreaId,optData)
                     end
                     entityClass = 1
                 end
-            
+    
             elseif(entityType == "Container") then
                 --UI.Notify("rollEntities: Container")
                 aEntitiesToSpawn = self:RNG({
@@ -525,7 +535,6 @@ function wanez.DGA.area.cBase(argRegionId,argAreaId,optData)
                 ]]
             end
     
-            
             
             --_tempProxy:createEntities(argEntityCoords,aEnemiesToSpawn,entityClass)
             _tempProxy:createEntities(argEntityCoords,aEntitiesToSpawn or self:genEntityDbr(entityClass,aEntityPool),entityClass)
