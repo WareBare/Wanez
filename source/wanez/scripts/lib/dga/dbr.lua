@@ -56,4 +56,17 @@ wanez.DGA.dbr = {
         boxTrigger(argObjectId,'onLeave','WZ_DGA_ALLOW_PORTAL_DEFAULT')
         --boxTrigger(argObjectId,'onLeave','WZ_DGA_CHALLENGE_START')
     end;
+    
+    boxTrigger_02a = function(argObjectId)
+        --UI.Notify('region trigger 2')
+        wanez.DGA.boxTriggerRegion(argObjectId,2)
+    end;
+    boxTrigger_03a = function(argObjectId)
+        --UI.Notify('region trigger 3')
+        wanez.DGA.boxTriggerRegion(argObjectId,3)
+    end;
+    boxTrigger_04a = function(argObjectId)
+        --UI.Notify('region trigger 4')
+        wanez.DGA.boxTriggerRegion(argObjectId,4)
+    end;
 }

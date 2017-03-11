@@ -18,7 +18,7 @@ local aEnemies = wanez.data.gEnemies
 local aNameToId = wanez.data.gNameToId
 --local aDataBase = wanez.DGA.aData
 local regionCount = {
-    [11]=3
+    [101]=3
 }
 
 function wanez.DGA.area.cBase(argRegionId,argAreaId,optData)
@@ -31,7 +31,7 @@ function wanez.DGA.area.cBase(argRegionId,argAreaId,optData)
     local aPortals = {}
     local aEntityCoords = {}
     local aEntities = {}
-    local timeEntityIni = false
+    local timeEntityIni = {}
     local allowNewEntityCoords = true
     local allowSpawn = true
     local baseRegion = argRegionId
@@ -100,7 +100,7 @@ function wanez.DGA.area.cBase(argRegionId,argAreaId,optData)
         -- used on boxTrigger (spawn)
         isNewArea = function(self,argMpTypeId,argTier,argAreaLvL)
             curRegion = curRegion or baseRegion
-            allowSpawn = true
+            allowSpawn = {}
             mpTypeId = argMpTypeId or mpTypeId
             areaLvL = argAreaLvL or self:convertTier(argTier)
             areaTier = self:convertLvL(argTier)
@@ -275,6 +275,18 @@ function wanez.DGA.area.cBase(argRegionId,argAreaId,optData)
             }
         end;
     
+        __getAllowSpawn = function(self)
+            local isAllowed = true
+            
+            if(allowSpawn[curRegion])then
+                isAllowed = false
+            end
+        
+            return isAllowed;
+        end;
+        __setAllowSpawn = function(self)
+            allowSpawn[curRegion] = true
+        end;
         getTier = function(self)
             return areaTier
         end;
@@ -296,42 +308,45 @@ function wanez.DGA.area.cBase(argRegionId,argAreaId,optData)
             if(aEntityCoords[argRegionId] == nil) then
                 aEntityCoords[argRegionId] = {}
                 --allowNewEntityCoords = true
-                timeEntityIni = Time.Now()
+                timeEntityIni[argRegionId] = Time.Now()
             end
             -- if allowed add coords for entities
         -- todo add time to check if allowed to add new proxies
-            if( (Time.Now() - timeEntityIni) <= 5000) then -- allowNewEntityCoords
+            if( (Time.Now() - timeEntityIni[argRegionId]) <= 5000) then -- allowNewEntityCoords
                 aEntityCoords[argRegionId][argType] = aEntityCoords[argRegionId][argType] or {}
                 table.insert(aEntityCoords[argRegionId][argType], Entity.Get(argObjectId):GetCoords())
-                timeEntityIni = Time.Now()
+                timeEntityIni[argRegionId] = Time.Now()
             else
                 --UI.Notify("Dont Add Entities: "..argType)
             end
         end;
         
         --- trigger inside area
-        spawnEntities = function(self,argObjectPlayer,iBossRoom,argType,argRegionId)
+        spawnEntities = function(self,argObjectPlayer,iBossRoom,argRegionId,argType)
             iBossRoom = iBossRoom or false
+            argRegionId = argRegionId or 1
+            curRegion = argRegionId
             --allowNewEntityCoords = false
             --local tempProxy = false
             --- remove token to summon Portal if player has one
             --local tokenPortalDefault = 'WZ_DGA_ALLOW_PORTAL_DEFAULT'
             --local _player = Player.Get(argObjectPlayer) or Game.GetLocalPlayer()
             
-            
-            
-            -- todo
-            if(allowSpawn) then
+            --UI.Notify("CurRegion: "..curRegion)
+            if(self:__getAllowSpawn()) then
+                --UI.Notify("prep spawn")
                 tryCount = tryCount + 1
             
                 self:removeEntities()
+                --aEntities[curRegion] = {}
                 --UI.Notify("Trigger: start spawn")
                 local _tempProxy = false
                 local usedCoords = {}
             
                 local incSpawnChance = self.aMods.entityChances.proxies or 0
                 local spawnChance = aDataArea.areaSettings.useProxies + incSpawnChance
-                
+    
+                --UI.Notify("01 - CurRegion: "..curRegion)
                 --UI.Notify(tostring(spawnChance))
                 --UI.Notify("ProxyCount: "..table.getn(aEntityCoords[curRegion].Default))
                 if(self.areaType == "BossRoom") then
@@ -354,7 +369,7 @@ function wanez.DGA.area.cBase(argRegionId,argAreaId,optData)
                             end
                         end;
                         
-                        table.insert(aEntities,_tempProxy)
+                        table.insert(aEntities[curRegion],_tempProxy)
                     end
                     usedCoords[bossCoords] = true
                 else
@@ -368,6 +383,7 @@ function wanez.DGA.area.cBase(argRegionId,argAreaId,optData)
                         --allowSpawn = allowSpawn;
                     })
                     --UI.Notify("Trigger: has set bossroom data")
+                    --UI.Notify("02 - CurRegion: "..curRegion)
                     --- NEMESIS
                     --
                     if(regionalSpawns[curRegion].Nemesis) then
@@ -384,39 +400,44 @@ function wanez.DGA.area.cBase(argRegionId,argAreaId,optData)
                             _tempProxy = wanez.DGA.entity.cEnemy()
                             _tempProxy:setDataEntity(aDataMP,monsterLevel)
                             _tempProxy:createEntities(nemesisCoords,nemesisDbr,6)
-                            table.insert(aEntities,_tempProxy)
+                            table.insert(aEntities[curRegion],_tempProxy)
     
                             usedCoords[nemesisCoords] = true
                         end;
                     end
+                    --UI.Notify("02.5 - CurRegion: "..curRegion)
                 end
-                
-            
+    
+                --UI.Notify("03 - CurRegion: "..curRegion)
+                --UI.Notify("start monsters")
                 for key,entityCoords in pairs(aEntityCoords[curRegion].Default) do
                     --UI.Notify("Trigger: start spawn")
                     -- add instance to the list
                     if(self:RNG({
                         aChances = spawnChance
                     }) and usedCoords[entityCoords] ~= true) then
-                        table.insert(aEntities,self:rollEntities(entityCoords))
+                        table.insert(aEntities[curRegion],self:rollEntities(entityCoords))
                     end
                     
                 end;
             
-                allowSpawn = false
+                --allowSpawn = false
+                self:__setAllowSpawn()
                 --UI.Notify("Trigger finished on Try: "..tryCount)
-                UI.Notify("tagWzDGA_LuaNotify_SpawnedEntities")
+                if(curRegion == 1 and self.areaType ~= "BossRoom") then UI.Notify("tagWzDGA_LuaNotify_SpawnedEntities") end
             end
             
         end;
         
         removeEntities = function(self)
-            for key,_cProxy in pairs(aEntities) do
+            if(aEntities[curRegion])then
+                for key,_cProxy in pairs(aEntities[curRegion]) do
+        
+                    _cProxy:destoryEntities()
     
-                _cProxy:destoryEntities()
-                
-            end;
-            aEntities = {}
+                end;
+            end
+            aEntities[curRegion] = {}
         end;
         
         genEntityDbr = function(self,argEntityClassId,optEntityPool)

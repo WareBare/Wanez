@@ -318,7 +318,8 @@ function wanez.DGA.useDGA_Scroll(argObjectId,argDifficultyGD,argTierDGA,argTypeD
         
             nextAreaId = 0
         
-            aActions.notify = "tagWzDGA_LuaNotify_usedScrollDGA_success"
+            --aActions.notify = "tagWzDGA_LuaNotify_usedScrollDGA_success"
+            aActions.notify = false
             -- giveBackItem while in developement
             if(argTierDGA ~= 0) then aActions.giveItems = false end
         elseif(difficultyId == 3 and difficultyId == argDifficultyGD) then
@@ -346,6 +347,12 @@ function wanez.DGA.boxTriggerDefault(argObjectId)
     
     --_cSettings:getArea():spawnEntities(argObjectId)
     _cSettings:spawnEntities(argObjectId,_cBossRoom)
+end
+function wanez.DGA.boxTriggerRegion(argObjectId,argRegionId,argType)
+    argRegionId = argRegionId or 1
+    argType = argType or "a"
+    --UI.Notify('region trigger 2')
+    _cSettings:spawnEntities(argObjectId,_cBossRoom,argRegionId)
 end
 function wanez.DGA.boxTriggerBossRoom(argObjectId)
     --_cBossRoom:isNewArea()

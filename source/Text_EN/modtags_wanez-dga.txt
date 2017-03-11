@@ -1,5 +1,5 @@
 ###
-tagWzDGA_LuaNotify_Welcome=Welcome to DGA v0.5.0 - Beta #07
+tagWzDGA_LuaNotify_Welcome=Welcome to DGA v0.5.0 - Beta #09
 tagWzDGA_LuaNotify_SpawnedEntities=New Enemies have arrived, enjoy!
 tagWzDGA_LuaNotify_Difficulty_failure=You are in the wrong difficulty to use this
 tagWzDGA_LuaNotify_usedScrollDGA_success=A Portal has been opened
@@ -38,6 +38,7 @@ tagEnemyZombieTrollHalfC01=Zombie Mistborn Warrior
 ### MISC ###
 tagWzGear_NPC_CrafterLeveling_DESC=Equipment
 tagWzGear_NPC_CrafterLeveling_NAME=Planes-Shifters
+tagWaDGA_ReducedRegen_NAME=Reduced Mana Regen (for Pot Exp/Devo Usage)
 
 ### Pylons ###
 #### Type A ####
@@ -68,7 +69,7 @@ tagWzDGA_ScriptPortals_ToBossRoom=Portal To Boss Room
 
 ## Areas ##
 ###  ###
-tagWzDGA_Areas_0000a=Planes-Shifters Encampment
+tagWzDGA_Areas_0000a=Planes-Shifters Encampment [v0.5.0-beta.9]
 tagWzDGA_Areas_0000b=Boss Room
 
 ### Mission ###

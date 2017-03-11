@@ -25,9 +25,10 @@ function wanez.DGA.cSettings()
             _cArea.cPortal:showPortal(self:__getCoords(argCoordsPortal))
             _cArea:__setAreaOwnwer(argPlayer,_argType) -- ,argTier
         end;
-        spawnEntities = function(self,argObjectIdPlayer,iBossRoom)
+        spawnEntities = function(self,argObjectIdPlayer,iBossRoom,argRegionId)
+            argRegionId = argRegionId or 1
             local _cArea = self:getArea()
-            _cArea:spawnEntities(argObjectIdPlayer,iBossRoom)
+            _cArea:spawnEntities(argObjectIdPlayer,iBossRoom,argRegionId)
         end;
     }
     

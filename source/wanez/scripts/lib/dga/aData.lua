@@ -19,7 +19,7 @@ wanez.DGA.aData = {
         [8] = "",
         [9] = "pack_chthoniandevourer",
         [10] = "pack_zombie",
-        [11] = "pack_boar",
+        [11] = "",
         [12] = "pack_ghoul",
         [13] = "pack_chthoniandreadguard",
         [14] = "",
@@ -28,7 +28,8 @@ wanez.DGA.aData = {
         [17] = "",
         [18] = "",
         [19] = "",
-        [20] = ""
+        [20] = "",
+        [101] = "pack_boar"
     };
     bossSpawn = {
         [1] = "banditminiboss_pitmaster",
@@ -41,7 +42,7 @@ wanez.DGA.aData = {
         [8] = "",
         [9] = "cultistdungeon_sectleader",
         [10] = "skeletalgolem_uroboruuksearch_01",
-        [11] = "grundleplith",
+        [11] = "",
         [12] = "ghost_maninneed_01",
         [13] = "chthonianfiend_trappedandalone_01",
         [14] = "",
@@ -50,7 +51,8 @@ wanez.DGA.aData = {
         [17] = "",
         [18] = "",
         [19] = "",
-        [20] = ""
+        [20] = "",
+        [101] = "golemrock_miniboss_cave_02"
     };
     monsterClassifications = {
         [1] = "Common",
@@ -326,8 +328,8 @@ wanez.DGA.aData = {
         {
             regularScroll = 10;
             endlessScroll = 0;
-            soul = 3;
-            essence = 30;
+            soul = 5;
+            essence = 20;
             rewardDevotion = 50;
             repDrop = 5;
         };
@@ -336,7 +338,7 @@ wanez.DGA.aData = {
             regularScroll = 1;
             endlessScroll = 10;
             soul = 1;
-            essence = 10;
+            essence = 6;
             rewardDevotion = 50;
             repDrop = 1;
         };
@@ -345,7 +347,7 @@ wanez.DGA.aData = {
             regularScroll = 3;
             endlessScroll = 0;
             soul = 5;
-            essence = 50;
+            essence = 20;
             rewardDevotion = 50;
             repDrop = 5;
         };
@@ -354,7 +356,7 @@ wanez.DGA.aData = {
             regularScroll = 10;
             endlessScroll = 0;
             soul = 5;
-            essence = 50;
+            essence = 20;
             rewardDevotion = 50;
             repDrop = 10;
         };

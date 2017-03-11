@@ -1,6 +1,33 @@
 # Changelog #
 You can also check out an [online changelog](http://wanez.de/gd/mod/updates).
 
+## v0.5.0 - Beta #09 ##
+### DGA ###
+#### Areas ####
+* some visual changes to "Mine" and renamed to "Abandoned Mine"
+* Island of Woe [by hawk4me] has been added back into the Mod
+  * the scroll is available at the merchant for a limited time
+  * this area is currently not part of the random map pools, due to possible issues
+  * it's a multi-region map, you can go back and forth as you like (this is different to the previous versions, due to the Lua overhaul in v0.5)
+
+#### Minor Features ####
+* The message "A Portal has been opened" has been removed
+* Exp Usables have been increased (x5)
+* Drop-Rate of Souls increased by 66%
+* Drop-Rate of Essences reduced by 33%
+* new Medal at the Merchant, it will reduce your energy regen by -1000, the reason for this item is to ease the use of Exp/Devotion Usables. You just have to use a skill (default attack works, too) or have some Energy reserved and your energy is drained until you take it off again.
+* Chest weights for DGA-Orbs and DGA-Affixes have benn adjusted
+* individual DGA-Affixes (II) Icons have been added
+
+### Runic Inscriptions ###
+#### Minor Features ####
+* Exp for Rune Lore has been increased to 10000 to make them more interesting while leveling
+
+### Gifts & Treasures ###
+#### Minor Features ####
+* Chance to roll Experience Gain Implicit increased (it's leveling gear after all)
+* Removed "Leveling" from crafting Tags to make it fit better into the window
+
 ## v0.5.0 - Beta #08 ##
 ### DGA ###
 #### Shrines ####
