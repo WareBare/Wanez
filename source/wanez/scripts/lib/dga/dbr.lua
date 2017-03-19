@@ -58,15 +58,30 @@ wanez.DGA.dbr = {
     end;
     
     boxTrigger_02a = function(argObjectId)
-        --UI.Notify('region trigger 2')
         wanez.DGA.boxTriggerRegion(argObjectId,2)
     end;
     boxTrigger_03a = function(argObjectId)
-        --UI.Notify('region trigger 3')
         wanez.DGA.boxTriggerRegion(argObjectId,3)
     end;
     boxTrigger_04a = function(argObjectId)
-        --UI.Notify('region trigger 4')
         wanez.DGA.boxTriggerRegion(argObjectId,4)
+    end;
+    boxTrigger_05a = function(argObjectId)
+        wanez.DGA.boxTriggerRegion(argObjectId,5)
+    end;
+    boxTrigger_06a = function(argObjectId)
+        wanez.DGA.boxTriggerRegion(argObjectId,6)
+    end;
+    boxTrigger_07a = function(argObjectId)
+        wanez.DGA.boxTriggerRegion(argObjectId,7)
+    end;
+    boxTrigger_08a = function(argObjectId)
+        wanez.DGA.boxTriggerRegion(argObjectId,8)
+    end;
+    boxTrigger_09a = function(argObjectId)
+        wanez.DGA.boxTriggerRegion(argObjectId,9)
+    end;
+    boxTrigger_10a = function(argObjectId)
+        wanez.DGA.boxTriggerRegion(argObjectId,10)
     end;
 }

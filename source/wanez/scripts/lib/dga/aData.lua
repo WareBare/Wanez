@@ -29,7 +29,11 @@ wanez.DGA.aData = {
         [18] = "",
         [19] = "",
         [20] = "",
-        [101] = "pack_boar"
+        [101] = "pack_boar",
+        [501] = "pack_manticore",
+        [502] = "pack_trollhalfswamp",
+        [503] = "pack_groblea",
+        [504] = "pack_vulture"
     };
     bossSpawn = {
         [1] = "banditminiboss_pitmaster",
@@ -52,7 +56,11 @@ wanez.DGA.aData = {
         [18] = "",
         [19] = "",
         [20] = "",
-        [101] = "golemrock_miniboss_cave_02"
+        [101] = "golemrock_miniboss_cave_02",
+        [501] = "banditminiboss_coastcaveboss",
+        [502] = "troll_swampking",
+        [503] = "spidergiant_mountaindeeps_01",
+        [504] = "smugglerbasin_dranghoul"
     };
     monsterClassifications = {
         [1] = "Common",

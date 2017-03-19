@@ -1,7 +1,7 @@
 templateName,database/templates/dungeonentrance.tpl,
 ActorName,,
 Class,DungeonEntrance,
-FileDescription,Updated with Tool - 26/02/2017 02:39 pm,
+FileDescription,Updated with Tool - 18/03/2017 06:29 am,
 openEffect,,
 doorHooks,,
 factionRequired,,

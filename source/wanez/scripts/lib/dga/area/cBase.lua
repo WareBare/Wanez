@@ -18,7 +18,12 @@ local aEnemies = wanez.data.gEnemies
 local aNameToId = wanez.data.gNameToId
 --local aDataBase = wanez.DGA.aData
 local regionCount = {
-    [101]=3
+    [101]=3,
+    [201]=5,
+    [501]=5,
+    [502]=5,
+    [503]=5,
+    [504]=8
 }
 
 function wanez.DGA.area.cBase(argRegionId,argAreaId,optData)
@@ -44,6 +49,8 @@ function wanez.DGA.area.cBase(argRegionId,argAreaId,optData)
     local monsterLevel = 1
     local areaLvL = false
     local tryCount = 0
+    local aUseCoords = false;
+    local coordCount = 1;
 
     local regionalSpawns;
 
@@ -326,107 +333,112 @@ function wanez.DGA.area.cBase(argRegionId,argAreaId,optData)
             iBossRoom = iBossRoom or false
             argRegionId = argRegionId or 1
             curRegion = argRegionId
-            --allowNewEntityCoords = false
-            --local tempProxy = false
-            --- remove token to summon Portal if player has one
-            --local tokenPortalDefault = 'WZ_DGA_ALLOW_PORTAL_DEFAULT'
-            --local _player = Player.Get(argObjectPlayer) or Game.GetLocalPlayer()
             
-            --UI.Notify("CurRegion: "..curRegion)
             if(self:__getAllowSpawn()) then
-                --UI.Notify("prep spawn")
+            
                 tryCount = tryCount + 1
             
-                self:removeEntities()
-                --aEntities[curRegion] = {}
-                --UI.Notify("Trigger: start spawn")
-                local _tempProxy = false
-                local usedCoords = {}
+                if(aUseCoords == false) then
+                    --UI.Notify("ProxyCount: "..table.getn(aEntityCoords[curRegion].Default))
+                
+                    self:removeEntities()
+                    local _tempProxy = false
+                    local usedCoords = {}
+                
+                    local incSpawnChance = self.aMods.entityChances.proxies or 0
+                    local spawnChance = aDataArea.areaSettings.useProxies + incSpawnChance
+        
+                    if(self.areaType == "BossRoom") then
+                        local bossCoords = self:RNG({
+                            aData = aEntityCoords[curRegion].Default
+                        })
             
-                local incSpawnChance = self.aMods.entityChances.proxies or 0
-                local spawnChance = aDataArea.areaSettings.useProxies + incSpawnChance
-    
-                --UI.Notify("01 - CurRegion: "..curRegion)
-                --UI.Notify(tostring(spawnChance))
-                --UI.Notify("ProxyCount: "..table.getn(aEntityCoords[curRegion].Default))
-                if(self.areaType == "BossRoom") then
-                    local bossCoords = self:RNG({
-                        aData = aEntityCoords[curRegion].Default
-                    })
+                        _tempProxy = wanez.DGA.entity.cEnemy()
+                        _tempProxy:setDataEntity(aDataMP,monsterLevel)
+            
+                        if(iBossRoom) then
         
-                    _tempProxy = wanez.DGA.entity.cEnemy()
-                    _tempProxy:setDataEntity(aDataMP,monsterLevel)
-        
-                    if(iBossRoom) then
-    
-                        local incCount = self.aMods.enemyCount[aTypeIdToBossType[mpTypeId]] or 0
-                        local totalCount = 1 + incCount
-                        for i=1,totalCount do
-                            if( iBossRoom:spawnBoss() )then
-                                _tempProxy:createEntities(bossCoords,aDataArea.bossSpawn,aTypeIdToBossType[mpTypeId])
-                            else
-                                _tempProxy:createEntities(bossCoords,self:RNG({aData = aEnemies.aBossMini}),4)
-                            end
-                        end;
-                        
-                        table.insert(aEntities[curRegion],_tempProxy)
-                    end
-                    usedCoords[bossCoords] = true
-                else
-                    --- set BossRoom Data
-                    iBossRoom:prepBossRoom({
-                        _cType = _cType;
-                        areaTier = areaTier;
-                        _areaOwner = _areaOwner;
-                        areaId = areaId;
-                        areaLvL = areaLvL;
-                        --allowSpawn = allowSpawn;
-                    })
-                    --UI.Notify("Trigger: has set bossroom data")
-                    --UI.Notify("02 - CurRegion: "..curRegion)
-                    --- NEMESIS
-                    --
-                    if(regionalSpawns[curRegion].Nemesis) then
-                        --UI.Notify("spawn "..regionalSpawns[curRegion].Nemesis.." Nemesis")
-                        for i=1,regionalSpawns[curRegion].Nemesis do
+                            local incCount = self.aMods.enemyCount[aTypeIdToBossType[mpTypeId]] or 0
+                            local totalCount = 1 + incCount
+                            for i=1,totalCount do
+                                if( iBossRoom:spawnBoss() )then
+                                    _tempProxy:createEntities(bossCoords,aDataArea.bossSpawn,aTypeIdToBossType[mpTypeId])
+                                else
+                                    _tempProxy:createEntities(bossCoords,self:RNG({aData = aEnemies.aBossMini}),4)
+                                end
+                            end;
                             
-                            local nemesisDbr = self:RNG({
-                                aData = aEnemies.aNemesis
-                            })
-                            local nemesisCoords = self:RNG({
-                                aData = aEntityCoords[curRegion].Default;
-                                rngData = usedCoords;
-                            })
-                            _tempProxy = wanez.DGA.entity.cEnemy()
-                            _tempProxy:setDataEntity(aDataMP,monsterLevel)
-                            _tempProxy:createEntities(nemesisCoords,nemesisDbr,6)
                             table.insert(aEntities[curRegion],_tempProxy)
-    
-                            usedCoords[nemesisCoords] = true
-                        end;
-                    end
-                    --UI.Notify("02.5 - CurRegion: "..curRegion)
-                end
-    
-                --UI.Notify("03 - CurRegion: "..curRegion)
-                --UI.Notify("start monsters")
-                for key,entityCoords in pairs(aEntityCoords[curRegion].Default) do
-                    --UI.Notify("Trigger: start spawn")
-                    -- add instance to the list
-                    if(self:RNG({
-                        aChances = spawnChance
-                    }) and usedCoords[entityCoords] ~= true) then
-                        table.insert(aEntities[curRegion],self:rollEntities(entityCoords))
+                        end
+                        usedCoords[bossCoords] = true
+                    else
+                        --- set BossRoom Data
+                        iBossRoom:prepBossRoom({
+                            _cType = _cType;
+                            areaTier = areaTier;
+                            _areaOwner = _areaOwner;
+                            areaId = areaId;
+                            areaLvL = areaLvL;
+                        })
+                        --- NEMESIS
+                        if(regionalSpawns[curRegion].Nemesis) then
+                            --UI.Notify("spawn "..regionalSpawns[curRegion].Nemesis.." Nemesis")
+                            for i=1,regionalSpawns[curRegion].Nemesis do
+                                
+                                local nemesisDbr = self:RNG({
+                                    aData = aEnemies.aNemesis
+                                })
+                                local nemesisCoords = self:RNG({
+                                    aData = aEntityCoords[curRegion].Default;
+                                    rngData = usedCoords;
+                                })
+                                _tempProxy = wanez.DGA.entity.cEnemy()
+                                _tempProxy:setDataEntity(aDataMP,monsterLevel)
+                                _tempProxy:createEntities(nemesisCoords,nemesisDbr,6)
+                                table.insert(aEntities[curRegion],_tempProxy)
+        
+                                usedCoords[nemesisCoords] = true
+                            end;
+                        end
                     end
                     
-                end;
+        
+                    for key,entityCoords in pairs(aEntityCoords[curRegion].Default) do
+                        -- add instance to the list
+                        if(self:RNG({
+                            aChances = spawnChance
+                        }) and usedCoords[entityCoords] ~= true) then
+                            --table.insert(aEntities[curRegion],self:rollEntities(entityCoords))
+                            aUseCoords = aUseCoords or {}
+                            table.insert(aUseCoords,entityCoords)
+                        end
+                        
+                    end;
+                    
+                end
             
-                --allowSpawn = false
+                self:newEntities()
+                --self:__setAllowSpawn()
+                --UI.Notify("Trigger finished on Try: "..tryCount)
+                --if(curRegion == 1 and self.areaType ~= "BossRoom") then UI.Notify("tagWzDGA_LuaNotify_SpawnedEntities") end
+            end
+            
+        end;
+    
+        newEntities = function(self)
+            if(aUseCoords[coordCount]) then
+                table.insert(aEntities[curRegion],self:rollEntities(aUseCoords[coordCount]))
+                coordCount = coordCount + 1
+            else
+                --- reset
+                aUseCoords = false
+                coordCount = 1
+                --- methods
                 self:__setAllowSpawn()
+                --- Notify
                 --UI.Notify("Trigger finished on Try: "..tryCount)
                 if(curRegion == 1 and self.areaType ~= "BossRoom") then UI.Notify("tagWzDGA_LuaNotify_SpawnedEntities") end
             end
-            
         end;
         
         removeEntities = function(self)

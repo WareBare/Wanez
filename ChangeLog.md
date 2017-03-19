@@ -1,6 +1,41 @@
 # Changelog #
 You can also check out an [online changelog](http://wanez.de/gd/mod/updates).
 
+## v0.5.0 - Beta #10 ##
+### Core Update ###
+#### Minor Updates ####
+* some monsters have been updated to reflect the Crowd Control Resistance changes in 1.0.0.9
+* Runes have been updated to reflect the change in 1.0.0.9
+
+### DGA ###
+#### Tech ####
+* spawning is now done location by location, rather than everything in one action
+* the reason for this change are new maps
+* as a nice little side-effect, loading times have been reduced
+* I need some feedback regarding this change
+  * does it feel weird
+  * does it lag
+  * does it crash
+
+#### Areas ####
+* changed the number of possible spawn locations to be the same for each map
+  * the purpose of this change is to balance DGA-Scroll drops and Affix outcome, the idea is for every map to be equal in terms of loot, this way you can do the area you prefer without thinking about game advantages.
+  * some exceptions for smaller maps, as they would have too much density (I may have to increase their size in the future).
+  * certain larger maps may seem too easy with this change, if this is the case I may have to block certain parts to increase monster density.
+  * different Monster Density isn't necessarily a bad thing
+* New Regular Maps
+  * Beach
+  * Marshes
+  * Tropical Island
+  * Mountain Ledge
+* all Regular Maps are once again part of the Random DGA-Pool
+* move Portals inside the Boss Room/Arena
+
+#### Minor Features ####
+* you can now buy Area-Scrolls at a Faction Merchant (requires Friendly)
+  * Area-Scroll crafting is still possible at the Blacksmith, but the creation cost has been reduced to 1 (from 1000)
+  * the reason for adding them to a vendor is to be able to buy a specific Area-Scroll now that there are coming more and more new areas
+
 ## v0.5.0 - Beta #09 ##
 ### DGA ###
 #### Areas ####

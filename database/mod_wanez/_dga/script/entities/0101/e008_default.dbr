@@ -1,7 +1,0 @@
-templateName,database/templates/scriptentity.tpl,
-editorMesh,creatures/enemies/proxynemesis01.msh,
-editorScale,1.0,
-pathing,0,
-Class,ScriptEntity,
-FileDescription,Updated with Tool - 11/03/2017 08:07 am,
-onAddToWorld,wanez.fn.gDGA.regProxy_Area0101_e008_Default,
