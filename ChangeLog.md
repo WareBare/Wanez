@@ -1,21 +1,29 @@
 # Changelog #
 You can also check out an [online changelog](http://wanez.de/gd/mod/updates).
 
-## v0.5.0 - Beta #10 ##
-### Core Update ###
-#### Minor Updates ####
-* some monsters have been updated to reflect the Crowd Control Resistance changes in 1.0.0.9
-* Runes have been updated to reflect the change in 1.0.0.9
+## v0.5.0 - Beta #10b ##
+### DGA ###
+#### Areas ####
+* Boss Room changes to make it easier on the eyes
 
+#### Minor Features ####
+* You are now able to kill a zombie near the water to complete the difficulty you are in, this way it won't change back to  Normal if you were in Ultimate before
+  * I have also added two guards in case the zombie finds its way into the camp
+  * I decided to go that way, because it doesn't really change anything for custom game since you can do any difficulty at any time
+
+#### Bug Fixes ####
+* water color in marshes fixed
+
+## v0.5.0 - Beta #10 ##
 ### DGA ###
 #### Tech ####
 * spawning is now done location by location, rather than everything in one action
 * the reason for this change are new maps
 * as a nice little side-effect, loading times have been reduced
 * I need some feedback regarding this change
-  * does it feel weird
-  * does it lag
-  * does it crash
+  * does it feel weird?
+  * does it lag?
+  * does it crash?
 
 #### Areas ####
 * changed the number of possible spawn locations to be the same for each map
@@ -35,6 +43,11 @@ You can also check out an [online changelog](http://wanez.de/gd/mod/updates).
 * you can now buy Area-Scrolls at a Faction Merchant (requires Friendly)
   * Area-Scroll crafting is still possible at the Blacksmith, but the creation cost has been reduced to 1 (from 1000)
   * the reason for adding them to a vendor is to be able to buy a specific Area-Scroll now that there are coming more and more new areas
+
+### Grim Dawn Version v1.0.0.9 ###
+#### Minor Updates ####
+* some monsters have been updated to reflect the Crowd Control Resistance changes in 1.0.0.9
+* Runes have been updated to reflect the change in 1.0.0.9
 
 ## v0.5.0 - Beta #09 ##
 ### DGA ###
