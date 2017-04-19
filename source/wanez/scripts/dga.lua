@@ -384,13 +384,15 @@ function wanez.DGA.onEnterTriggerCampOnLoad(argObjectId)
         end
     end
     
+
     --- AREA Testing
     --_player:wzHasItem("mod_wanez/_dga/items/scrolls/area_scroll_0008.dbr",1)
     --_player:wzHasItem("mod_wanez/_dga/items/scrolls/area_scroll_0501.dbr",1)
     --_player:wzHasItem("mod_wanez/_dga/items/scrolls/area_scroll_0502.dbr",1)
     --_player:wzHasItem("mod_wanez/_dga/items/scrolls/area_scroll_0503.dbr",1)
     --_player:wzHasItem("mod_wanez/_dga/items/scrolls/area_scroll_0504.dbr",1)
-
+    
+    --_player:GiveSkillPoints(1000);
     --_player:GiveLevels(85)
     --_player:AdjustMoney(9999999)
     --_player:wzHasItem("mod_wanez/_dga/items/affixes/b003.dbr",1)
