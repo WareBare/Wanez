@@ -1,7 +1,7 @@
 templateName,database/templates/npccrafter.tpl,
 ActorName,,
 Class,NpcCrafter,
-FileDescription,Updated with Tool - 11/03/2017 06:48 am,
+FileDescription,Updated with WanezToolsGD - 23/04/2017 11:15 pm,
 crafterBitmap,ui/inventor/crafting_iconblacksmithmaster.tex,
 enhancementTable,mod_wanez/_gear/lootaffixes/crafting/completionbonus_b00_00.dbr,
 enhancementTag,tagStoreDesc_SmithA01_1;tagStoreDesc_SmithA01_2;tagStoreDesc_SmithA01_3;tagStoreDesc_SmithA01_4,

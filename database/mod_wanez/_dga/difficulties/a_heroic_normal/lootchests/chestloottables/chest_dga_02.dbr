@@ -1,5 +1,5 @@
 templateName,database/templates/fixeditemloot.tpl,
-FileDescription,Updated with Tool - 11/03/2017 11:22 pm,
+FileDescription,Updated with WanezToolsGD - 24/04/2017 10:27 pm,
 numSpawnMinEquation,(1.0+(numberOfPlayers*1.0))*1.2,
 numSpawnMaxEquation,(3.0+(numberOfPlayers*2.0))*1.2,
 loot1Chance,270.000000;60.000000;12.000000;0.000000;0.000000;0.000000;0.000000;0.000000;0.000000;180.000000,

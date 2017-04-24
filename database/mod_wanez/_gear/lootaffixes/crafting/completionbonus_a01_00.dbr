@@ -1,6 +1,6 @@
 templateName,database/templates/lootrandomizertabledynamic.tpl,
 Class,LootRandomizerTable,
-FileDescription,Updated with Tool - 27/02/2017 12:11 am,
+FileDescription,Updated with WanezToolsGD - 23/04/2017 11:03 pm,
 randomizerName1,mod_wanez/_gear/lootaffixes/crafting/a01_.dbr,
 randomizerLevelMin1,1,
 randomizerLevelMax1,250,
