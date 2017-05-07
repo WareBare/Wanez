@@ -1,6 +1,6 @@
 templateName,database/templates/oneshot_scroll.tpl,
 Class,OneShot_Scroll,
-FileDescription,Updated with WanezToolsGD - 22/04/2017 11:58 pm,
+FileDescription,Updated with WanezToolsGD - 05/05/2017 12:02 am,
 AreaDescription,This is a really lame area of interest description.,
 onDestroy,wanez.fn.gRunes.useRuneRuneB049,
 useBoundingBoxesForDynamicObstacles,0,

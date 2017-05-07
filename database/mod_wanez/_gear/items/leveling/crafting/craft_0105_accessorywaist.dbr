@@ -1,6 +1,6 @@
 templateName,database/templates/armor_waist.tpl,
 Class,ArmorProtective_Waist,
-FileDescription,Updated with WanezToolsGD - 23/04/2017 11:31 pm,
+FileDescription,Updated with WanezToolsGD - 05/05/2017 05:08 am,
 AreaDescription,This is a really lame area of interest description.,
 useBoundingBoxesForDynamicObstacles,0,
 scale,1.0,

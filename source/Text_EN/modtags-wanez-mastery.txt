@@ -1273,8 +1273,11 @@ tagSkillClassName4950=?
 
 ## --------------------------------------- ##
 
+### Mastery ###
 tagClass25SkillName00=^pPlanes-Shaper
 tagClass21SkillName00=^pPlanes Warrior
+
+### Skills ###
 tagWzMasteryDGA05SkillName_BoltProj=Planar Projectiles
 tagWzMasteryDGA05SkillDescription_BoltProj=Increases the number of Projectiles you fire, but you deal less damage.
 tagWzMasteryDGA05SkillName_Bolt=Planar Bolt
@@ -1295,3 +1298,33 @@ tagWzMasteryDGA05SkillName_VortexDMG=Empowered Vortex
 tagWzMasteryDGA05SkillDescription_VortexDMG=Increase the damage of you Vortex.
 tagWzMasteryDGA05SkillName_VortexConv=Chaos Vortex
 tagWzMasteryDGA05SkillDescription_VortexConv=Converts the Cold Damage to Chaos.
+tagWzMasteryDGA05SkillName_DDSplinter=Splintering Blast
+tagWzMasteryDGA05SkillDescription_DDSplinter=Creates Fragments on hitting a Target.
+tagWzMasteryDGA05SkillName_DDAoE=Explosive Blast
+tagWzMasteryDGA05SkillDescription_DDAoE=Increases the AoE of Planar Blast.
+tagWzMasteryDGA05SkillName_RayCold=Freezing Ray
+tagWzMasteryDGA05SkillDescription_RayCold=Adds Cold DoT to the Ray.
+tagWzMasteryDGA05SkillName_RayDmg=Empowered Ray
+tagWzMasteryDGA05SkillDescription_RayDmg=Adds Weapon Damage to the Ray and increases it's Cold and Chaos Damage.
+tagWzMasteryDGA05SkillName_Ray=Planar Ray
+tagWzMasteryDGA05SkillDescription_Ray=A devastating Ray dealing Chaos and Cold Damage. ^oRequires a Caster Off-Hand or a Staff.
+tagWzMasteryDGA05SkillName_RayWidth=Enhanced Ray
+tagWzMasteryDGA05SkillDescription_RayWidth=Increases the width of the Ray.
+tagWzMasteryDGA05SkillName_DDDmg=Empowered Blast
+tagWzMasteryDGA05SkillDescription_DDDmg=Increases the Damage of your Blast.
+tagWzMasteryDGA05SkillName_Passive01=Knowledge of Planes
+tagWzMasteryDGA05SkillDescription_Passive01=You gain more knowledge about how the Planes are working and are able to use the Energy from within.
+tagWzMasteryDGA05SkillName_Passive02=Planar Focus
+tagWzMasteryDGA05SkillDescription_Passive02=You are getting more focused and your Spells become more devastating.
+tagWzMasteryDGA05SkillName_Passive03=Planes-Survivalist
+tagWzMasteryDGA05SkillDescription_Passive03=You are sacrificing a portion of your Energy to gain more Health.
+tagWzMasteryDGA05SkillName_RayConv=Elemental Ray
+tagWzMasteryDGA05SkillDescription_RayConv=Adds Elemental Damage and ultimately converts the Ray's Chaos damage to Elemental Damage.
+tagWzMasteryDGA05SkillDescription_Aura01Conv=Convert Aether Damage to Cold Damage.
+tagWzMasteryDGA05SkillName_Aura01Conv=Chilling Touch
+tagWzMasteryDGA05SkillName_Aura01Dmg=Planar Infusion
+tagWzMasteryDGA05SkillDescription_Aura01Dmg=Adds Cold and Chaos damage to your attacks.
+tagWzMasteryDGA05SkillName_Aura01=Planar Mastery
+tagWzMasteryDGA05SkillDescription_Aura01=Use the Energy surrounding you for powerful spells.
+tagWzMasteryDGA05SkillName_Passive04=The Planes' Destroyer
+tagWzMasteryDGA05SkillDescription_Passive04=Some secrets better be left alone, but maybe you can handle it. Gain a massive Damage boost to Chaos and Cold.

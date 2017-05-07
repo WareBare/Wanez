@@ -29,6 +29,15 @@ local addToClientQuestTable = {
     wzDGA_setDifficulty04 = function()
         local _cDifficulty = wanez.DGA.cDifficulty(4)
     end;
+    wzDGA_setDifficulty05 = function()
+        local _cDifficulty = wanez.DGA.cDifficulty(5)
+    end;
+    wzDGA_setDifficulty06 = function()
+        local _cDifficulty = wanez.DGA.cDifficulty(6)
+    end;
+    wzDGA_setDifficulty07 = function()
+        local _cDifficulty = wanez.DGA.cDifficulty(7)
+    end;
     
     wzDGA_setDifficultyNext = function()
         local _cDifficulty = wanez.DGA.cDifficulty(true)

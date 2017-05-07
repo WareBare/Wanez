@@ -221,13 +221,33 @@ wanez.DGA.aData = {
             }, {
                 name = "hard";
                 token = "WZ_DGA_MP_DIFFICULTY_03";
+                entitySpawn = "mod_wanez/skills/difficulty_entity_01.dbr";
                 quest = {0x5F6EF180,0xF69F4800};
                 mulScroll = 20;
             }, {
                 name = "elite";
                 token = "WZ_DGA_MP_DIFFICULTY_04";
+                entitySpawn = "mod_wanez/skills/difficulty_entity_02.dbr";
                 quest = {0x6CB2C580,0xF69F4800};
                 mulScroll = 50;
+            }, {
+                name = "Ultimate";
+                token = "WZ_DGA_MP_DIFFICULTY_05";
+                entitySpawn = "mod_wanez/skills/difficulty_entity_03.dbr";
+                quest = {0x18E18680,0xF69F4800};
+                mulScroll = 100;
+            }, {
+                name = "Epic";
+                token = "WZ_DGA_MP_DIFFICULTY_06";
+                entitySpawn = "mod_wanez/skills/difficulty_entity_04.dbr";
+                quest = {0x5A476300,0xF69F4800};
+                mulScroll = 150;
+            }, {
+                name = "Legendary";
+                token = "WZ_DGA_MP_DIFFICULTY_07";
+                entitySpawn = "mod_wanez/skills/difficulty_entity_05.dbr";
+                quest = {0xEAB0D600,0xF69F4800};
+                mulScroll = 200;
             }
         };
         types = {

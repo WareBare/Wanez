@@ -35,6 +35,7 @@ Script.Load("wanez/scripts/lib/index.lua")
 
 --- LOAD FILES
 Script.Load("wanez/scripts/main.lua");
+Script.Load("wanez/scripts/gd.lua");
 Script.Load("wanez/scripts/dga.lua");
 Script.Load("wanez/scripts/runes.lua");
 

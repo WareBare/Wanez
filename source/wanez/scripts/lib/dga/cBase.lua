@@ -270,10 +270,11 @@ function wanez.DGA.cBase()
                 
             end;
             local difficultyValue = dataMP.difficulties[difficultyId].name
-            if(argPlayer:HasToken("WZ_DGA_MODE") == false) then
-                difficultyId = 2
-                difficultyValue = "default"
-            end
+            -- old MonsterPower for Vanilla Mode
+            --if(argPlayer:HasToken("WZ_DGA_MODE") == false) then
+                --difficultyId = 2
+                --difficultyValue = "default"
+            --end
         
             return {
                 type = {
@@ -291,6 +292,10 @@ function wanez.DGA.cBase()
                     ID = difficultyId;
                     Value = difficultyValue;
                     MulScroll = dataMP.difficulties[difficultyId].mulScroll;
+                };
+                entitySpawn = {
+                    ID = difficultyId;
+                    Value = dataMP.difficulties[difficultyId].entitySpawn or false;
                 };
             }
         end;
