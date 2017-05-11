@@ -102,7 +102,7 @@ function wanez.DGA.entity.cBase()
                 --UI.Notify("Spawn: setCoords")
                 table.insert(aEntities,newEntity)
             end;
-    
+        
             if(aDataMP.entitySpawn.Value) then
                 local newEntity;
                 newEntity = Character.Create(aDataMP.entitySpawn.Value,argLevel,nil)

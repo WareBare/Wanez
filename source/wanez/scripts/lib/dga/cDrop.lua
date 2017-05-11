@@ -15,7 +15,19 @@ local tplCurrency = {
     soul = {{"mod_wanez/currency/b_001{POTENCY}.dbr",100}};
 }
 
-local aClassMul = {0.15,0.5,1.0, 1.0,1.5,2.0, 2.0,3.0,3.0}
+local aClassMul = {0.15,0.5,1.0, 1.0,1.5,2.0, 2.0,3.0,3.0 }
+
+-- phasing spawns
+local entityNames = {
+    'manticore',
+    'spidergiant',
+    'waspgiant',
+    'slith',
+    'vulture'
+}
+local aLetterEquiv = {'a','b','c','d','e','e','e','e','e','e','e','e','e','e','e'}
+local timeSinceLastKill = Time.Now()
+local killRating = 0
 
 function wanez.DGA.cDrop()
     local _parent = wanez.DGA.cBase()
@@ -233,6 +245,8 @@ function wanez.DGA.cDrop()
             
         end;
         
+        
+        
         __dropLoot = function(self)
             --- INDIVIDUAL
             --self:dropCurrency('soul')
@@ -261,7 +275,9 @@ function wanez.DGA.cDrop()
                     QuestGlobalEvent("wzDGA_completeQuestType001")
                 end
             end
-            
+    
+            --- PHASING BEASTS
+            wanez.gd.onDieEntity(entityId,classId)
     
             --- PACK
             if(_pack) then

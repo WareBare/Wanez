@@ -468,6 +468,16 @@ function wanez.DGA.crafterDGA(argObjectId)
     --wanez.DGA.area.cArea()
 end
 
+function wanez.DGA.onAddToWorldCrafterGear(argObjectId)
+    local entity_ = Entity.Get(argObjectId)
+    local dbr = "mod_wanez/_gear/creatures/npcs/blacksmith_leveling0".._cSettings:getFactionRank("USER14")..".dbr"
+    --UI.Notify(dbr)
+    local crafter_ = Entity.Create( dbr )
+    crafter_:SetCoords(entity_:GetCoords())
+
+    entity_:Destroy()
+end
+
 function wanez.DGA.useReward_Scroll(argObjectId,argTier,argType)
     _cScroll = wanez.cScroll({
         notify = "tagWzDGA_LuaNotify_usedReward_Scroll";

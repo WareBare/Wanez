@@ -1,0 +1,4 @@
+
+## ITEMS ##
+tagWzPatron_ItemsCurrencyPlanarInvader_Name=Faction Token - Planar Invaders
+tagWzPatron_ItemsCurrencyPlanarInvader_DESC="You can upgrade Artifacts with this token at a Blacksmith."

@@ -354,7 +354,7 @@ wanez.DGA.aData = {
     dropChances = {
         -- Mission
         {
-            regularScroll = 10;
+            regularScroll = 5;
             endlessScroll = 0;
             soul = 5;
             essence = 20;
@@ -372,7 +372,7 @@ wanez.DGA.aData = {
         };
         -- Challenge
         {
-            regularScroll = 3;
+            regularScroll = 2;
             endlessScroll = 0;
             soul = 5;
             essence = 20;

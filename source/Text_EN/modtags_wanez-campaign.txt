@@ -5,3 +5,5 @@ tagWzCampaign_EnemySpiderGiantA01=Phasing Spider
 tagWzCampaign_EnemyVultureA01=Phasing Vulture
 tagWzCampaign_EnemyWaspGiantA01=Phasing Wasp
 
+tagWzCampaingLua_TimeHasRunOut=Your time has run out, Spawn-Count has been reset!
+tagWzCampaingLua_SpawnBoss=You are now able to spawn a Boss, Good Luck!
