@@ -85,3 +85,13 @@ function wanez.fn.gRunes.useRuneRuneB080() wanez.Runes.useRune('RuneB',80,5); en
 function wanez.fn.gRunes.useRuneRuneB081() wanez.Runes.useRune('RuneB',81,5); end;
 function wanez.fn.gRunes.useRuneRuneB082() wanez.Runes.useRune('RuneB',82,5); end;
 function wanez.fn.gRunes.useRuneRuneB083() wanez.Runes.useRune('RuneB',83,5); end;
+function wanez.fn.gRunes.useRuneRuneC001() wanez.Runes.useRune('RuneC',1,5); end;
+function wanez.fn.gRunes.useRuneRuneC002() wanez.Runes.useRune('RuneC',2,5); end;
+function wanez.fn.gRunes.useRuneRuneC003() wanez.Runes.useRune('RuneC',3,5); end;
+function wanez.fn.gRunes.useRuneRuneC004() wanez.Runes.useRune('RuneC',4,5); end;
+function wanez.fn.gRunes.useRuneRuneC005() wanez.Runes.useRune('RuneC',5,5); end;
+function wanez.fn.gRunes.useRuneRuneC006() wanez.Runes.useRune('RuneC',6,5); end;
+function wanez.fn.gRunes.useRuneRuneC007() wanez.Runes.useRune('RuneC',7,5); end;
+function wanez.fn.gRunes.useRuneRuneC008() wanez.Runes.useRune('RuneC',8,5); end;
+function wanez.fn.gRunes.useRuneRuneC009() wanez.Runes.useRune('RuneC',9,5); end;
+function wanez.fn.gRunes.useRuneRuneC010() wanez.Runes.useRune('RuneC',10,5); end;

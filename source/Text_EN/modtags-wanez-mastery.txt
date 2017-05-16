@@ -7,8 +7,10 @@ tagSkillClassName05=Arcanist
 tagSkillClassName06=Shaman
 tagSkillClassName09=
 tagSkillClassName08=
-tagSkillClassName25=^pShaper
 tagSkillClassName21=^pWarrior
+tagSkillClassName22=^pGunslinger
+tagSkillClassName23=^pConjurer
+tagSkillClassName25=^pEldritch
 
 //tagSkillClassName0102=Commando
 //tagSkillClassName0103=Witchblade
@@ -77,7 +79,7 @@ tagSkillClassName0218=?
 tagSkillClassName0219=?
 tagSkillClassName0220=?
 tagSkillClassName0221=?
-tagSkillClassName0222=?
+tagSkillClassName0222=^pPlanar Sniper
 tagSkillClassName0223=?
 tagSkillClassName0224=?
 tagSkillClassName0225=?
@@ -833,7 +835,7 @@ tagSkillClassName2249=?
 tagSkillClassName2250=?
 ##
 tagSkillClassName2324=?
-tagSkillClassName2325=?
+tagSkillClassName2325=^pShaper
 tagSkillClassName2326=?
 tagSkillClassName2327=?
 tagSkillClassName2328=?
@@ -1274,8 +1276,11 @@ tagSkillClassName4950=?
 ## --------------------------------------- ##
 
 ### Mastery ###
-tagClass25SkillName00=^pPlanes-Shaper
+tagClass25SkillName00=^p[Planes-]Eldritch
 tagClass21SkillName00=^pPlanes Warrior
+tagClass22SkillName00=^p[Planes-]Gunslinger
+tagClass23SkillName00=^p[Planes-]Conjurer
+
 
 ### Skills ###
 tagWzMasteryDGA05SkillName_BoltProj=Planar Projectiles
@@ -1328,3 +1333,19 @@ tagWzMasteryDGA05SkillName_Aura01=Planar Mastery
 tagWzMasteryDGA05SkillDescription_Aura01=Use the Energy surrounding you for powerful spells.
 tagWzMasteryDGA05SkillName_Passive04=The Planes' Destroyer
 tagWzMasteryDGA05SkillDescription_Passive04=Some secrets better be left alone, but maybe you can handle it. Gain a massive Damage boost to Chaos and Cold.
+tagWzMasteryDGA05SkillName_Curse=Worlds' Curse
+tagWzMasteryDGA05SkillDescription_Curse=Apply a Debuff to your enemies that make them more vulnerable to Chaos, Fire and Cold damage.
+tagWzMasteryDGA02SkillName_StrikeMain=Shoot
+tagWzMasteryDGA02SkillDescription_StrikeMain=Fire a projectile at you target.
+tagWzMasteryDGA02SkillDescription_RainTrans=Converts Physical to Cold and adds a Chance to freeze the target, it also slows enemies hit down and adds a cooldown to the skill.
+tagWzMasteryDGA02SkillName_RainTrans=Icicle Rain
+tagSkillClassDescription22=The Gunslinger is a master with Ranged Weapons, he would never consider a different weapon type. It doesn't matter to the him whether he is using one-handed guns or a two-handed gun, he also doesn't mind using a crossbow, as long as he is far away from the things that could hurt him.^n^oPhysical, Pierce and Cold are his damage types.
+tagSkillClassDescription25=A powerful spellcaster using the void to destroy its foes.^n^oCold and Chaos damage.
+tagWzMasteryDGA02SkillName_RootMain=Entangling Shot
+tagWzMasteryDGA02SkillDescription_RootMain=Fire a Projectile to immobilize your target.
+tagWzMasteryDGA02SkillName_MultiMain=Multishot
+tagWzMasteryDGA02SkillDescription_MultiMain=Fire multiple Projectiles at the same time.
+tagWzMasteryDGA02SkillName_MultiPierce=Piercing Shots
+tagWzMasteryDGA02SkillDescription_MultiPierce=Adds the chance to Pierce and Piercing Damage.
+tagWzMasteryDGA02SkillName_MultiTrans=Relentless Shots
+tagWzMasteryDGA02SkillDescription_MultiTrans=Removes the Cooldown and lowers the Damage of Multishot.

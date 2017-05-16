@@ -1,6 +1,6 @@
 templateName,database/templates/weaponarmor_shield.tpl,
 Class,WeaponArmor_Shield,
-FileDescription,Updated with WanezToolsGD - 23/04/2017 11:29 pm,
+FileDescription,Updated with WanezToolsGD - 12/05/2017 03:14 pm,
 AreaDescription,This is a really lame area of interest description.,
 useBoundingBoxesForDynamicObstacles,0,
 scale,1.0,

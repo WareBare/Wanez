@@ -277,7 +277,7 @@ function wanez.DGA.cDrop()
             end
     
             --- PHASING BEASTS
-            wanez.gd.onDieEntity(entityId,classId)
+            wanez.gd.onDieEntity(entityId,classId,aDataMP.difficulty.ID)
     
             --- PACK
             if(_pack) then

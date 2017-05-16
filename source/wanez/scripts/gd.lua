@@ -21,6 +21,7 @@ local aLetterEquiv = {'a','b','c','d','e','e','e','e','e','e','e','e','e','e','e
 local timeSinceLastKill = Time.Now()
 local killRating = 0
 local aRewards = {1,2,5,10,25,25,25,25,25,25,25,25,25,25}
+local aRewardsDifficultyMul = {1,1,1,2,2,3,3}
 local usedProxy = {}
 local createProxy = false
 local _trigger = false
@@ -56,55 +57,78 @@ function wanez.gd.onAddToWorldCrafterGear(argObjectId)
     entityToDestroy = crafter_;
 end
 
-local function spawnPlanarInvader(argObjectId,argClassId)
+local function spawnPlanarInvader(argObjectId,argClassId,argDifficultyId)
     if(Game.GetLocalPlayer():HasToken("WZ_DGA_NO_PHASING") == false)then
-        --UI.Notify("working spawn")
+        
+        local difficultySpawn = wanez.DGA.aData.monsterPower.difficulties[argDifficultyId].entitySpawn or false
+        
         local randomSpawnClass = aLetterEquiv[random(1,argClassId)]
         local randomEntityType = random(1,5)
         local enemyCoords = Entity.Get(argObjectId):GetCoords()
-        if(random(1,100) <= 20) then
+        if(random(1,100) <= 10 * argDifficultyId) then
             --UI.Notify('should spawn')
             local newEnemy = Character.Create('mod_wanez/_campaign/creatures/enemies/phasing_'..entityNames[randomEntityType]..'_'..randomSpawnClass..'01.dbr',Game.GetAveragePlayerLevel() + argClassId,nil)
             newEnemy:SetCoords(enemyCoords)
+        
+            if(difficultySpawn) then
+                local newEnemy = Character.Create(difficultySpawn,Game.GetAveragePlayerLevel() + argClassId,nil)
+                newEnemy:SetCoords(enemyCoords)
+            end
             --UI.Notify('spawned Planar Invader')
         end
     end
 end
-function wanez.gd.spawnPlanarInvader(argObjectId,argClassId)
+function wanez.gd.spawnPlanarInvader(argObjectId,argClassId,argDifficultyId)
     --UI.Notify("working spawn global")
-    spawnPlanarInvader(argObjectId,argClassId)
+    --spawnPlanarInvader(argObjectId,argClassId,argDifficultyId)
 end
 
+local tokenPerId = {false,false,"WZ_GD_DIF_01","WZ_GD_DIF_02","WZ_GD_DIF_03","WZ_GD_DIF_04","WZ_GD_DIF_05"}
+local function getDifficultyId()
+    local newId = 1;
+    local _player = Game.GetLocalPlayer()
+    
+    for id,token in pairs(tokenPerId) do
+        if(_player:HasToken(token)) then
+            newId = id;
+        end
+    end
+    
+    return newId;
+end
 --- onDie events
-local function onDieEntity(argObjectId,argClassId)
+local function onDieEntity(argObjectId,argClassId,argDifficultyId)
+    
+    --local difficultyId = 1
+    argDifficultyId = argDifficultyId or getDifficultyId()
     
     --UI.Notify("working onDie")
     if(killRating == 0) then
         --math.randomseed(Time.Now());
     end
     if( (Time.Now() - timeSinceLastKill) <= 10000 ) then -- 10 seconds between kills or reset killRating
-        killRating = killRating + aRewards[argClassId];
+        killRating = killRating + (aRewards[argClassId] * aRewardsDifficultyMul[argDifficultyId]);
         --UI.Notify('add to Rating')
         if(killRating <= 25) then
             -- spawn common
-            spawnPlanarInvader(argObjectId,1)
+            spawnPlanarInvader(argObjectId,1,argDifficultyId)
         elseif(killRating >= 25) then
             -- spawn champion
-            spawnPlanarInvader(argObjectId,2)
+            spawnPlanarInvader(argObjectId,2,argDifficultyId)
         elseif(killRating >= 100) then
             -- spawn hero
-            spawnPlanarInvader(argObjectId,3)
+            spawnPlanarInvader(argObjectId,3,argDifficultyId)
         elseif(killRating >= 300) then
             -- spawn nemesis
-            spawnPlanarInvader(argObjectId,4)
+            spawnPlanarInvader(argObjectId,4,argDifficultyId)
         elseif(killRating >= 500) then
             -- spawn boss
-            spawnPlanarInvader(argObjectId,5)
+            spawnPlanarInvader(argObjectId,5,argDifficultyId)
             UI.Notify("tagWzCampaingLua_SpawnBoss")
         end
     else
         --UI.Notify('reset Rating')
-        killRating = aRewards[argClassId];
+        killRating = aRewards[argClassId] * aRewardsDifficultyMul[argDifficultyId];
         math.randomseed(Time.Now());
         UI.Notify("tagWzCampaingLua_TimeHasRunOut")
     end
@@ -112,9 +136,10 @@ local function onDieEntity(argObjectId,argClassId)
     timeSinceLastKill = Time.Now()
     --UI.Notify("working onDie")
 end
-function wanez.gd.onDieEntity(argObjectId,argClassId)
+function wanez.gd.onDieEntity(argObjectId,argClassId,argDifficultyId)
     --UI.Notify("working global")
-    onDieEntity(argObjectId,argClassId)
+    UI.Notify(argDifficultyId)
+    onDieEntity(argObjectId,argClassId,argDifficultyId)
 end
 
 --- move trigger to new location
@@ -181,7 +206,9 @@ end
 
 function wanez.gd.cloneProxy(argObjectId)
     
+    local difficultyId = getDifficultyId()
     local _proxy = Entity.Get(argObjectId)
+    local difficultySpawn = wanez.DGA.aData.monsterPower.difficulties[difficultyId].entitySpawn or false
     
     if usedProxy[argObjectId] ~= true then
         local dbr = _proxy:GetName()
@@ -194,6 +221,10 @@ function wanez.gd.cloneProxy(argObjectId)
         if(Game.GetLocalPlayer():HasToken("WZ_GD_ENEMY_COUNT_03")) then
             local newProxy = Entity.Create(newDBR)
             newProxy:SetCoords(_proxy:GetCoords())
+        end
+        if(difficultySpawn) then
+            local newEnemy = Entity.Create(difficultySpawn)
+            newEnemy:SetCoords(_proxy:GetCoords())
         end
     
         usedProxy[argObjectId] = true

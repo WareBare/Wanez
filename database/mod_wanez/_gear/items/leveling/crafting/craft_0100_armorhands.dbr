@@ -1,6 +1,6 @@
 templateName,database/templates/armor_hands.tpl,
 Class,ArmorProtective_Hands,
-FileDescription,Updated with WanezToolsGD - 23/04/2017 11:27 pm,
+FileDescription,Updated with WanezToolsGD - 12/05/2017 03:16 pm,
 AreaDescription,This is a really lame area of interest description.,
 useBoundingBoxesForDynamicObstacles,0,
 scale,1.0,

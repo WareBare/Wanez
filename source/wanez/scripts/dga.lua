@@ -384,6 +384,8 @@ function wanez.DGA.onEnterTriggerCampOnLoad(argObjectId)
         end
     end
     
+    --_player:wzHasItem("mod_wanez/_gear/items/artifacts/001_artifact_05.dbr",1)
+    --_player:wzHasItem("mod_wanez/_runes/items/materia/runec_002.dbr",1)
 
     --- AREA Testing
     --_player:wzHasItem("mod_wanez/_dga/items/scrolls/area_scroll_0008.dbr",1)
@@ -404,7 +406,7 @@ function wanez.DGA.onEnterTriggerCampOnLoad(argObjectId)
     --_player:wzHasItem("records/items/materia/compa_blessedsteel.dbr",1)
     --_player:wzHasItem("records/items/materia/compa_radiantgem.dbr",1)
     --_player:GiveFaction("USER14",100)
-    --_player:GiveFaction("USER15",12000)
+    --_player:GiveFaction("USER15",-12000)
     --UI.Notify(_player:GetFaction("USER15"))
     --_player:GiveItem("mod_wanez/_dga/items/scrolls/reward_scroll_a001.dbr",1,true)
     --wanez.DGA.dbr.onLeaveTriggerOrbConversion(argObjectId)
