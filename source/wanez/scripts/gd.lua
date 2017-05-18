@@ -124,7 +124,7 @@ local function onDieEntity(argObjectId,argClassId,argDifficultyId)
         elseif(killRating >= 500) then
             -- spawn boss
             spawnPlanarInvader(argObjectId,5,argDifficultyId)
-            UI.Notify("tagWzCampaingLua_SpawnBoss")
+            --UI.Notify("tagWzCampaingLua_SpawnBoss")
         end
     else
         --UI.Notify('reset Rating')
@@ -138,7 +138,7 @@ local function onDieEntity(argObjectId,argClassId,argDifficultyId)
 end
 function wanez.gd.onDieEntity(argObjectId,argClassId,argDifficultyId)
     --UI.Notify("working global")
-    UI.Notify(argDifficultyId)
+    --UI.Notify(argDifficultyId)
     onDieEntity(argObjectId,argClassId,argDifficultyId)
 end
 
@@ -199,7 +199,7 @@ function wanez.gd.proxyTriggerOnInside()
         --if(_trigger) then _trigger:Destroy() end
         --_trigger = false;
         wanez.gd.proxyTriggerOnLeave()
-        UI.Notify('reset trigger')
+        --UI.Notify('reset trigger')
     end
     
 end

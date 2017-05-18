@@ -1,7 +1,7 @@
 templateName,database/templates/skill_passivedualwieldweapon.tpl,
 ActorName,,
 Class,Skill_PassiveDualWieldWeapon,
-FileDescription,enables dual wield and gives chance to multihit,
+FileDescription,enables dual pistols,
 skillDisplayName,tagWzMasteryDGA02SkillName_ProcMain,
 skillBaseDescription,tagWzMasteryDGA02SkillDescription_ProcMain,
 skillUpBitmapName,wanez/mastery/skills/icons/dga02/skillicon_proc_main_up.tex,

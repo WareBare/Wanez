@@ -394,9 +394,12 @@ function wanez.DGA.onEnterTriggerCampOnLoad(argObjectId)
     --_player:wzHasItem("mod_wanez/_dga/items/scrolls/area_scroll_0503.dbr",1)
     --_player:wzHasItem("mod_wanez/_dga/items/scrolls/area_scroll_0504.dbr",1)
     
-    --_player:GiveSkillPoints(1000);
+    --_player:GiveSkillPoints(1000)
     --_player:GiveLevels(85)
     --_player:AdjustMoney(9999999)
+    --_player:wzHasItem("mod_wanez/currency/a_001c.dbr",1000)
+    --_player:wzHasItem("mod_wanez/currency/b_001c.dbr",1000)
+
     --_player:wzHasItem("mod_wanez/_dga/items/affixes/b003.dbr",1)
     --_player:wzHasItem("mod_wanez/_runes/items/lore/loreobj_runeb001_000.dbr",1)
     
@@ -410,8 +413,6 @@ function wanez.DGA.onEnterTriggerCampOnLoad(argObjectId)
     --UI.Notify(_player:GetFaction("USER15"))
     --_player:GiveItem("mod_wanez/_dga/items/scrolls/reward_scroll_a001.dbr",1,true)
     --wanez.DGA.dbr.onLeaveTriggerOrbConversion(argObjectId)
-    --_player:wzHasItem("mod_wanez/currency/a_001c.dbr",1000)
-    --_player:wzHasItem("mod_wanez/currency/b_001c.dbr",1000)
 
     removeOldItems(_player)
 end
