@@ -14,8 +14,6 @@ requires: _cMission; _cEndless; _cChallenge; _cRaid
     protected questId
     protected taskId
 
-
-
 SubMod: DGA
 ]]--
 local _cSettings = wanez.DGA.cSettings()
@@ -384,7 +382,7 @@ function wanez.DGA.onEnterTriggerCampOnLoad(argObjectId)
         end
     end
     
-    --_player:wzHasItem("mod_wanez/_gear/items/artifacts/001_artifact_05.dbr",1)
+    --_player:wzHasItem("mod_wanez/_gear/items/artifacts/003_artifact_05.dbr",1)
     --_player:wzHasItem("mod_wanez/_runes/items/materia/runec_002.dbr",1)
 
     --- AREA Testing
@@ -394,11 +392,11 @@ function wanez.DGA.onEnterTriggerCampOnLoad(argObjectId)
     --_player:wzHasItem("mod_wanez/_dga/items/scrolls/area_scroll_0503.dbr",1)
     --_player:wzHasItem("mod_wanez/_dga/items/scrolls/area_scroll_0504.dbr",1)
     
-    _player:GiveSkillPoints(1000)
-    _player:GiveLevels(85)
-    _player:AdjustMoney(9999999)
-    _player:wzHasItem("mod_wanez/currency/a_001c.dbr",1000)
-    _player:wzHasItem("mod_wanez/currency/b_001c.dbr",1000)
+    --_player:GiveSkillPoints(1000)
+    --_player:GiveLevels(85)
+    --_player:AdjustMoney(9999999)
+    --_player:wzHasItem("mod_wanez/currency/a_001c.dbr",1000)
+    --_player:wzHasItem("mod_wanez/currency/b_001c.dbr",1000)
 
     --_player:wzHasItem("mod_wanez/_dga/items/affixes/b003.dbr",1)
     --_player:wzHasItem("mod_wanez/_runes/items/lore/loreobj_runeb001_000.dbr",1)

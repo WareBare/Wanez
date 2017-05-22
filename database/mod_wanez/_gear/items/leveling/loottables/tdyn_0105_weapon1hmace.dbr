@@ -1,6 +1,6 @@
 templateName,database/templates/lootitemtable_dynweighted_dynaffix.tpl,
 Class,LootItemTable_DynWeight,
-FileDescription,Updated with WanezToolsGD - 12/05/2017 03:12 pm,
+FileDescription,Updated with WanezToolsGD - 21/05/2017 09:27 am,
 bothPrefixSuffix,1250,
 rareBothPrefixSuffix,750,
 rarePrefixNormalSuffix,1000,

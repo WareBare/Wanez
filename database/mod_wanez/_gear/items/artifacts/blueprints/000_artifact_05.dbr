@@ -1,6 +1,6 @@
 templateName,database/templates/itemartifactformula.tpl,
 Class,ItemArtifactFormula,
-FileDescription,Updated with WanezToolsGD - 10/05/2017 03:06 am,
+FileDescription,Updated with WanezToolsGD - 21/05/2017 12:04 pm,
 AreaDescription,This is a really lame area of interest description.,
 useBoundingBoxesForDynamicObstacles,0,
 description,tagWaGearArtifact_000_Blueprint_NAME,
