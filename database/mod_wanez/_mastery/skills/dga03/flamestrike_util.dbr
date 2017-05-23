@@ -5,7 +5,7 @@ skillUpBitmapName,wanez/mastery/skills/icons/dga03/skillicon_flamestrike_util_up
 skillDownBitmapName,wanez/mastery/skills/icons/dga03/skillicon_flamestrike_util_down.tex,
 isPetDisplayable,0,
 isPetBonusScaling,0,
-skillTier,5,
+skillTier,6,
 skillMasteryLevelRequired,0,
 skillMaxLevel,12,
 skillUltimateLevel,22,

@@ -75,8 +75,9 @@ function wanez.DGA.entity.cBase()
             
             argLevel = argLevel + self.aClassLvlInc[argClass]
             --local tplPath = "mod_wanez/_dga/difficulties/{TYPE}_{MODE}_{DIFFICULTY}/enemies/{CLASS}"
-            local tplPath = "mod_wanez/_dga/difficulties/{TYPE}_{MODE}_normal/enemies/{CLASS}"
+            local tplPath = "mod_wanez/_dga/difficulties/{TYPE}_{MODE}_{DIFFICULTY}/enemies/{CLASS}"
             --UI.Notify("Spawn: gen path")
+            --UI.Notify(aDataMP.mode.Value)
             -- todo dynamic path
             local path = self:str_replace(tplPath,{
                 TYPE = aDataMP.type.Value,

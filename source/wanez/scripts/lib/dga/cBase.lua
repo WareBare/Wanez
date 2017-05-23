@@ -269,12 +269,13 @@ function wanez.DGA.cBase()
                 end
                 
             end;
-            local difficultyValue = dataMP.difficulties[difficultyId].name
+            --local difficultyValue = dataMP.difficulties[difficultyId].name
+            local difficultyValue = "normal"
             -- old MonsterPower for Vanilla Mode
-            --if(argPlayer:HasToken("WZ_DGA_MODE") == false) then
+            if(argPlayer:HasToken("WZ_DGA_MODE") == false) then
                 --difficultyId = 2
-                --difficultyValue = "default"
-            --end
+                difficultyValue = "default"
+            end
         
             return {
                 type = {

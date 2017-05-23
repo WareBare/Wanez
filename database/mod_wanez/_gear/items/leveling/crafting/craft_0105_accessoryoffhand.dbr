@@ -1,6 +1,6 @@
 templateName,database/templates/weapon_offhand.tpl,
 Class,WeaponArmor_Offhand,
-FileDescription,Updated with WanezToolsGD - 21/05/2017 09:27 am,
+FileDescription,Updated with WanezToolsGD - 23/05/2017 02:11 pm,
 AreaDescription,This is a really lame area of interest description.,
 useBoundingBoxesForDynamicObstacles,0,
 scale,1.0,
