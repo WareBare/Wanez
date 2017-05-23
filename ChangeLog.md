@@ -1,6 +1,190 @@
 # Changelog #
 You can also check out an [online changelog](http://wanez.de/gd/mod/updates).
 
+## v0.5.1 - Beta #01 ##
+### General ###
+* You can salvage Common Items at the Settings Ghost/Jailor (Let me know if a Common Item slipped through and isn't salvaged).
+  * This will destroy every item you currently have with you (even equipped) so be careful with this.
+  * You will get Scraps in return (since you cannot Dismantle Common Items I added this feature)
+  * It is possible you destroy a Magic/Rare with this method aswell, not sure if any of them are in an affix table and can become Magic/Rare, so far testing this never destroyed something different than a Common Item, just consider yourself warned.
+
+### Mastery ###
+#### General ####
+* most icons are a placeholder or at least the first draft, when I get the time I'll take a closer look.
+* same for the vast majority of FX, while I'm happy with how it is, it's far from perfect.
+* The following list may not reflect every skill available to that Mastery, it was changing so many times that I lost track at some point. The only reason for it is to give an idea of what a Mastery has to offer.
+* The vast majority of Mastery Combination names is still missing and has a placeholder with the two Mastery Names.
+
+#### Gunslinger (DGA02) ####
+* All attacks and spells require Ranged Attack Weapons (1H Guns, 2H Guns, Crossbows)
+* Shoot (Attack)
+  * Physical/Pierce/Cold Damage
+* Multishot - Relentless Shots (Spell)
+  * Physical/Pierce/Cold Damage
+* Rain of Projectiles (Spell)
+  * Physical/Pierce Damage
+  * `Transmuter` converts it to Cold and adds a chance to freeze (Icicle Rain)
+* Entangling Shot (Attack)
+  * Physical/Pierce Damage
+  * Slows Targets
+  * `Modifier` traps Targets
+  * `Modifier` Causes Bleeding
+* Chilling Aura
+* Dual Pistols (Weapon Pool)
+  * Physical/Pierce/Cold Damage
+  * `Modifier` AoE
+  * `Modifier` Fragment/Splinter
+
+#### Conjurer (DGA03) ####
+* Flame Strike (Spell)
+  * Aether/Fire Damage
+  * `Transmuter` converts Aether to Chaos
+* Suicidal Spirit (Spell)
+  * Fire/Chaos Damage
+  * a spirit is looking for an enemy to explode when it gets there
+  * very high damage
+* Planar Spirit (Pet)
+  * Chaos/Fire Damage
+  * temporary pet seeking enemies and attacking them
+  * pet limit 20-40 depending on the skill level
+  * duration increases from 7 to 18 seconds
+* Planar Hound (Pet)
+  * Generates Aggro
+  * Has a Cleave attack to hit up to 6 enemies
+  * barely does any damage, the main purpose is to tank
+* Haste (Aura)
+  * Movement Speed
+  * Attack Speed
+  * Casting Speed
+* Celerity (Buff-AoE)
+  * Movement Speed
+  * Attack Speed
+  * Casting Speed
+  * Cooldown is much higher than the duration
+* Passives
+  * Pet Attributes
+  * Pet Damage
+  * Pet Flat Damage
+  * Pet Speed
+  * Master Physique/Health %
+
+#### Eldritch (DGA05) ####
+* Planar Bolt (Spell)
+  * Chaos/Cold Damage
+  * Long Range
+  * `Modifier - Explosive Bolt` Explosion
+  * `Modifier - Piercing Bolt` Chance to Pierce
+  * `Modifier - Empowered Bolt` Critical Damage
+  * `Transmuter - Planar Projectiles` Add 2/4 Projectiles
+* Vortex (Spell)
+  * Ground Effect
+  * Cold Damage
+  * `Modifier - Chilling Vortex` Add Chill Effect
+  * `Modifier - Empowered Vortex` Damage
+  * `Transmuter - Chaos Vortex` Convert Cold to Chaos
+* Planar Blast (Spell)
+  * Chaos/Cold Damage
+  * Medium Range
+  * Medium AoE
+  * `Modifier - Explosive Blast` Increase AoE + Weapon Damage
+  * `Modifier - Empowered Blast` Increase Damage
+  * `Modifier - Splintering Blast` Splinters
+* Planar Beam (Spell)
+  * Chaos Damage/Cold Damage
+  * `Modifier - Freezing Beam` Add Cold DoT + chance to Freeze
+  * `Modifier - Empowered Beam` Weapon Damage + Damage %
+  * `Transmuter - Elemental Ray` Convert Chaos to Elemental Damage and add Elemental Damage (Flat + %)
+* Planar Mastery (Aura)
+  * Mana Regen
+  * `Modifier - Planar Infusion` Damage Bonus
+  * `Transmuter - Chilling Touch` Conversion (Aether -> Cold) ??
+* Planar Grip (Debuff)
+  * Reduce Cold/Chaos resist
+  * `Modifier - Tightened Grip` Reduce DA + Slow
+* Planar Focus (Passive #02)
+  * Spirit %
+  * OA Flat
+* Knowledge of Planes (Passive #01)
+  * Casting Speed
+  * Total Damage
+* Planar Survivalist (Passive #03)
+  * Increased Health
+  * Reduced Mana
+* Planes Destroyer (Passive #04)
+  * Flat Cold/Chaos Damage
+  * Cold/Chaos Damage Increase (%)
+
+### Campaign ###
+#### Crafters ####
+* Gifts & Treasures Blacksmith (Leveling Gear) can be summoned by talking to the Jailor
+* Runic Inscriptions Blacksmith can be summoned by talking to the Jailor
+
+#### Spawns ####
+* you can select how many spawns you want at the Jailor.
+  * you can use vanilla spawns.
+  * double the number of enemies.
+  * or triple the number of enemies.
+
+#### Devotion Shrines ####
+* those who require Items will now spawn a random Proxy
+* they will also spawn more enemies than the other Shrines
+
+#### Phasing Beasts ####
+* killing enemies in a set amount of time has a chance to spawn a Phasing Beast, stronger than your average Vanilla monster and able to drop useful Items for Artifacts.
+* as always you are able to disable these spawns with `Disable Phasing Beasts`.
+* killing more and more enemies will eventually give you the chance to spawn a Boss
+* in comparison to PoE: this system is basically a mix of Rampage and Beyond. Killing monsters no more than 10seconds apart will increase the counter and at some point the counter will enable a Boss Spawn.
+
+### DGA ###
+#### Monster Power ####
+* Difficulties are now using a buff entity rather than different Sets of Monsters
+  * this may result in some values to be additive, depending on DGA-Affix in Monster Auras
+  * but allows for more difficulties and a smaller file size
+* Added 3 more Difficulties (Ultimate [+75%], Epic[+100%], Legendary[+125%])
+* Vanilla Mode can no play with different Difficulties (keep in mind drop rates won't change, because the loottable is the same as Normal, Scrolls are Scripted and as such affected by the difficulty change)
+
+#### Phasing Beasts ####
+* Same rules as for Campaign
+* They are using the same onDie event as other DGA Entities, which means in DGA they apply to the counter to spawn more Phasing Beast
+
+### Runic Inscriptions ###
+#### Rune Stones ####
+* Crafting tags have been changed to make it easier to find the Stone you want to craft
+* Generic Stones have been removed, because their initial usage is redundant with the lore pages
+
+#### Runes ####
+* Tags have been changed into groups (as you know it from vanilla components) if you can put it in all weapons it will say "All Weapons" rather than list them all.
+* now have their Base Component's Icon
+  * when converting the core files to .tga (or any other format) they get flipped, I didn't flip them back since this is a way to tell it is the rune without consuming my time too much, in the future I will probably make them look more unique.
+* New Rune Type (Phasing Runes)
+  * can drop from Phasing Beasts)
+
+#### Inscriptions ####
+* 9 New Empowered Inscriptions.
+* New Inscription Type (Phasing Inscriptions)
+
+#### Lore ####
+* Due to the introduction of Phasing Beasts, they are able to drop Lore Pages. (Altars dropping pages are still in DGA on top of these new enemies)
+
+### Gifts & Treasures ###
+#### General ####
+* Fixed weight issues with Accessories.
+* Planar Scraps don't require Souls/Essences anymore, all you need is scraps
+  * rates have been adjusted to keep the balance (feedback is needed to balance this right)
+
+#### Armor ####
+* increased Armor by 50%.
+* Armor ratios have been adjusted for each Slot.
+* Attribute Requirements have been increased
+
+#### Shields ####
+* complete rework.
+* Shields have 35% Block.
+* Shields have Block Absorption scaling with item Level, lower level may be a bit stronger but the 75 Shields have the same value as Legendaries.
+* 3 different variations, the lower the recovery rate the lower the Absorption.
+* changed the Absorption roll to Reflect/Retaliation (Zolhan's Revenge).
+* changed the Pet roll to have the same Reflect/Retaliation stats. (giving pets Reflect/Retaliation, let's see what it does)
+
 ## v0.5.0 - Beta #10b ##
 ### DGA ###
 #### Areas ####

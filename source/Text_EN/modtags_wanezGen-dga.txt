@@ -425,3 +425,4 @@ tagWzDGA_ItemsScrolls_AffixbX_NAME=Random DGA Affix (II)
 tagWzDGA_ChestBossChallenge01=Challenger Loot Orb
 tagWzDGA_ChestDGA01=DGA Chest
 tagWzDGA_ChestLoreRuneB001=Rune Lore Page
+tagWzDGA_PortalToPlane=Portal to a different Plane

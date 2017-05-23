@@ -12,9 +12,9 @@ local _cBase = wanez.cBase()
 
 local entityNames = {
     'manticore',
+    'slith',
     'spidergiant',
     'waspgiant',
-    'slith',
     'vulture'
 }
 local aLetterEquiv = {'a','b','c','d','e','e','e','e','e','e','e','e','e','e','e','e'}
@@ -63,7 +63,7 @@ local function spawnPlanarInvader(argObjectId,argClassId,argDifficultyId)
         local difficultySpawn = wanez.DGA.aData.monsterPower.difficulties[argDifficultyId].entitySpawn or false
         
         local randomSpawnClass = aLetterEquiv[random(1,argClassId)]
-        local randomEntityType = random(1,5)
+        local randomEntityType = random(1,2)
         local enemyCoords = Entity.Get(argObjectId):GetCoords()
         if(random(1,100) <= 10 * argDifficultyId) then
             --UI.Notify('should spawn')

@@ -17,16 +17,6 @@ Entering the game will give you access to everything the dismantle NPC has to of
 #### Multiplayer ####
 In any previous version lots of issues occured in Multiplayer, v0.5 is going to change that as it's fully compatible with Multiplayer!
 
-#### OMEGA MOD removal ####
-From the start the plan was to make a mod that can be merged easily with any other mod. Having a complex mod with many files is not going to make it easier for others who only want the source of my mod, so I decided to remove it. Since the source is now available, it's pretty easy to merge it yourself.
-
-In addition my mod will have different ways to improve your character and adding other mods to it will make it more difficult to balance properly.
-
-What this means to you (as a non-DAIL player), if you have any OMEGA items on you, you should place them in your transfer-stash or they will disappear, unless you have merged the mods yourself.
-
-
-*The guard dbr is in the world and will show up either as the vanilla guard or OMEGA NPC depending on it being merged or not*
-
 ### DGA-Items ###
 #### General ####
 Any item not used anymore is exchanged when you first login for the new ones coming with v0.5, if you don't want that - you can place them in your stash (at least in the non-DAIL version) and they are removed entirely with v1.0.
@@ -115,7 +105,7 @@ Difficulties Normal and Elite don't require you to find an item to open a portal
   * 2 additional Monster Levels for Tiers 6 - 10
   * 3 additional Monster Levels for Tiers 11 - 15
   * this adds up to +30 Monster Level at Tier 15 (rather than the previous +15 at Tier 15)
-  * and +105 Monster Level at Tier 30.
+  * and +105 Monster Level at Tier 30. 
   * Endless DGA work a little different, but more about that later
 * All difficulties now have 30 Tiers available and Normal/Elite doesn't require drops to craft the higher Tiers
 * 3% more Essences/Souls/Orbs per Tier
@@ -157,7 +147,7 @@ Endless will not follow the regular DGA-Tier mechanics, but instead increase Mon
 * `The Portal can be opened by using a regular DGA-Scroll while having an active Raid Quest`
 
 #### Uber ####
-* Uber will show up as a Quest and is removed when you open the next Portal.
+* Uber will show up as a Quest and is removed when you open the next Portal. 
 * Uber Quest-Scrolls can be crafted at the Blacksmith for DGA-Orbs
 * Challenges and Raids require more DGA-Orbs than Missions/Endless
 
@@ -182,7 +172,7 @@ The following items are being affected by drop-rate increases from DGA Affixes:
 
 Increases are being added up and multiplied with the base drop-rate (eg. Base Drop-Rate of a DGA Scroll could be 5% and you have three different affixes giving 10%/25%/30%, this will result in 5% * 65% = 8.25%)
 
-#### `new` Affix Types ####
+#### Affix Types ####
 * Type (I): Increase Monster Count
 * Type (II): Buff Monsters
 
@@ -190,8 +180,11 @@ Increases are being added up and multiplied with the base drop-rate (eg. Base Dr
 #### General ####
 I added enemies to the tool's functionality, this means I can change data across all files or pick a certain file to change values easily, also every time there is a new Grim Dawn update I can update them aswell. This results in more features that would have been tedious and not worth the time. It also means more customization options for players and up to date enemy files.
 
+#### `new` Phasing Beasts ####
+* new monsters with new loot (more about that in the Campaign Section)
+
 #### Loot & Drop ####
-You can choose to play a "Vanilla-Mode", it means monsters will have their vanilla Loot Tables with their vanilla Drop-Rates (or any changes made to vanilla files from other Mods). This Mode is only available in Normal DGA-Difficulty. If you just want a different endgame experience to vanilla areas, you can choose "Vanilla-Mode" and you will get the same items and nothing that would enable any of the new features (eg. Gifts & Treasures).
+You can choose to play a "Vanilla-Mode", it means monsters will have their vanilla Loot Tables with their vanilla Drop-Rates (or any changes made to vanilla files from other Mods). This Mode is only available in Normal DGA-Difficulty. If you just want a different endgame experience to vanilla areas, you can choose "Vanilla-Mode" and you will get the same items and nothing that would enable any of the new features (eg. Gifts & Treasures). 
 
 *I am giving the option of removing worthless items, because I cant just remove them from the ground, you would have to start a new Session if you are doing the same area multiple times and this is defeating the purpose of this Mod.*
 
@@ -216,7 +209,7 @@ Starting with v0.5 you will have the option of making monsters more powerful and
 *Reflect has not been adjusted, so keep an eye out for it*
 
 #### Difficulties ####
-Im going to start with 4 different difficulties, I believe this is enough for now. I don't want to go completely crazy from the start.
+You can choose between 7 different (DGA-)Difficulties, you won't get more Drops only DGA Items moved directly into your inventory are increased by this.
 * Casual
   * Portal will stay until a new one is opened (you may re-enter the map when you die)
   * 10% less DGA Scrolls
@@ -229,6 +222,15 @@ Im going to start with 4 different difficulties, I believe this is enough for no
 * Elite
   * 50% more DGA Scrolls
   * 150% Power Level
+* Ultimate
+  * 75% more DGA Scrolls
+  * 175% Power Level
+* Epic
+  * 100% more DGA Scrolls
+  * 200% Power Level
+* Legendary
+  * 125% more DGA Scrolls
+  * 225% Power Level
 
 
 *Vanilla-Mode is only playable in Normal DGA-Difficulty*
@@ -287,7 +289,7 @@ You can choose between
 * An Obelisk that grants a buff to the player and party members around
 * Duration may vary depending on your Reputation with the Planes-Shifters
 
-#### `updated` Shrines ####
+#### Shrines ####
 * Shrine effects last 1 minute
   * up to 5 minutes at revered
 * Current Shrines in the Mod
@@ -304,14 +306,43 @@ You can choose between
   * Shrine of Resistance - +5 to all Maximum Resistances
   * Shrine of Force - 50% reduced reflective damage taken
 
+## `new` Campaign ##
+### Enemies ###
+#### Vanilla Spawns ####
+* You get a new option at the Jailor to change the number of enemies spawned
+  * it can be doubled
+  * it can be tripled
+
+#### Phasing Beasts ####
+* new monster will spawn (all this also applies to DGA)
+* killing a monster will increase a counter, the value added to the counter is depending on the Monster Classification
+  * a Common Monster adds +1 to the counter
+  * a Hero Monster adds +5
+* upon reaching a certain threshold you can spawn more powerful monster
+* kills have to occur in intervals no longer than 10 seconds, if you kill a monster 11 seconds after you killed the one before, the counter gets set to 0
+  * I believe this is a good time, it should make the player want to kill the next monster faster while keeping it in a relaxed state
+  * I may add more calculations in the future if this is to hectic for some players or too easy for others
+* these monsters can drop Rune-Lore and Artifact Pages (more about these in their Sections)
+  * only Heros or higher can drop Artifact Pages, but all are able to drop Rune-Lore
+* balancing is in an early stage, any feedback is appreciated
+* Difficulties will increase the chance for a Phasing Beast to spawn, this will make them more difficult since you could end up with multiple bosses at the same time and increases the effective drop rate by killing more of them in the same amount of time. Difficulty also increases the "points" you are getting for each kill, so it will become easier to reach the threshold to spawn a Boss.
+
+### Crafting ###
+#### Special Crafters ####
+* Runic Inscriptions and Gifts & Treasures Blacksmiths can be spawned by using a conversation option at the Jailor
+  * this will replace Chester (in Devils Crossing) with the Blacksmith
+
 ## Factions ##
 ### DGA-Factions ###
 #### Planar Invaders ####
 * Hostile Faction
 * Spawns Nemesis in DGA
+* `new` you can exchange your Reputation for a Token necessary to upgrade Artifacts
 
 #### Planes-Shifters ####
 * Friendly Faction
+* Faction Rank will increase the duration of Shrines
+* Faction Rank will increase the values of Blacksmith Bonuses
 * `Access to Bounty-Table in DGA (moved to v0.5.x)`
 
 ## Runic Inscriptions ##
@@ -367,7 +398,7 @@ A quick Tutorial on "How to create an Inscription"
 * once the number of Runes [used] matches the number of Sockets [of the Stone] it will either fail or succeed in creating an Inscription
   * It will only succeed if the Runes were used in the correct order
 
-#### `new` Lore ####
+#### Lore ####
 * You can find Lore Pages to help you figure out the Sequence used to create an Inscription
 * They drop from Bookstands
 * They also grant Experience like Lore from the Main Campaign
@@ -380,12 +411,10 @@ Already mentioned in the DGA Section, but they are still relevant here, because 
 #### Planar Scraps ####
 * Crafted from
   * Scraps
-  * Planar Essence
-  * Planar Soul
 * Used for
   * Leveling-Gear
+  * Upgrading Artifacts
   * `Upgrading Planar Sets [v0.5.x]`
-  * `Upgrading Artifact dropping in DGA [v0.5.x]`
 
 ### Leveling Gear ###
 #### How To Obtain ####
@@ -409,21 +438,154 @@ Already mentioned in the DGA Section, but they are still relevant here, because 
 *this is still the first version of them, they'll be adjusted depending on the feedback*
 
 #### The Goal ####
-* Good rolls should be fairly easy to obtain in lower levels, but more difficult in higher levels
+* Good rolls should be fairly easy to obtain at lower levels, but more difficult in higher levels
 * the first character will have trouble getting these items right away, but farming essences/souls with a higher level character will make leveling alternate characters easier
 * no need to hoard anything, you can easily craft good enough gear if you have the souls/essences for it
 
-### Planar Sets (with v0.5.x) ###
-#### Why The Delay ####
-Still unsure how the player can obtain them and all other details about them. Instead of changing it later when everyone has gotten them in an easier/harder way I prefer to delay it until I have these things figured out, but its not going to be that long, probably somewhere between v0.5.2 and v0.5.4.
+### `new` Artifacts ###
+#### How To Obtain ####
+* Planar-Scraps and Reputation can be used to Obtain Token from the Settings Ghost
+* Craftable at the Blacksmith
+  * This will require a Pattern (you can get from Nemesis)
+  * and a Book (pages are dropping of the new Phasing Beasts)
+  * since Pages are still dropping after you have got the Artifact, but you don't need them to craft anymore, you can sell them
+* Upgrading an item to the next Level requires the previous item and a number of Token (increasing with Level)
 
-### Artifacts (with v0.5.x) ###
-#### Why The Delay ####
-I know every little detail on how I want them to work, but it is still work for at least two weeks and the last update for DGA has been such a long time ago, that I decided to work on Artifacts after that. You'll probably see them somewhere between v0.5.2 and v0.5.6.
+#### What Is Special About It ####
+* The Level Requirement increases as you Upgrade the Item
+* As a result of an increased Level Requirement stats are also increasing (since this system is using a Property Scaling)
+* Artifacts start at level 73 and go all the way up to 100
+  * until the Expansion the maximum (Artifact-)Level you can upgrade an Artifact to is 5
+  * when the Expansion is out you can Upgrade the Artifact to 10 (this will also make use of the new Properties coming with the Expansion)
+* They are using the Blacksmith you are crafting Leveling Items with and as a result Artifacts gain the Blacksmith Bonuses as Leveling Items
+
+#### The Goal ####
+* add some new aspects to the endgame item hunt
+* the first few upgrades should be easy enough for everyone interested in the item, higher upgrades should be almost impossible unless you put in the effort
+
+## `new` Mastery ##
+The following list may not reflect every skill available to that Mastery, it was changing so many times that I lost track at some point. The only reason for it is to give an idea of what a Mastery has to offer.
+
+### [Planes-]Gunslinger ###
+#### Damage Types ####
+* Mainly Cold/Pierce/Bleeding
+* Some Chaos
+
+#### Skills ####
+* All attacks and spells require Ranged Attack Weapons (1H Guns, 2H Guns, Crossbows)
+* Shoot (Attack)
+  * Physical/Pierce/Cold Damage
+* Multishot - Relentless Shots (Spell)
+  * Physical/Pierce/Cold Damage
+* Rain of Projectiles (Spell)
+  * Physical/Pierce Damage
+  * `Transmuter` converts it to Cold and adds a chance to freeze (Icicle Rain)
+* Entangling Shot (Attack)
+  * Physical/Pierce Damage
+  * Slows Targets
+  * `Modifier` traps Targets
+  * `Modifier` Causes Bleeding
+* Chilling Aura
+* Dual Pistols (Weapon Pool)
+  * Physical/Pierce/Cold Damage
+  * `Modifier` AoE
+  * `Modifier` Fragment/Splinter
+
+### Spellcaster/Summoner ([Planes-]Conjurer) ###
+#### Damage Types ####
+* Mainly Fire/Chaos
+* Some Aether
+
+#### Skills ####
+* Flame Strike (Spell)
+  * Aether/Fire Damage
+  * `Transmuter` converts Aether to Chaos
+* Suicidal Spirit (Spell)
+  * Fire/Chaos Damage
+  * a spirit is looking for an enemy to explode when it gets there
+  * very high damage
+* Planar Spirit (Pet)
+  * Chaos/Fire Damage
+  * temporary pet seeking enemies and attacking them
+  * pet limit 20-40 depending on the skill level
+  * duration increases from 7 to 18 seconds
+* Planar Hound (Pet)
+  * Generates Aggro
+  * Has a Cleave attack to hit up to 6 enemies
+  * barely does any damage, the main purpose is to tank
+* Haste (Aura)
+  * Movement Speed
+  * Attack Speed
+  * Casting Speed
+* Celerity (Buff-AoE)
+  * Movement Speed
+  * Attack Speed
+  * Casting Speed
+  * Cooldown is much higher than the duration
+* Passives
+  * Pet Attributes
+  * Pet Damage
+  * Pet Flat Damage
+  * Pet Speed
+  * Master Physique/Health %
+
+### Spellcaster ([Planes-]Eldritch) ###
+#### Damage Types ####
+* Mainly Cold & Chaos
+
+#### Skills ####
+* Planar Bolt (Spell)
+  * Chaos/Cold Damage
+  * Long Range
+  * `Modifier - Explosive Bolt` Explosion
+  * `Modifier - Piercing Bolt` Chance to Pierce
+  * `Modifier - Empowered Bolt` Critical Damage
+  * `Transmuter - Planar Projectiles` Add 2/4 Projectiles
+* Vortex (Spell)
+  * Ground Effect
+  * Cold Damage
+  * `Modifier - Chilling Vortex` Add Chill Effect
+  * `Modifier - Empowered Vortex` Damage
+  * `Transmuter - Chaos Vortex` Convert Cold to Chaos
+* Planar Blast (Spell)
+  * Chaos/Cold Damage
+  * Medium Range
+  * Medium AoE
+  * `Modifier - Explosive Blast` Increase AoE + Weapon Damage
+  * `Modifier - Empowered Blast` Increase Damage
+  * `Modifier - Splintering Blast` Splinters
+* Planar Beam (Spell)
+  * Chaos Damage/Cold Damage
+  * `Modifier - Freezing Beam` Add Cold DoT + chance to Freeze
+  * `Modifier - Empowered Beam` Weapon Damage + Damage %
+  * `Transmuter - Elemental Ray` Convert Chaos to Elemental Damage and add Elemental Damage (Flat + %)
+* Planar Mastery (Aura)
+  * Mana Regen
+  * `Modifier - Planar Infusion` Damage Bonus
+  * `Transmuter - Chilling Touch` Conversion (Aether -> Cold) ??
+* Planar Grip (Debuff)
+  * Reduce Cold/Chaos resist
+  * `Modifier - Tightened Grip` Reduce DA + Slow
+* Planar Focus (Passive #02)
+  * Spirit %
+  * OA Flat
+* Knowledge of Planes (Passive #01)
+  * Casting Speed
+  * Total Damage
+* Planar Survivalist (Passive #03)
+  * Increased Health
+  * Reduced Mana
+* Defense from Within (Passive #04)
+  * Damage Reduction (Cold/Chaos)
+
+## `new` Links  ##
+### Videos ###
+#### Runic Inscriptions ####
+* Tutorial: [How To Make Inscriptions](https://youtu.be/aFObq76jXXw "Opens a new Tab")
 
 ## For Modders ##
 ### Database ###
-The directories currency, scroll and faction are used globally, so you'll need those as well as the directory with the _ (underscore) prefix. However some items may not be able to drop/craftable unless you add them to vanilla or your own LootTables/Blacksmiths.
+The directories currency, scroll and faction are used globally, so you'll need those as well as the directory with the _ (underscore) prefix. However some items may not be able to drop/craftable unless you add them to vanilla or your own LootTables/Blacksmiths. 
 
 ### Source ###
 With the exception of Tags, everything is inside the "wanez" directory.
