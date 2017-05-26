@@ -1,6 +1,24 @@
 # Changelog #
 You can also check out an [online changelog](http://wanez.de/gd/mod/updates).
 
+## v0.5.1 - Beta #02 ##
+### Mastery ###
+#### Conjurer ####
+* Added a Modifier to the Planar Spirits Aura.
+* Added a new Passive (regen for pet and master).
+  * also made the Spirit Pets cost more mana at higher levels and less and lower levels.
+
+### General ###
+#### Balance ####
+* Hero and stronger Phasing Beasts were unable to spawn due to a bug in the kill rating code.
+* killing powerful Phasing Beasts now grants reputation for DGA Factions.
+* exp granted by Rune-Lore has been reduced to 5000 (instead of 10000).
+
+#### Bug Fixes ####
+* various missing skill tags have been added.
+* Phasing Beasts' reset Kill-Count message won't show if Phasing Beasts are disabled.
+* Phasing Beasts' reset Kill-Count message will now only be displayed if it got reset after reach enough to spawn a Boss.
+
 ## v0.5.1 - Beta #01 ##
 ### General ###
 * You can salvage Common Items at the Settings Ghost/Jailor (Let me know if a Common Item slipped through and isn't salvaged).

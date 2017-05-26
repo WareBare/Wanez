@@ -74,7 +74,7 @@ local function spawnPlanarInvader(argObjectId,argClassId,argDifficultyId)
                 local newEnemy = Character.Create(difficultySpawn,Game.GetAveragePlayerLevel() + argClassId,nil)
                 newEnemy:SetCoords(enemyCoords)
             end
-            --UI.Notify('spawned Planar Invader')
+            --UI.Notify("spawned Planar Invader: "..randomSpawnClass.." | ID: "..argClassId.." | KillRating: "..killRating)
         end
     end
 end
@@ -103,37 +103,41 @@ local function onDieEntity(argObjectId,argClassId,argDifficultyId)
     argDifficultyId = argDifficultyId or getDifficultyId()
     
     --UI.Notify("working onDie")
-    if(killRating == 0) then
-        --math.randomseed(Time.Now());
-    end
-    if( (Time.Now() - timeSinceLastKill) <= 10000 ) then -- 10 seconds between kills or reset killRating
-        killRating = killRating + (aRewards[argClassId] * aRewardsDifficultyMul[argDifficultyId]);
-        --UI.Notify('add to Rating')
-        if(killRating <= 25) then
-            -- spawn common
-            spawnPlanarInvader(argObjectId,1,argDifficultyId)
-        elseif(killRating >= 25) then
-            -- spawn champion
-            spawnPlanarInvader(argObjectId,2,argDifficultyId)
-        elseif(killRating >= 50) then
-            -- spawn hero
-            spawnPlanarInvader(argObjectId,3,argDifficultyId)
-        elseif(killRating >= 100) then
-            -- spawn nemesis
-            spawnPlanarInvader(argObjectId,4,argDifficultyId)
-        elseif(killRating >= 250) then
-            -- spawn boss
-            spawnPlanarInvader(argObjectId,5,argDifficultyId)
-            --UI.Notify("tagWzCampaingLua_SpawnBoss")
-        end
-    else
-        --UI.Notify('reset Rating')
-        killRating = aRewards[argClassId] * aRewardsDifficultyMul[argDifficultyId];
-        math.randomseed(Time.Now());
-        UI.Notify("tagWzCampaingLua_TimeHasRunOut")
-    end
     
-    timeSinceLastKill = Time.Now()
+    if(Game.GetLocalPlayer():HasToken("WZ_DGA_NO_PHASING") == false)then
+        if(killRating == 0) then
+            --math.randomseed(Time.Now());
+        end
+        if( (Time.Now() - timeSinceLastKill) <= 10000 ) then -- 10 seconds between kills or reset killRating
+            killRating = killRating + (aRewards[argClassId] * aRewardsDifficultyMul[argDifficultyId]);
+            --UI.Notify('add to Rating')
+            if(killRating <= 25) then
+                -- spawn common
+                spawnPlanarInvader(argObjectId,1,argDifficultyId)
+            elseif(killRating <= 250) then
+                -- spawn champion
+                spawnPlanarInvader(argObjectId,2,argDifficultyId)
+            elseif(killRating <= 1000) then
+                -- spawn hero
+                spawnPlanarInvader(argObjectId,3,argDifficultyId)
+            elseif(killRating <= 2500) then
+                -- spawn nemesis
+                spawnPlanarInvader(argObjectId,4,argDifficultyId)
+            else
+                -- spawn boss
+                spawnPlanarInvader(argObjectId,5,argDifficultyId)
+                --UI.Notify("tagWzCampaingLua_SpawnBoss")
+            end
+        else
+            --UI.Notify('reset Rating')
+            if(killRating >= 250) then UI.Notify("tagWzCampaingLua_TimeHasRunOut") end;
+            killRating = aRewards[argClassId] * aRewardsDifficultyMul[argDifficultyId];
+            math.randomseed(Time.Now());
+            
+        end
+        
+        timeSinceLastKill = Time.Now()
+    end
     --UI.Notify("working onDie")
 end
 function wanez.gd.onDieEntity(argObjectId,argClassId,argDifficultyId)
@@ -284,6 +288,13 @@ local function onDieBeast(argObjectId,argClassId)
     -- rune drops
     -- artifact scroll drops
     -- artifact base item drops
+    
+    local _player = Game.GetLocalPlayer()
+    local aRep = {0,0,1,3,5}
+    local iRep = aRep[argClassId]
+    
+    _player:GiveFaction("USER14",iRep)
+    _player:GiveFaction("USER15",iRep * -1)
 end
 
 function wanez.gd.onDieCommonBeast(argObjectId)
