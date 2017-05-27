@@ -1,6 +1,9 @@
 # Changelog #
 You can also check out an [online changelog](http://wanez.de/gd/mod/updates).
 
+## v0.5.1 - Beta #02b ##
+* Fixed a bug in the Campaign (Vanilla onDie events were replaced and would prevent doors to open or quests to finish)
+
 ## v0.5.1 - Beta #02 ##
 ### Mastery ###
 #### Conjurer ####

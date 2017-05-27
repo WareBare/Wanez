@@ -1462,4 +1462,4 @@ tagWzMasteryDGA02SkillDescription_BuffDef=Only a living Gunslinger can kill.^nGu
 tagWzMasteryDGA03SkillName_SpiritFireAura2=Aether Spirit
 tagWzMasteryDGA03SkillDescription_SpiritFireAura2=Increases the damage of the Spirits Aura as well as adding Aether damage to the Aura.^n^aThis is a Modifier for your pet's aura, not a Transmuter.
 tagWzMasteryDGA03SkillName_Passive05=Planar Regeneration
-tagWzMasteryDGA03SkillDescription_Passive05=Grants Regeneration to the Master and its Minions.
+tagWzMasteryDGA03SkillDescription_Passive05=Grants Regeneration to Master and Minions.
