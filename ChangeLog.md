@@ -1,6 +1,27 @@
 # Changelog #
 You can also check out an [online changelog](http://wanez.de/gd/mod/updates).
 
+## v0.5.1 - Beta #03 ##
+### Mastery ###
+#### Gunslinger ####
+* added a passive similar to the Demolitionist's Blast Shield, but with the Gunslinger's damage types and some additional changes to duration and cooldown.
+* Skill `Hex Shot` will now lower Enemy Resisance.
+
+#### Conjurer ####
+* Added Fire Resistance to `Haste`.
+* Added Chaos Resistance to `Burning Conversion`.
+
+#### Eldritch ####
+* Added Cold and Chaos Resistance to `Planes-Survivalist`.
+* Transmuter `Chilling Touch` changed to `Chaotic Touch` it now converts Physical to Chaos damage.
+* New Passive `Planar Mirror` will trigger below 30% Health and add 100% damage absorption and reflect.
+* Textures for `Planar/Elemental Ray` have been changed.
+
+### General ###
+#### Bug Fixes ####
+* Various fixes to Tag.
+* Added `Chester - Watchguard` to the locations the Blacksmith can spawn at.
+
 ## v0.5.1 - Beta #02b ##
 * Fixed a bug in the Campaign (Vanilla onDie events were replaced and would prevent doors to open or quests to finish)
 

@@ -1,7 +1,5 @@
 templateName,database/templates/ingameui/textstaticstring.tpl,
-ActorName,,
-Class,,
-FileDescription,Updated with WanezToolsGD - 15/05/2017 08:56 am,
+FileDescription,Updated with WanezToolsGD - 27/05/2017 04:42 pm,
 textTag,tagSkillClassName22,
 style,records/ui/styles/text/style_special_skillclassdescriptions.dbr,
 textBoxX,783,
