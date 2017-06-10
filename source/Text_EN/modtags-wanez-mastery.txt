@@ -1467,3 +1467,5 @@ tagWzMasteryDGA02SkillName_Passive03=Planar Shield
 tagWzMasteryDGA02SkillDescription_Passive03=Adds protection to the Gunslinger's damage types.
 tagWzMasteryDGA05SkillName_Passive05=Planar Mirror
 tagWzMasteryDGA05SkillDescription_Passive05=When your Health drops below 30% you gain a Shield protecting you from all inconming damage and reflects a portion of that damage back to the Attacker.
+tagWzMasteryDGA03SkillName_TankRetal=Hound's Retaliation
+tagWzMasteryDGA03SkillDescription_TankRetal=Adds Retaliation and Reflect to your Hounds and reduces the maximum number of Hounds allowed (this will enable Pet Portraits).

@@ -1,5 +1,5 @@
 templateName,database/templates/ingameui/skillpanectrl.tpl,
-FileDescription,Updated with WanezToolsGD - 26/05/2017 10:37 pm,
+FileDescription,Updated with WanezToolsGD - 10/06/2017 05:46 am,
 BasePane,records/ui/skills/classcommon/skills_classpanelconfiguration.dbr,
 skillTabTitle,tagSkillClassName23,
 skillPaneDescriptionTag,tagSkillClassDescription23,
